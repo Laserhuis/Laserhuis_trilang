@@ -1,4 +1,4 @@
-import { IMG } from "../images";
+import { IMG } from "../images.js";
 
 export const BATCH_4 = [
   // 76
@@ -11,7 +11,7 @@ export const BATCH_4 = [
     readTime: "11 min",
     materials: ["Anodized Aluminum Brushless Motor Cans / ESC Heat Sinks"],
     tools: ["Fiber Galvo Laser (20W-30W)", "Rotary Fixture", "LightBurn Galvo"],
-    summary: "Precision laser dye bleaching of motor KV specs and logo graphics onto anodized aluminum drone motor bells.",
+    summary: "Precision laser dye bleaching of motor KV specs and logo graphics onto anodized aluminum drone motor bells. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.machine_fiber,
     steps: [
       {
@@ -44,7 +44,7 @@ export const BATCH_4 = [
     readTime: "14 min",
     materials: ["6.0mm Cell-Cast Clear Acrylic Sheet", "Acrylic Hinges", "Acrylic Solvent Cement (Weld-On 3)"],
     tools: ["CO2 Laser (60W-100W)", "Digital Caliper", "LightBurn Software"],
-    summary: "Precision vector cutting of custom rimless aquarium mesh tops, feeding ports, and filter cutout slots in 6mm cast acrylic.",
+    summary: "Precision vector cutting of custom rimless aquarium mesh tops, feeding ports, and filter cutout slots in 6mm cast acrylic. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_glow,
     steps: [
       {
@@ -77,7 +77,7 @@ export const BATCH_4 = [
     readTime: "18 min",
     materials: ["14K Gold / 925 Sterling Silver Wedding Bands"],
     tools: ["30W Fiber Galvo Laser", "Inside-Ring Rotary Attachment", "LightBurn / EZCAD3"],
-    summary: "Micro-text vector engraving inside curved metal wedding rings using rotary galvo laser systems.",
+    summary: "Micro-text vector engraving inside curved metal wedding rings using rotary galvo laser systems. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -110,7 +110,7 @@ export const BATCH_4 = [
     readTime: "13 min",
     materials: ["3.5mm Heavy Vegetable-Tanned Tooling Leather (9oz)", "Waxed Thread", "Neatsfoot Oil"],
     tools: ["CO2 Laser (50W-80W) or Diode Laser (20W)", "LightBurn Software", "Saddle Stitch Needles"],
-    summary: "Vector scoring stitch grooves, punching 1.2mm needle holes, and perimeter cutting heavy 9oz tooling leather knife sheaths.",
+    summary: "Vector scoring stitch grooves, punching 1.2mm needle holes, and perimeter cutting heavy 9oz tooling leather knife sheaths. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.leather_book,
     steps: [
       {
@@ -143,7 +143,7 @@ export const BATCH_4 = [
     readTime: "19 min",
     materials: ["4-Inch Silicon Carbide (SiC) Semiconductor Wafers"],
     tools: ["355nm UV Laser or 30W MOPA Fiber Galvo", "Wafer Handling Wand", "Keyence Microscope"],
-    summary: "Sub-surface non-damaging serial number marking on ultra-hard Silicon Carbide semiconductor wafers for cleanroom traceability.",
+    summary: "Sub-surface non-damaging serial number marking on ultra-hard Silicon Carbide semiconductor wafers for cleanroom traceability. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.pcb_etch,
     steps: [
       {
@@ -176,7 +176,7 @@ export const BATCH_4 = [
     readTime: "12 min",
     materials: ["9mm Compressed PET Acoustic Felt Panels (300kg/m3)"],
     tools: ["CO2 Laser (80W-130W)", "LightBurn Software", "High-Pressure Air Assist (35 PSI)"],
-    summary: "Precision 3D geometric cutouts and edge beveling of heavy 9mm PET acoustic felt panels for recording studio sound treatment.",
+    summary: "Precision 3D geometric cutouts and edge beveling of heavy 9mm PET acoustic felt panels for recording studio sound treatment. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.laser_badge,
     steps: [
       {
@@ -209,12 +209,12 @@ export const BATCH_4 = [
     readTime: "10 min",
     materials: ["Flexible Matte Black TPU Phone Cases"],
     tools: ["20W/30W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3"],
-    summary: "High-speed white foaming laser text and logo marking on flexible TPU rubber smartphone cases.",
+    summary: "High-speed white foaming laser text and logo marking on flexible TPU rubber smartphone cases. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
         title: "TPU Polymer Surface Foaming Mechanics",
-        detail: "MOPA fiber laser short pulses (4ns-8ns) at high frequency (300 kHz) gently melt TPU rubber surface, expanding micro-bubbles that reflect light into bright snow-white text without burning or rubber stiffening."
+        detail: "MOPA fiber laser short pulses (4ns-8ns) at high frequency (300 kHz) gently melt TPU rubber surface, expanding micro-bubbles that reflect light into bright snow-white text without engraving or rubber stiffening."
       },
       {
         title: "Laser Parameters (30W MOPA Fiber - Black TPU)",
@@ -242,7 +242,7 @@ export const BATCH_4 = [
     readTime: "17 min",
     materials: ["Hardened D2 Tool Steel Punch Blanks (62 HRC)"],
     tools: ["50W Fiber Galvo Laser", "LightBurn / EZCAD3 3D", "Microscope"],
-    summary: "Carving 1.2mm deep raised reversed steel stamping punches into 62 HRC hardened D2 tool steel for hammer marking metal parts.",
+    summary: "Carving 1.2mm deep raised reversed steel stamping punches into 62 HRC hardened D2 tool steel for hammer marking metal parts. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -275,7 +275,7 @@ export const BATCH_4 = [
     readTime: "13 min",
     materials: ["3.0mm B-Flute Corrugated Cardboard Sheets"],
     tools: ["CO2 Laser (60W-100W)", "LightBurn Software", "Bone Folder Folding Tool"],
-    summary: "Cutting point-of-purchase (POP) retail display racks with laser-scored perforation folding lines in 3mm corrugated cardboard.",
+    summary: "Cutting point-of-purchase (POP) retail display racks with laser-scored perforation folding lines in 3mm corrugated cardboard. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -308,7 +308,7 @@ export const BATCH_4 = [
     readTime: "16 min",
     materials: ["Medical Grade PEEK (PolyEther Ether Ketone) Implant Cages"],
     tools: ["355nm UV Laser or MOPA Fiber Laser", "Keyence Microscope", "Autoclave Tester"],
-    summary: "Dark high-contrast non-ablative laser marking on medical PEEK spinal implants compliant with FDA biocompatibility standards.",
+    summary: "Dark high-contrast non-ablative laser marking on medical PEEK spinal implants compliant with FDA biocompatibility standards. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
@@ -341,7 +341,7 @@ export const BATCH_4 = [
     readTime: "10 min",
     materials: ["Natural High-Density Cork Yoga Mats (5mm) & Blocks (100mm)"],
     tools: ["CO2 Laser (50W-100W)", "LightBurn Software"],
-    summary: "Large-format laser engraving of alignment position grids and yoga mandalas onto natural cork mats.",
+    summary: "Large-format laser engraving of alignment position grids and yoga mandalas onto natural cork mats. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cork_pad,
     steps: [
       {
@@ -374,7 +374,7 @@ export const BATCH_4 = [
     readTime: "14 min",
     materials: ["316L Stainless Steel Surgical Instrument Trays"],
     tools: ["30W/50W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3", "Keyence Barcode Verifier"],
-    summary: "Passivated black chromium oxide laser marking on 316L medical stainless steel trays resistant to 1000+ autoclave sterilization cycles.",
+    summary: "Passivated black chromium oxide laser marking on 316L medical stainless steel trays resistant to 1000+ autoclave sterilization cycles. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -407,7 +407,7 @@ export const BATCH_4 = [
     readTime: "15 min",
     materials: ["Dual-Layer Black/White Translucent Cast Acrylic (3mm)", "Deionized Water"],
     tools: ["CO2 Laser (50W-80W)", "LightBurn Software", "Digital Caliper"],
-    summary: "Dual-layer acrylic engraving and cutout for illuminated aircraft and automotive control instrument panels.",
+    summary: "Dual-layer acrylic engraving and cutout for illuminated aircraft and automotive control instrument panels. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_glow,
     steps: [
       {
@@ -440,7 +440,7 @@ export const BATCH_4 = [
     readTime: "10 min",
     materials: ["4.0mm C-Flute Corrugated Cardboard Sheets"],
     tools: ["CO2 Laser (60W-100W)", "LightBurn Box Generator", "Bone Folder"],
-    summary: "Cutting custom corrugated shipping cartons with laser perforated fold creases and tab locks.",
+    summary: "Cutting custom corrugated shipping cartons with laser perforated fold creases and tab locks. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -460,7 +460,7 @@ export const BATCH_4 = [
       "Direct high-pressure air assist into cut kerf to extinguish internal flute embers.",
       "Clear loose cardboard scrap dropouts from laser bed."
     ],
-    safety: "Cardboard can burn if unattended. Keep fire extinguisher nearby."
+    safety: "Cardboard can engrave if unattended. Keep fire extinguisher nearby."
   },
 
   // 90
@@ -473,7 +473,7 @@ export const BATCH_4 = [
     readTime: "18 min",
     materials: ["Pure Copper Heat Pipes / CPU Heatsink Fins (C11000)"],
     tools: ["50W/100W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3"],
-    summary: "High-peak power galvo laser engraving on pure copper CPU heat sinks and heat pipes.",
+    summary: "High-peak power galvo laser engraving on pure copper CPU heat sinks and heat pipes. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -506,7 +506,7 @@ export const BATCH_4 = [
     readTime: "9 min",
     materials: ["Laserable Dual-Color Leatherette Sheets (PU / PVC-Free)", "Elastic Band"],
     tools: ["Diode Laser 10W-20W or CO2 Laser 40W", "LightBurn Software"],
-    summary: "Production workflow for batch manufacturing dual-tone synthetic leather notebook covers and custom bookmarks.",
+    summary: "Production workflow for batch manufacturing dual-tone synthetic leather notebook covers and custom bookmarks. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.leather_engrave,
     steps: [
       {
@@ -539,7 +539,7 @@ export const BATCH_4 = [
     readTime: "14 min",
     materials: ["9.5mm High-Impact Polycarbonate (Lexan) Sheets"],
     tools: ["355nm UV Laser or 30W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3"],
-    summary: "Sub-surface dark carbonization marking inside bullet-resistant polycarbonate sheets without yellow edge scorching.",
+    summary: "Sub-surface dark carbonization marking inside bullet-resistant polycarbonate sheets without yellow edge scorching. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
@@ -572,7 +572,7 @@ export const BATCH_4 = [
     readTime: "13 min",
     materials: ["1.0mm Limewood / Basswood Veneer Sheets"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W)", "LightBurn Software", "Digital Caliper"],
-    summary: "Micro-vector scoring simulated deck planking line art and cutting 1.0mm limewood deck overlays for scale model ships.",
+    summary: "Micro-vector scoring simulated deck planking line art and cutting 1.0mm limewood deck overlays for scale model ships. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_letter,
     steps: [
       {
@@ -605,7 +605,7 @@ export const BATCH_4 = [
     readTime: "12 min",
     materials: ["Black Anodized Aluminum Industrial Rating Plates (0.8mm)"],
     tools: ["Fiber Galvo Laser (20W-30W)", "LightBurn Galvo / EZCAD3", "Keyence Barcode Verifier"],
-    summary: "High-speed laser marking of serial numbers, electrical ratings, and 2D DataMatrix QR codes on anodized aluminum equipment VIN tags.",
+    summary: "High-speed laser marking of serial numbers, electrical ratings, and 2D DataMatrix QR codes on anodized aluminum equipment VIN tags. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -638,7 +638,7 @@ export const BATCH_4 = [
     readTime: "17 min",
     materials: ["Grade 9 Titanium (Ti-3Al-2.5V) Bicycle Tubing"],
     tools: ["30W/50W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3", "Acetone Degreaser"],
-    summary: "Non-ablative black oxidation laser annealing on titanium bicycle frame tubes resistant to weathering and fatigue.",
+    summary: "Non-ablative black oxidation laser annealing on titanium bicycle frame tubes resistant to weathering and fatigue. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -671,7 +671,7 @@ export const BATCH_4 = [
     readTime: "11 min",
     materials: ["1.5mm High-Purity Translucent Medical Silicone Sheet"],
     tools: ["CO2 Laser (50W-80W)", "High-Pressure Air Assist (35 PSI)", "Digital Caliper"],
-    summary: "Precision vector cutting of chemical-resistant medical silicone gaskets for peristaltic laboratory pumps.",
+    summary: "Precision vector cutting of chemical-resistant medical silicone gaskets for peristaltic laboratory pumps. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.silicone_band,
     steps: [
       {
@@ -704,12 +704,12 @@ export const BATCH_4 = [
     readTime: "10 min",
     materials: ["Matte Black ABS Plastic Project Enclosures"],
     tools: ["20W/30W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3"],
-    summary: "High-contrast snow-white foaming laser text and port labels on black ABS plastic project boxes.",
+    summary: "High-contrast snow-white foaming laser text and port labels on black ABS plastic project boxes. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
         title: "ABS Polymer Foaming Reaction Mechanics",
-        detail: "MOPA fiber laser short pulses (4ns-8ns) at high frequency (300-400 kHz) melt ABS surface gently, expanding microscopic gas bubbles ('foaming') that reflect light into bright snow-white text without burning or charring."
+        detail: "MOPA fiber laser short pulses (4ns-8ns) at high frequency (300-400 kHz) melt ABS surface gently, expanding microscopic gas bubbles ('foaming') that reflect light into bright snow-white text without engraving or charring."
       },
       {
         title: "Laser Parameters (30W MOPA Fiber - Black ABS Box)",
@@ -737,7 +737,7 @@ export const BATCH_4 = [
     readTime: "9 min",
     materials: ["1.0mm Clear Cell-Cast Acrylic Sheet"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W)", "LightBurn Software"],
-    summary: "Micro-vector cutting of architectural drafting stencil symbol templates in thin 1.0mm clear cast acrylic.",
+    summary: "Micro-vector cutting of architectural drafting stencil symbol templates in thin 1.0mm clear cast acrylic. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
@@ -770,7 +770,7 @@ export const BATCH_4 = [
     readTime: "8 min",
     materials: ["304 Food-Grade Stainless Steel Reusable Straws"],
     tools: ["Fiber Galvo Laser (20W-30W)", "Rotary Fixture", "LightBurn Galvo"],
-    summary: "Rotary fiber galvo laser annealing of custom name logos on food-grade stainless steel drinking straws.",
+    summary: "Rotary fiber galvo laser annealing of custom name logos on food-grade stainless steel drinking straws. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -803,7 +803,7 @@ export const BATCH_4 = [
     readTime: "16 min",
     materials: ["4mm Grade-A Birch Plywood (5-ply)", "UV Printed Photo Substrate", "Puzzle Clear Sealant"],
     tools: ["CO2 Laser (50W-80W)", "LightBurn Jigsaw Puzzle Generator", "LightBurn Software"],
-    summary: "Generating 500-piece interlocking wooden jigsaw puzzles with micro-kerf vector cutlines and zero image tearing.",
+    summary: "Generating 500-piece interlocking wooden jigsaw puzzles with micro-kerf vector cutlines and zero image tearing. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_action,
     steps: [
       {

@@ -8,6 +8,7 @@ import { LanguageSelector } from "@/components/LanguageSelector";
 const NAV_BASE = [
   { to: "/reviews", key: "nav.reviews", defaultLabel: "Reviews", icon: Cpu },
   { to: "/tutorials", key: "nav.tutorials", defaultLabel: "Tutorials", icon: BookOpen },
+  { to: "/cnc-tutorials", key: "nav.cnc", defaultLabel: "Genmitsu CNC", icon: BookOpen },
   { to: "/materials", key: "nav.materials", defaultLabel: "Materials", icon: Layers },
   { to: "/gallery", key: "nav.gallery", defaultLabel: "Gallery", icon: Image },
   { to: "/videos", key: "nav.videos", defaultLabel: "Videos", icon: Youtube },

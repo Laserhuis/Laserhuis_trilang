@@ -399,6 +399,98 @@
             "detail": "Schrob het gesneden hout onder stromend water met een messingborstel langs de houtvezels om losse koolstofresten te verwijderen. Droog grondig gedurende 24 uur en wrijf daarna in met 3 lagen zuivere Tungolie."
           }
         ]
+      },
+      "surfacing-a-cnc-spoilboard": {
+        "id": "surfacing-a-cnc-spoilboard",
+        "title": "Hoe je een Genmitsu MDF-offerplaat vlakt en egaliseert",
+        "summary": "Leer hoe je een perfect vlakke en planaire MDF-offerplaat voorbereidt op je Genmitsu CNC-frees, essentieel voor een consistente diepte bij kwetsbare graveerprojecten.",
+        "steps": [
+          {
+            "title": "Zet de MDF-plaat vast",
+            "detail": "Bevestig je MDF-plaat stevig op het aluminium bed met behulp van verzonken schroeven of krachtige dubbelzijdige houtbewerkingstape."
+          },
+          {
+            "title": "Genereer het gereedschapspad voor het vlakken",
+            "detail": "Stel in Candle of je CAM-software (bijv. Candle, Easel of Carbide Create) een raster- of pocket-gereedschapspad in dat iets groter is dan je werkgebied, met behulp van een vlakfrees."
+          },
+          {
+            "title": "Stel de voedingssnelheid en het toerental in",
+            "detail": "Configureer een geringe snijdiepte (0,2 mm tot 0,5 mm per gang), een spindelsnelheid van 10.000 RPM en een voedingssnelheid van 1000-1200 mm/min."
+          },
+          {
+            "title": "Nul de Z-as en voer uit",
+            "detail": "Stel de Z-as op nul op het laagste punt van de plaat, schakel je stofafzuiging in en voer de G-code uit om een vlak referentieoppervlak te creëren."
+          }
+        ]
+      },
+      "understanding-feeds-and-speeds": {
+        "id": "understanding-feeds-and-speeds",
+        "title": "Voedingssnelheden, toerentallen en spaanbelasting beheersen voor Genmitsu CNC's",
+        "summary": "Beheers de basisbeginselen van voedingssnelheden, spindeltoerentallen en spaanbelastingsberekeningen om de levensduur van je gereedschap te optimaliseren en freesbreuk op desktop CNC-frezen te voorkomen.",
+        "steps": [
+          {
+            "title": "Begrijp de formule voor spaanbelasting",
+            "detail": "Bereken de spaanbelasting met de formule: Spaanbelasting = Voedingssnelheid / (RPM x Aantal snijkanten). Streef naar 0,001 tot 0,003 inch voor kleine desktopfrezen."
+          },
+          {
+            "title": "Bepaal de basisinstellingen voor hout",
+            "detail": "Voor zachthout met een 1/8 inch tweesnijder frees, begin je bij 10.000 RPM, een voedingssnelheid van 800 mm/min en een snijdiepte (DOC) van 1,5 mm."
+          },
+          {
+            "title": "Voer een testfreesgang uit",
+            "detail": "Frees testsleuven in afvalhout terwijl je luistert naar de toonhoogte van de spindel en controleert op schroeiplekken of overmatige trillingen."
+          },
+          {
+            "title": "Pas aan op basis van de spaanstructuur",
+            "detail": "Inspecteer de freesresten: vervang fijn stof door duidelijke houtspaanstructuren door de voedingssnelheid te verhogen of het spindeltoerental te verlagen."
+          }
+        ]
+      },
+      "cnc-bit-selection-guide": {
+        "id": "cnc-bit-selection-guide",
+        "title": "Handleiding voor beginners over CNC-frezen en schachtfrezen",
+        "summary": "Leer hoe je de juiste freesgeometrie kiest—upcut, downcut, compressie, O-flute of V-bit—voor strakke resultaten in hout, kunststof en zachte metalen.",
+        "steps": [
+          {
+            "title": "Herken het verschil tussen upcut- en downcut-spiraalfrezen",
+            "detail": "Gebruik upcut-frezen voor diepe sleuven en spaanafvoer; gebruik downcut-frezen voor schone bovenoppervlakken zonder splinteren bij multiplex."
+          },
+          {
+            "title": "Kies frezen voor kunststoffen",
+            "detail": "Kies een-snijdige 'O-flute'-frezen bij het frezen van acrylaat om te voorkomen dat spaanresten hersmelten en er gesmolten randen ontstaan."
+          },
+          {
+            "title": "Kies frezen voor details en V-carving",
+            "detail": "Gebruik 60° of 90° V-groeffrezen voor fijne tekstbelettering en naamborden, en bolkopfrezen voor gladde 3D-contourreliëfs."
+          },
+          {
+            "title": "Stem de schachtdiameter af op de spantang",
+            "detail": "Zorg ervoor dat je Genmitsu ER11- of ER20-spantang exact overeenkomt met de schachtmaat van de frees (1/8 inch of 4 mm) om slingering te voorkomen."
+          }
+        ]
+      },
+      "workpiece-holding-methods": {
+        "id": "workpiece-holding-methods",
+        "title": "Essentiële opspantechnieken voor werkstukken op de CNC",
+        "summary": "Ontdek belangrijke opspantechnieken—waaronder klemmen, schilderstape met CA-lijm en een laag raster van schilderstape—voor een verschuivingsvrije fixatie.",
+        "steps": [
+          {
+            "title": "Gebruik mechanische T-track klemmen",
+            "detail": "Plaats klemmen op de vier hoeken van het ruwe hout en zorg ervoor dat de gereedschapspaden minstens 10 mm afstand houden van de klemmen."
+          },
+          {
+            "title": "Pas de schilderstape- & CA-lijmmethode toe",
+            "detail": "Breng blauwe schilderstape aan op zowel de offerplaat als de onderkant van het werkstuk. Breng medium CA-lijm aan op de ene tape-strook en spuit activator op de andere."
+          },
+          {
+            "title": "Druk het werkstuk aan en laat het hechten",
+            "detail": "Druk het materiaal gedurende 15 seconden stevig aan om een starre, dunne verbinding te vormen, ideaal voor het uitfrezen van platte profielen zonder externe klemmen."
+          },
+          {
+            "title": "Controleer de stevigheid van de bevestiging",
+            "detail": "Probeer het werkstuk handmatig te verdraaien. Als je enige beweging voelt, breng de bevestiging dan volledig opnieuw aan."
+          }
+        ]
       }
     }
   },
@@ -708,6 +800,1037 @@
           {
             "title": "Tests de corrosion et vérification de passivation",
             "detail": "[fr] Immerse marked part in 5% Salt Spray (NaCl) for 24 hours. Properly annealed Cr2O3 layers exhibit 0% rust or surface pitting."
+          }
+        ]
+      },
+      "surfacing-a-cnc-spoilboard": {
+        "id": "surfacing-a-cnc-spoilboard",
+        "title": "Comment aplanir et surfacer un plateau martyr en MDF Genmitsu",
+        "summary": "Apprenez à préparer une surface de plateau martyr en MDF parfaitement plate et plane sur votre fraiseuse CNC Genmitsu, essentiel pour une profondeur constante lors de projets de gravure délicats.",
+        "steps": [
+          {
+            "title": "Fixer la plaque de MDF",
+            "detail": "Fixez fermement votre plaque de MDF au lit en aluminium à l'aide de vis à tête fraisée ou de ruban adhésif double face puissant pour le travail du bois."
+          },
+          {
+            "title": "Générer le parcours d'outil de surfaçage",
+            "detail": "Dans Candle ou votre logiciel de FAO (ex. Candle, Easel ou Carbide Create), configurez un parcours d'outil de balayage ou d'évidement légèrement plus grand que votre zone de travail à l'aide d'une fraise à surfacer."
+          },
+          {
+            "title": "Régler les avances et vitesses",
+            "detail": "Configurez une faible profondeur de passe (0,2 mm à 0,5 mm par passe), une vitesse de broche à 10 000 tr/min et une vitesse d'avance de 1000 à 1200 mm/min."
+          },
+          {
+            "title": "Faire le zéro de l'axe Z et exécuter",
+            "detail": "Faites le zéro de l'axe Z sur le point le plus bas du plateau, allumez votre aspirateur et exécutez le G-code pour créer une surface de référence plane."
+          }
+        ]
+      },
+      "understanding-feeds-and-speeds": {
+        "id": "understanding-feeds-and-speeds",
+        "title": "Maîtriser les avances, vitesses et la charge par dent pour les CNC Genmitsu",
+        "summary": "Maîtrisez les fondamentaux des vitesses d'avance, des tr/min de la broche et des calculs de charge par dent pour optimiser la durée de vie des outils et éviter la casse des fraises sur les fraiseuses CNC de bureau.",
+        "steps": [
+          {
+            "title": "Comprendre la formule de la charge par dent",
+            "detail": "Calculez la charge par dent à l'aide de la formule : Charge par dent = Vitesse d'avance / (Tr/min x Nombre de dents). Visez 0,001 à 0,003 pouce pour les petites fraiseuses de bureau."
+          },
+          {
+            "title": "Établir des réglages de base pour le bois",
+            "detail": "Pour les bois tendres avec une fraise 2 dents de 1/8 pouce, commencez à 10 000 tr/min, une vitesse d'avance de 800 mm/min et une profondeur de passe (DOC) de 1,5 mm."
+          },
+          {
+            "title": "Effectuer une coupe d'essai",
+            "detail": "Réalisez des rainures de test sur des chutes de bois tout en écoutant la tonalité de la broche et en vérifiant l'absence de traces de brûlure ou de broutement excessif."
+          },
+          {
+            "title": "Ajuster en fonction des copeaux",
+            "detail": "Inspectez les débris de coupe : remplacez la poussière fine par des copeaux de bois distincts en augmentant la vitesse d'avance ou en réduisant les tr/min de la broche."
+          }
+        ]
+      },
+      "cnc-bit-selection-guide": {
+        "id": "cnc-bit-selection-guide",
+        "title": "Guide du débutant pour les fraises et mèches de CNC",
+        "summary": "Apprenez à choisir la bonne géométrie de fraise (hélice à gauche/downcut, hélice à droite/upcut, compression, mono-dent/O-flute ou fraise en V) pour des résultats propres sur le bois, le plastique et les métaux tendres.",
+        "steps": [
+          {
+            "title": "Identifier les hélices à droite (upcut) et à gauche (downcut)",
+            "detail": "Utilisez des fraises 'upcut' (hélice à droite) pour le rainurage profond et l'évacuation des copeaux ; utilisez des fraises 'downcut' (hélice à gauche) pour des surfaces supérieures propres sans éclats sur le contreplaqué."
+          },
+          {
+            "title": "Sélectionner des fraises pour le plastique",
+            "detail": "Choisissez des fraises monodents 'O-flute' lors de la découpe d'acrylique pour éviter le ressoupage des copeaux et l'accumulation de matière fondue sur les bords."
+          },
+          {
+            "title": "Sélectionner des fraises pour les détails et la gravure en V",
+            "detail": "Utilisez des fraises en V à 60° ou 90° pour le lettrage fin et la fabrication d'enseignes, et des fraises hémisphériques (ball nose) pour les reliefs 3D lisses."
+          },
+          {
+            "title": "Faire correspondre le diamètre de la queue à la pince de serrage",
+            "detail": "Assurez-vous que votre pince ER11 ou ER20 Genmitsu correspond exactement à la taille de la queue de la fraise (1/8 pouce ou 4 mm) pour éviter le faux-rond."
+          }
+        ]
+      },
+      "workpiece-holding-methods": {
+        "id": "workpiece-holding-methods",
+        "title": "Techniques essentielles de maintien de la pièce pour CNC",
+        "summary": "Découvrez les stratégies clés de maintien des pièces — notamment les brides de serrage, le ruban de masquage avec colle cyanoacrylate (CA), et les grilles de ruban adhésif — pour une stabilité sans aucun décalage.",
+        "steps": [
+          {
+            "title": "Utiliser des brides de serrage mécaniques pour rails en T",
+            "detail": "Positionnez des brides de serrage aux quatre coins de la pièce en bois brut, en vous assurant que les parcours d'outil conservent au moins 10 mm de dégagement par rapport aux corps des brides."
+          },
+          {
+            "title": "Appliquer la méthode du ruban de masquage et de la colle CA",
+            "detail": "Appliquez du ruban de masquage bleu sur le plateau martyr et sur la surface inférieure de la pièce. Appliquez de la colle CA moyenne sur l'une des bandes de ruban et pulvérisez de l'activateur sur l'autre."
+          },
+          {
+            "title": "Presser et coller la pièce",
+            "detail": "Pressez fermement la pièce pendant 15 secondes pour former une liaison rigide et fine, idéale pour les opérations de découpe de profilés plats sans brides externes."
+          },
+          {
+            "title": "Vérifier la solidité de la fixation",
+            "detail": "Essayez de faire pivoter la pièce manuellement. Si vous sentez un mouvement, réappliquez complètement le mécanisme de fixation."
+          }
+        ]
+      }
+    }
+  },
+  "es": {
+    "reviews": {
+      "rev-011": {
+        "id": "rev-011",
+        "summary": "El Kintix de Genmitsu es un láser galvo híbrido revolucionario: dispara un diodo azul de 455 nm a través de espejos galvo de alta velocidad montados sobre un eje motorizado, alcanzando velocidades de marcado de hasta 90 000 mm/min. Es nuestra elección principal para pequeños talleres y creadores que necesitan seguridad de Clase 1, enfoque automático motorizado y un marcado detallado ultrarrápido sobre madera, cuero, acero inoxidable, pizarra y cerámica.",
+        "pros": [
+          "Velocidad galvo deslumbrante: hasta 90 000 mm/min para un marcado en lote ultrarrápido",
+          "Carcasa de Clase 1 totalmente cerrada y segura para la vista con extractor de humo integrado",
+          "Elevación motorizada eléctrica del eje Z para un enfoque automático sin esfuerzo en piezas de altura variable",
+          "Integración nativa con LightBurn y la aplicación CutLab a través de Wi-Fi, Ethernet o USB-C",
+          "Detalle nítido de 0,01 mm en madera, cuero, metal revestido, acero inoxidable y piedra"
+        ],
+        "cons": [
+          "El campo de marcado de 200 x 100 mm es adecuado para piezas pequeñas o medianas, no para letreros grandes",
+          "La fuente de diodo azul de 455 nm no puede atravesar acrílico transparente o vidrio transparente sin un recubrimiento",
+          "La velocidad de corte en madera dura gruesa de más de 6 mm es limitada en comparación con el CO2 de alta potencia"
+        ],
+        "hardwareSpecs": {
+          "frame": "Estructura anodizada totalmente cerrada de Clase 1 con escudo de filtro rojo",
+          "motionSystem": "Espejos galvo en el eje Y con pórtico X de motor de pasos de alto par",
+          "focusSystem": "Enfoque motorizado en el eje Z de elevación eléctrica con encuadre de doble punto rojo",
+          "safetyRating": "Seguridad láser de Clase 1, sensor de enclavamiento de la tapa, detectores de inclinación y llama"
+        },
+        "benchmarks": {
+          "maxSpeed": "90 000 mm/min (1500 mm/s galvo)",
+          "woodEngrave": "100 % de potencia a 45 000 mm/min (1 pasada)",
+          "stainlessSteelMark": "100 % de potencia a 12 000 mm/min (2 pasadas, óxido oscuro)",
+          "plywoodCut3mm": "100 % de potencia a 400 mm/min (3 pasadas con asistencia de aire)",
+          "acrylicCut3mm": "Corte de acrílico opaco oscuro a 300 mm/min (4 pasadas)"
+        }
+      },
+      "rev-012": {
+        "id": "rev-012",
+        "summary": "El Kintix de 5W ofrece la misma velocidad híbrida galvo, enfoque motorizado y carcasa de seguridad de Clase 1 que su hermano de 10W a un precio más accesible. Es ideal para joyeros, aficionados y personalizadores que trabajan con piezas pequeñas de metal, cuero y madera.",
+        "pros": [
+          "El mismo motor de movimiento galvo ultrarrápido de 90 000 mm/min que el modelo de 10W",
+          "Punto óptico fino de 0,01 mm para microtexto, códigos de barras e ilustraciones gráficas detalladas",
+          "La carcasa de seguridad cerrada de Clase 1 lo hace ideal para estudios en casa y ferias de artesanía",
+          "Un punto de precio sustancialmente más bajo para acceder al flujo de trabajo del láser galvo"
+        ],
+        "cons": [
+          "La salida óptica de 5W es más lenta al grabar maderas duras oscuras o cuero grueso",
+          "No se recomienda para corte vectorial de materiales de más de 2 mm de grosor",
+          "El campo de 200 x 100 mm requiere reposicionar las piezas largas"
+        ],
+        "hardwareSpecs": {
+          "frame": "Estructura anodizada totalmente cerrada de Clase 1",
+          "motionSystem": "Espejos galvo + pórtico Y",
+          "focusSystem": "Enfoque de elevación eléctrica en el eje Z",
+          "safetyRating": "Seguridad láser de Clase 1 con enclavamiento"
+        },
+        "benchmarks": {
+          "maxSpeed": "90 000 mm/min",
+          "woodEngrave": "100 % de potencia a 30 000 mm/min",
+          "stainlessSteelMark": "100 % de potencia a 8000 mm/min (3 pasadas)",
+          "plywoodCut3mm": "100 % de potencia a 200 mm/min (5 pasadas)"
+        }
+      },
+      "rev-001": {
+        "id": "rev-001",
+        "summary": "El xTool D1 Pro 20W es un grabador de diodo de escritorio de referencia. Su cabezal láser de cuádruple diodo y su sólida estructura de ruedas de acero ofrecen cortes limpios en 1 pasada sobre contrachapado de 3 mm y un control confiable con LightBurn para talleres de creadores serios.",
+        "pros": [
+          "La estructura del marco excepcionalmente rígida minimiza la oscilación del vector a alta velocidad",
+          "La compresión de cuádruple diodo ofrece cortes limpios en 1 pasada en contrachapado de 3 mm a 6 mm",
+          "Compatibilidad total con LightBurn junto con el software XCS fácil de usar para principiantes",
+          "Rico ecosistema de accesorios que incluye accesorio rotatorio, patas elevadoras y kits de extensión"
+        ],
+        "cons": [
+          "La estructura abierta de Clase 4 requiere la compra de una carcasa opcional para la contención del humo",
+          "La bomba de asistencia de aire se vende por separado en la configuración base",
+          "No puede cortar acrílico transparente o blanco debido a la longitud de onda del diodo de 455 nm"
+        ],
+        "hardwareSpecs": {
+          "frame": "Ruedas totalmente de acero y estructura de extrusión de aluminio",
+          "motionSystem": "Correas sincrónicas de acero con rodillos de acero inoxidable",
+          "focusSystem": "Palanca focal desplegable manual",
+          "safetyRating": "Estructura abierta de Clase 4 (carcasa opcional)"
+        },
+        "benchmarks": {
+          "maxSpeed": "24 000 mm/min (400 mm/s)",
+          "woodEngrave": "35 % de potencia a 12 000 mm/min",
+          "plywoodCut3mm": "100 % de potencia a 360 mm/min (1 pasada)",
+          "acrylicCut3mm": "100 % de potencia a 180 mm/min (1 pasada, acrílico negro/oscuro)"
+        }
+      },
+      "rev-002": {
+        "id": "rev-002",
+        "summary": "El S30 Ultra 33W de Sculpfun combina un riel lineal X industrial, asistencia de aire automática controlada por LightBurn y una enorme base de 600x600 mm. Es una auténtica herramienta de trabajo para cortar letreros grandes, piezas de muebles y contrachapado grueso.",
+        "pros": [
+          "Enorme área de trabajo predeterminada de 600 x 600 mm lista para usar sin kits de extensión",
+          "Bomba de asistencia de aire automática controlada por software incluida en la caja",
+          "La salida óptica de 33W corta pino de hasta 10 mm en una sola pasada",
+          "Incluye una lente de vidrio protectora reemplazable para evitar daños por humo"
+        ],
+        "cons": [
+          "La estructura abierta ocupa un espacio enorme en el banco de trabajo (aprox. 900x850 mm)",
+          "El diodo de alta potencia genera un humo denso que exige un extractor de conducto externo",
+          "El montaje tarda de 45 a 60 minutos al desembalar"
+        ],
+        "hardwareSpecs": {
+          "frame": "Riel de guía lineal de alta precisión en el eje X",
+          "motionSystem": "Riel lineal de grado industrial + correas de distribución pesadas",
+          "focusSystem": "Módulo de lente protectora reemplazable con bloque de enfoque fijo",
+          "safetyRating": "Estructura abierta de Clase 4"
+        },
+        "benchmarks": {
+          "maxSpeed": "18 000 mm/min",
+          "woodEngrave": "25 % de potencia a 10 000 mm/min",
+          "plywoodCut6mm": "100 % de potencia a 200 mm/min (1 pasada con asistencia de aire automática)",
+          "pineWoodCut10mm": "100 % de potencia a 100 mm/min (1 pasada)"
+        }
+      }
+    },
+    "materials": {},
+    "tutorials": {
+      "wood-coasters-stucki": {
+        "id": "wood-coasters-stucki",
+        "title": "Dominando el fotograbado en madera contrachapada de abedul con tramado Stucki",
+        "summary": "Metodología óptica y química exhaustiva para convertir retratos fotográficos familiares de alto rango dinámico en fotograbados ultranítidos y sin halos sobre madera de abedul sin carbonizar los detalles finos. Esta técnica se utiliza ampliamente en entornos profesionales para crear productos personalizados de alta calidad, como señalización personalizada, regalos a medida y soluciones de marcado industrial.",
+        "steps": [
+          {
+            "title": "Preprocesamiento fotométrico y corrección de gamma",
+            "detail": "Importe la imagen TIFF/PNG sin compresión de 16 bits en LightBurn. Aplique una máscara de contraste de enfoque de 0,5. Ajuste la gamma del punto medio a 0,85 en Ajustar imagen de LightBurn para comprimir los tonos de sombra y potenciar los microdetalles de medios tonos en el iris de los ojos y los poros de la piel."
+          },
+          {
+            "title": "Selección de la matriz de tramado (Por qué Stucki)",
+            "detail": "Seleccione el tramado de difusión de error 'Stucki' en Ajustes de capa. A diferencia de Floyd-Steinberg o Atkinson, que generan patrones de puntos direccionales a más de 300 DPI, Stucki utiliza un núcleo de propagación de errores de 48 coeficientes sobre una matriz de 5x5 píxeles, produciendo gradientes tonales suaves a 45° y evitando la aglomeración de puntos en el grano de la madera de abedul."
+          },
+          {
+            "title": "Ajuste del tamaño del punto y cálculo del intervalo de línea",
+            "detail": "Calcule el intervalo de línea utilizando el diámetro del punto láser d0 = 0,08 mm. Ajuste el intervalo de línea a 0,08 mm (exactamente 317,5 DPI). Hacer coincidir el intervalo de línea con el ancho del punto focal elimina el doble grabado por superposición de líneas, garantizando una cobertura de superficie del 100% sin franjas de madera bruta."
+          },
+          {
+            "title": "Preparación de la superficie del sustrato y enmascaramiento",
+            "detail": "Lije la superficie de abedul con papel de lija de grano 320 a lo largo de la veta de la madera para eliminar el brillo del prensado. Aplique cinta de enmascarar de papel 3M 2090 con una espátula de plástico en un ángulo de 45° para purgar las burbujas de aire, capturando la savia de resina de madera vaporizada en el aire."
+          },
+          {
+            "title": "Ejecución de parámetros láser en diferentes plataformas",
+            "detail": "Ejecute el diodo de 20 W y 455 nm a 4500 mm/min con un 28% de potencia; CO2 de 50 W (10.600 nm) a 350 mm/s con un 12% de potencia; fibra de 30 W (1064 nm) - N/A (1064 nm atraviesa la madera sin absorción térmica)."
+          },
+          {
+            "title": "Limpieza química y preservación del polímero",
+            "detail": "Despegue la cinta de enmascarar, limpie la superficie con alcohol isopropílico (IPA) al 99% en microfibra sin pelusa para disolver la resina residual y selle con 5 mL de aceite mineral apto para alimentos. Deje curar a temperatura ambiente durante 40 minutos a 20 °C."
+          }
+        ]
+      },
+      "slate-coasters-laser": {
+        "id": "slate-coasters-laser",
+        "title": "Grabado láser de posavasos de pizarra natural galesa con matriz de semitonos",
+        "summary": "Método técnico para crear arte lineal vectorial y retratos fotográficos permanentes en blanco brillante de alto contraste sobre pizarra negra metamórfica natural. Esta técnica se utiliza ampliamente en entornos profesionales para crear productos personalizados de alta calidad, como señalización personalizada, regalos a medida y soluciones de marcado industrial.",
+        "steps": [
+          {
+            "title": "Limpieza del sustrato metamórfico",
+            "detail": "Desengrase la superficie de la baldosa de pizarra con alcohol isopropílico al 99% y un cepillo de nailon para extraer el polvo de cantera atrapado y los aceites de la piel de los poros microscópicos de la superficie."
+          },
+          {
+            "title": "Inversión de imagen y dinámica de tramado",
+            "detail": "Invierta el arte en LightBurn (ACTIVE 'Imagen negativa'). Debido a que el láser microfractura la pizarra oscura convirtiéndola en cuarzo/mica cristalina de color blanco brillante, los píxeles brillantes requieren pulsos láser mientras que las zonas de sombra permanecen en negro intacto."
+          },
+          {
+            "title": "Ejecución de hardware en diferentes tipos de láser",
+            "detail": "Diodo (455 nm 20 W): 3000 mm/min con un 42% de potencia, 254 DPI (intervalo de línea de 0,10 mm). CO2 (10.600 nm 60 W): 280 mm/s con un 16% de potencia, 254 DPI. Fibra (1064 nm 30 W): 1500 mm/s con un 35% de potencia, frecuencia de 200 kHz, tramado de línea de 0,05 mm."
+          },
+          {
+            "title": "Extracción de polvo térmico posterior al grabado y sellado",
+            "detail": "Aspire el polvo suelto de microsílice. Aplique una capa pulverizada de 2 g de aceite mineral o poliuretano satinado para intensificar el negro del fondo conservando el realce del blanco brillante del láser."
+          }
+        ]
+      },
+      "acrylic-edge-lit-sign": {
+        "id": "acrylic-edge-lit-sign",
+        "title": "Creación de letreros LED de escritorio de acrílico retroiluminados mediante marcado vectorial subsuperficial",
+        "summary": "Flujo de trabajo industrial para el grabado ráster por la parte posterior y corte vectorial de bordes de placas de acrílico de colada para pantallas de iluminación LED de borde. Esta técnica se utiliza ampliamente en entornos profesionales para crear productos personalizados de alta calidad, como señalización personalizada, regalos a medida y soluciones de marcado industrial.",
+        "steps": [
+          {
+            "title": "Selección del polímero: PMMA de colada vs. de extrusión",
+            "detail": "DEBE utilizar PMMA de colada (Cell-Cast). El acrílico extruido se derrite en hebras pegajosas y produce cortes transparentes al grabarse. El acrílico de colada se sublima directamente de sólido a gas, dejando un acabado microesmerilado blanco nieve que refracta la luz LED."
+          },
+          {
+            "title": "Espejo horizontal y grabado inverso",
+            "detail": "Refleje el diseño horizontalmente en LightBurn. Grabe en la parte POSTERIOR de la lámina para que la cara frontal lisa se mantenga impecable y fácil de limpiar."
+          },
+          {
+            "title": "Parámetros de grabado ráster (CO2 60 W)",
+            "detail": "350 mm/s con un 14% de potencia, intervalo de línea de 0,05 mm (508 DPI), asistencia de aire DESACTIVADA (o ultrabaja a 3 PSI) para evitar ondulaciones de aire frío en la superficie del acrílico fundido."
+          },
+          {
+            "title": "Corte vectorial preciso de pestañas y cálculo de sangría (kerf)",
+            "detail": "Mida el ancho de la ranura de la base LED (p. ej., 4,15 mm). Aplique una compensación de sangría (kerf) de +0,12 mm al corte vectorial de la pestaña de la base a 12 mm/s con un 68% de potencia y asistencia de aire a alta presión (25 PSI)."
+          },
+          {
+            "title": "Mitigación de grietas por tensión (¡Sin alcohol!)",
+            "detail": "NUNCA limpie el acrílico cortado con láser con alcohol isopropílico. La tensión interna térmica provoca un agrietamiento instantáneo (microfracturas). Limpie exclusivamente con agua desionizada y un 1% de jabón suave para platos."
+          }
+        ]
+      },
+      "fiber-stainless-annealing": {
+        "id": "fiber-stainless-annealing",
+        "title": "Recocido de pasivado con óxido de cromo negro en acero inoxidable",
+        "summary": "Proceso metalúrgico para generar capas superficiales de óxido negro azabache permanente no ablativo (Cr2O3/Fe3O4) en acero inoxidable sin eliminación de material. Esta técnica se utiliza ampliamente en entornos profesionales para crear productos personalizados de alta calidad, como señalización personalizada, regalos a medida y soluciones de marcado industrial.",
+        "steps": [
+          {
+            "title": "Desengrase químico y eliminación de óxido superficial",
+            "detail": "Limpie el acero inoxidable con acetona pura usando un paño sin pelusa para eliminar los lípidos orgánicos de los dedos que bloquean la transferencia uniforme de calor."
+          },
+          {
+            "title": "Precisión del enfoque óptico del galvanómetro",
+            "detail": "Alinee los dos puntos focales rojos en el plano focal exacto (tolerancia de +/- 0,05 mm). Una varianza focal de 100 um altera la densidad de energía en un 35%."
+          },
+          {
+            "title": "Calibración de parámetros de oxidación térmica (MOPA 50 W)",
+            "detail": "Velocidad = 220 mm/s, Potencia = 45%, Frecuencia = 35 kHz, Ancho de pulso = 200 ns, Tramado de línea = 0,012 mm (Tramado cruzado activado a 45° y 135°). Desenfoque verticalmente +0,3 mm para aumentar la huella del punto del haz y acumular energía térmica sin ablación."
+          },
+          {
+            "title": "Prueba de corrosión y verificación de pasivado",
+            "detail": "Sumerja la pieza marcada en una niebla salina al 5% (NaCl) durante 24 horas. Las capas de Cr2O3 adecuadamente recocidas muestran un 0% de óxido o picaduras en la superficie."
+          }
+        ]
+      },
+      "surfacing-a-cnc-spoilboard": {
+        "id": "surfacing-a-cnc-spoilboard",
+        "title": "Cómo aplanar y planear una tabla de sacrificio MDF de Genmitsu",
+        "summary": "Aprenda a preparar una superficie de tabla de sacrificio de MDF perfectamente plana y nivelada en su fresadora CNC Genmitsu, esencial para lograr una profundidad constante en proyectos de grabado delicados.",
+        "steps": [
+          {
+            "title": "Fije la lámina de MDF",
+            "detail": "Fije firmemente la lámina de MDF a la base de aluminio utilizando tornillos avellanados o cinta para madera de doble cara de alta resistencia."
+          },
+          {
+            "title": "Genere la trayectoria de la herramienta para el planeado",
+            "detail": "En Candle o en su software CAM (p. ej., Candle, Easel o Carbide Create), configure una trayectoria de barrido (ráster) o cajera ligeramente más grande que su área de trabajo utilizando una fresa para aplanar."
+          },
+          {
+            "title": "Configure los avances y velocidades",
+            "detail": "Configure una profundidad de corte poco profunda (de 0,2 mm a 0,5 mm por pasada), una velocidad del husillo de 10.000 RPM y una velocidad de avance de 1000-1200 mm/min."
+          },
+          {
+            "title": "Ajuste a cero el eje Z y ejecute",
+            "detail": "Establezca el cero del eje Z en el punto más bajo de la tabla, encienda el colector de polvo y ejecute el código G para crear una superficie de referencia plana."
+          }
+        ]
+      },
+      "understanding-feeds-and-speeds": {
+        "id": "understanding-feeds-and-speeds",
+        "title": "Dominio de avances, velocidades y carga de viruta para CNC Genmitsu",
+        "summary": "Domine los fundamentos de las velocidades de avance, las RPM del husillo y los cálculos de carga de viruta para optimizar la vida útil de la herramienta y evitar la rotura de la fresa en fresadoras CNC de escritorio.",
+        "steps": [
+          {
+            "title": "Comprenda la fórmula de carga de viruta",
+            "detail": "Calcule la carga de viruta utilizando la fórmula: Carga de viruta = Velocidad de avance / (RPM x Número de filos). Busque un objetivo de 0,001 a 0,003 pulgadas para fresadoras pequeñas de escritorio."
+          },
+          {
+            "title": "Establezca la configuración base para madera",
+            "detail": "Para maderas blandas utilizando una fresa de 2 filos de 1/8 de pulgada, comience a 10.000 RPM, velocidad de avance de 800 mm/min y profundidad de corte (DOC) de 1,5 mm."
+          },
+          {
+            "title": "Realice un corte de prueba de avance",
+            "detail": "Realice ranuras de prueba en madera de desecho mientras escucha el tono del husillo y comprueba si hay marcas de quemado o vibraciones excesivas."
+          },
+          {
+            "title": "Ajuste según la viruta",
+            "detail": "Inspeccione los residuos del corte: reemplace el polvo fino por virutas de madera definidas aumentando la velocidad de avance o disminuyendo las RPM del husillo."
+          }
+        ]
+      },
+      "cnc-bit-selection-guide": {
+        "id": "cnc-bit-selection-guide",
+        "title": "Guía para principiantes sobre brocas y fresas para ruteadoras CNC",
+        "summary": "Aprenda a elegir la geometría de fresa adecuada (corte ascendente, corte descendente, compresión, ranura O o fresa en V) para obtener resultados limpios en madera, plástico y metales blandos.",
+        "steps": [
+          {
+            "title": "Identifique los filos de corte ascendente frente a corte descendente",
+            "detail": "Utilice fresas de corte ascendente para ranurado profundo y evacuación de virutas; utilice fresas de corte descendente para obtener superficies superiores limpias sin astillar la madera contrachapada."
+          },
+          {
+            "title": "Seleccione fresas para plásticos",
+            "detail": "Elija fresas de un solo filo 'ranura O' al cortar acrílico para evitar la resoldadura de virutas y la acumulación de bordes derretidos."
+          },
+          {
+            "title": "Seleccione fresas para detalles y grabado en V",
+            "detail": "Utilice fresas en V de 60° o 90° para letras de texto fino y fabricación de letreros, y fresas de punta esférica para relieves contorneados en 3D suaves."
+          },
+          {
+            "title": "Haga coincidir el diámetro del mango con la pinza (collet)",
+            "detail": "Asegúrese de que su pinza ER11 o ER20 Genmitsu coincida exactamente con el tamaño del mango de la fresa (1/8 de pulgada o 4 mm) para evitar excentricidades (runout)."
+          }
+        ]
+      },
+      "workpiece-holding-methods": {
+        "id": "workpiece-holding-methods",
+        "title": "Técnicas esenciales de sujeción de piezas de trabajo para CNC",
+        "summary": "Explore estrategias clave de sujeción de piezas (incluidas abrazaderas de sujeción, cinta de pintor con pegamento CA y cuadrículas de cinta de pintor de bajo perfil) para una estabilidad sin desplazamientos.",
+        "steps": [
+          {
+            "title": "Utilice abrazaderas mecánicas para riel en T (T-Track)",
+            "detail": "Coloque abrazaderas escalonadas en las cuatro esquinas del bloque de madera en bruto, asegurándose de que las trayectorias de la herramienta tengan al menos 10 mm de separación de los cuerpos de las abrazaderas."
+          },
+          {
+            "title": "Aplique el método de cinta de pintor y pegamento CA",
+            "detail": "Aplique cinta azul de pintor tanto en la tabla de sacrificio como en la superficie inferior de la pieza de trabajo. Aplique pegamento CA mediano sobre una tira de cinta y rocíe activador en la otra."
+          },
+          {
+            "title": "Presione y adquiera la pieza de trabajo",
+            "detail": "Presione firmemente el material hacia abajo durante 15 segundos para formar una unión rígida y delgada, ideal para operaciones de corte de perfil plano sin abrazaderas externas."
+          },
+          {
+            "title": "Verifique la seguridad de la sujeción",
+            "detail": "Intente girar la pieza de trabajo manualmente. Si siente algún movimiento, vuelva a aplicar el mecanismo de sujeción por completo."
+          }
+        ]
+      }
+    }
+  },
+  "it": {
+    "reviews": {
+      "rev-011": {
+        "id": "rev-011",
+        "summary": "Il Kintix di Genmitsu è un rivoluzionario laser galvo ibrido: emette un diodo blu da 455 nm attraverso specchi galvo ad alta velocità montati su un asse motorizzato, raggiungendo velocità di marcatura fino a 90.000 mm/min. È la nostra scelta migliore per piccoli laboratori e creatori che necessitano di sicurezza di Classe 1, messa a fuoco automatica motorizzata e marcatura dettagliata ultra-rapida su legno, pelle, acciaio inossidabile, ardesia e ceramica.",
+        "pros": [
+          "Velocità galvo eccezionale: fino a 90.000 mm/min per marcature in serie ultra-rapide",
+          "Involucro di sicurezza Classe 1 completamente chiuso per la protezione degli occhi, con ventola di estrazione fumi integrata",
+          "Sollevamento elettrico motorizzato dell'asse Z per una messa a fuoco automatica senza sforzo su pezzi di altezza variabile",
+          "Integrazione nativa con LightBurn e CutLab App tramite Wi-Fi, Ethernet o USB-C",
+          "Dettagli definiti da 0,01 mm su legno, pelle, metallo rivestito, acciaio inossidabile e pietra"
+        ],
+        "cons": [
+          "Il campo di marcatura di 200 x 100 mm è adatto per parti di dimensioni piccole e medie, non per insegne grandi",
+          "La sorgente a diodo blu da 455 nm non può attraversare l'acrilico trasparente o il vetro trasparente senza un rivestimento",
+          "La velocità di taglio su legno duro spesso 6 mm o più è limitata rispetto ai laser CO2 ad alta potenza"
+        ],
+        "hardwareSpecs": {
+          "frame": "Telaio anodizzato completamente chiuso di Classe 1 con schermo di protezione rosso",
+          "motionSystem": "Specchi galvo sull'asse Y con ponte X a motore passo-passo ad alta coppia",
+          "focusSystem": "Messa a fuoco motorizzata su asse Z ad alzata elettrica con inquadratura a doppio punto rosso",
+          "safetyRating": "Sicurezza laser di Classe 1, sensore di blocco sul coperchio, rilevatori di inclinazione e fiamma"
+        },
+        "benchmarks": {
+          "maxSpeed": "90.000 mm/min (1.500 mm/s galvo)",
+          "woodEngrave": "100% potenza @ 45.000 mm/min (1 passaggio)",
+          "stainlessSteelMark": "100% potenza @ 12.000 mm/min (2 passaggi, ossido scuro)",
+          "plywoodCut3mm": "100% potenza @ 400 mm/min (3 passaggi con Air Assist)",
+          "acrylicCut3mm": "Taglio acrilico scuro opaco @ 300 mm/min (4 passaggi)"
+        }
+      },
+      "rev-012": {
+        "id": "rev-012",
+        "summary": "Il Kintix da 5W offre la stessa velocità galvo ibrida, messa a fuoco motorizzata e involucro di sicurezza di Classe 1 del modello da 10W a un prezzo più accessibile. È ideale per gioiellieri, hobbisti e personalizzatori che lavorano su piccoli pezzi in metallo, pelle e legno.",
+        "pros": [
+          "Stesso motore di movimento galvo ultra-rapido da 90.000 mm/min del modello da 10W",
+          "Punto ottico di precisione da 0,01 mm per micro-testi, codici a barre e grafica dettagliata",
+          "L'involucro protettivo di Classe 1 lo rende ideale per studi casalinghi e fiere dell'artigianato",
+          "Prezzo decisamente più contenuto per accedere al flusso di lavoro dei laser galvo"
+        ],
+        "cons": [
+          "L'uscita ottica da 5W è più lenta durante l'incisione di legni duri scuri o pelle spessa",
+          "Non consigliato per il taglio vettoriale di materiali di spessore superiore a 2 mm",
+          "Il campo da 200 x 100 mm richiede il riposizionamento per gli oggetti lunghi"
+        ],
+        "hardwareSpecs": {
+          "frame": "Telaio anodizzato completamente chiuso di Classe 1",
+          "motionSystem": "Specchi galvo + ponte Y",
+          "focusSystem": "Messa a fuoco su asse Z ad alzata elettrica",
+          "safetyRating": "Sicurezza laser di Classe 1 con interblocco"
+        },
+        "benchmarks": {
+          "maxSpeed": "90.000 mm/min",
+          "woodEngrave": "100% potenza @ 30.000 mm/min",
+          "stainlessSteelMark": "100% potenza @ 8.000 mm/min (3 passaggi)",
+          "plywoodCut3mm": "100% potenza @ 200 mm/min (5 passaggi)"
+        }
+      },
+      "rev-001": {
+        "id": "rev-001",
+        "summary": "L'xTool D1 Pro 20W è un incisore a diodo desktop di riferimento. La sua testa laser a quattro diodi e il solido telaio con ruote in acciaio garantiscono un taglio pulito in un unico passaggio su compensato da 3 mm e un controllo affidabile tramite LightBurn per i laboratori maker più esigenti.",
+        "pros": [
+          "La struttura del telaio eccezionalmente rigida riduce al minimo l'oscillazione dei vettori ad alta velocità",
+          "La compressione a quattro diodi garantisce tagli puliti in un solo passaggio su compensato da 3 mm a 6 mm",
+          "Piena compatibilità con LightBurn insieme al software XCS, ideale anche per principianti",
+          "Ricco ecosistema di accessori che include modulo rotante, piedini di rialzo e kit di estensione"
+        ],
+        "cons": [
+          "Il telaio aperto di Classe 4 richiede l'acquisto di una struttura protettiva opzionale per il contenimento dei fumi",
+          "La pompa Air Assist è venduta separatamente nella configurazione base",
+          "Non può tagliare acrilico trasparente o bianco a causa della lunghezza d'onda del diodo di 455 nm"
+        ],
+        "hardwareSpecs": {
+          "frame": "Telaio in estruso di alluminio e ruote interamente in acciaio",
+          "motionSystem": "Cinghie sincrone in acciaio con rulli in acciaio inossidabile",
+          "focusSystem": "Leva di messa a fuoco manuale a discesa",
+          "safetyRating": "Telaio aperto di Classe 4 (Involucro opzionale)"
+        },
+        "benchmarks": {
+          "maxSpeed": "24.000 mm/min (400 mm/s)",
+          "woodEngrave": "35% potenza @ 12.000 mm/min",
+          "plywoodCut3mm": "100% potenza @ 360 mm/min (1 passaggio)",
+          "acrylicCut3mm": "100% potenza @ 180 mm/min (1 passaggio, acrilico nero/scuro)"
+        }
+      },
+      "rev-002": {
+        "id": "rev-002",
+        "summary": "L'S30 Ultra 33W di Sculpfun combina una guida lineare industriale sull'asse X, un sistema air assist automatico controllato da LightBurn e un'ampia area di lavoro da 600x600 mm. È una macchina instancabile per il taglio di grandi insegne, componenti di mobili e compensato spesso.",
+        "pros": [
+          "Enorme area di lavoro standard da 600 x 600 mm pronta all'uso senza kit di estensione",
+          "Pompa air assist automatica controllata via software inclusa nella confezione",
+          "La potenza ottica da 33W taglia il pino fino a 10 mm in un singolo passaggio",
+          "Include una lente protettiva in vetro sostituibile per prevenire danni da fumo"
+        ],
+        "cons": [
+          "Il telaio aperto occupa un'ampia superficie sul banco da lavoro (circa 900x850 mm)",
+          "Il diodo ad alta potenza genera un denso fumo che richiede un aspiratore esterno con condotto",
+          "L'assemblaggio richiede 45-60 minuti dopo l'apertura della scatola"
+        ],
+        "hardwareSpecs": {
+          "frame": "Guida lineare ad alta precisione sull'asse X",
+          "motionSystem": "Guida lineare di grado industriale + cinghie dentate ad alta resistenza",
+          "focusSystem": "Modulo lente protettiva sostituibile con blocco a fuoco fisso",
+          "safetyRating": "Telaio aperto di Classe 4"
+        },
+        "benchmarks": {
+          "maxSpeed": "18.000 mm/min",
+          "woodEngrave": "25% potenza @ 10.000 mm/min",
+          "plywoodCut6mm": "100% potenza @ 200 mm/min (1 passaggio con Auto Air Assist)",
+          "pineWoodCut10mm": "100% potenza @ 100 mm/min (1 passaggio)"
+        }
+      }
+    },
+    "materials": {},
+    "tutorials": {
+      "wood-coasters-stucki": {
+        "id": "wood-coasters-stucki",
+        "title": "Padroneggiare l'Incisione Fotografica su Compensato di Betulla con Dithering Stucki",
+        "summary": "Metodologia ottica e chimica completa per convertire ritratti fotografici di famiglia ad alta gamma dinamica in incisioni fotografiche ultra-nitide e prive di alone su legno di betulla senza carbonizzare i dettagli fini. Questa tecnica è ampiamente utilizzata in ambito professionale per creare prodotti personalizzati di alta qualità, come insegne personalizzate, regali su misura e soluzioni di marcatura industriale.",
+        "steps": [
+          {
+            "title": "Pre-elaborazione Fotometrica e Correzione Gamma",
+            "detail": "Importa un'immagine TIFF/PNG a 16 bit non compressa in LightBurn. Applica una maschera di contrasto Nitidezza (Sharpen) di 0,5. Regola il gamma del punto medio a 0,85 in Regola Immagine di LightBurn per comprimere i toni d'ombra e amplificare i micro-dettagli dei mezzitoni nell'iride degli occhi e nei pori della pelle."
+          },
+          {
+            "title": "Selezione della Matrice di Dithering (Perché Stucki)",
+            "detail": "Seleziona il dithering a diffusione d'errore 'Stucki' nelle Impostazioni del Livello. A differenza di Floyd-Steinberg o Atkinson che generano trame di punti direzionali a 300+ DPI, Stucki utilizza un kernel di propagazione dell'errore a 48 coefficienti su una matrice di 5x5 pixel, producendo sfumature tonali fluide a 45° ed evitando il raggruppamento dei punti nelle venature del legno di betulla."
+          },
+          {
+            "title": "Corrispondenza della Dimensione dello Spot e Calcolo dell'Intervallo di Linea",
+            "detail": "Calcola l'intervallo di linea utilizzando il diametro dello spot laser d0 = 0,08 mm. Imposta l'Intervallo di Linea su 0,08 mm (esattamente 317,5 DPI). La corrispondenza tra l'intervallo di linea e la larghezza dello spot focale elimina la doppia incisione da sovrapposizione delle linee, garantendo al contempo una copertura della superficie del 100% senza strisce di legno grezzo."
+          },
+          {
+            "title": "Preparazione della Superficie del Substrato e Mascheratura",
+            "detail": "Carteggia la superficie in betulla con carta vetrata grana 320 lungo la venatura del legno per rimuovere la patina di pressatura. Applica il nastro carta di mascheratura 3M 2090 con una spatola di plastica a un angolo di 45° per eliminare le bolle d'aria, catturando la resina di legno vaporizzata nell'aria."
+          },
+          {
+            "title": "Esecuzione dei Parametri Laser su Diverse Piattaforme",
+            "detail": "Esegui con Diodo da 20W 455nm a 4500 mm/min al 28% di potenza; CO2 da 50W (10.600nm) a 350 mm/s al 12% di potenza; Fibra da 30W (1064nm) - N/D (1064nm passa attraverso il legno senza assorbimento termico)."
+          },
+          {
+            "title": "Pulizia Chimica e Conservazione del Polimero",
+            "detail": "Rimuovi il nastro di mascheratura, pulisci la superficie con alcol isopropilico (IPA) al 99% su un panno in microfibra senza sfilacciature per dissolvere la resina residua e sigilla con 5 mL di olio minerale per uso alimentare. Lascia essiccare a temperatura ambiente per 40 minuti a 20 °C."
+          }
+        ]
+      },
+      "slate-coasters-laser": {
+        "id": "slate-coasters-laser",
+        "title": "Incisione Laser di Sottobicchieri in Ardesia Naturale Gallese con Matrice Retinata",
+        "summary": "Metodo ingegnerizzato per creare grafica vettoriale a linee e ritratti fotografici permanenti bianco brillante ad alto contrasto su ardesia nera metamorfica naturale. Questa tecnica è ampiamente utilizzata in ambito professionale per creare prodotti personalizzati di alta qualità, come insegne personalizzate, regali su misura e soluzioni di marcatura industriale.",
+        "steps": [
+          {
+            "title": "Pulizia del Substrato Metamorfico",
+            "detail": "Sgrassa la superficie della piastrella in ardesia utilizzando alcol isopropilico al 99% e una spazzola di nylon per estrarre la polvere di cava e gli oli cutanei intrappolati dai pori microscopici della superficie."
+          },
+          {
+            "title": "Inversione dell'Immagine e Dinamica del Dithering",
+            "detail": "Inverti la grafica in LightBurn (Attiva 'Immagine Negativa'). Poiché il laser micro-frattura l'ardesia scura in quarzo/mica cristallino bianco brillante, i pixel chiari richiedono impulsi laser mentre le aree d'ombra rimangono nere inalterate."
+          },
+          {
+            "title": "Esecuzione Hardware su Vari Tipi di Laser",
+            "detail": "Diodo (455nm 20W): 3000 mm/min al 42% di potenza, 254 DPI (intervallo di linea 0,10 mm). CO2 (10.600nm 60W): 280 mm/s al 16% di potenza, 254 DPI. Fibra (1064nm 30W): 1500 mm/s al 35% di potenza, frequenza 200 kHz, tratteggio linea 0,05 mm."
+          },
+          {
+            "title": "Estrazione della Polvere Termica Post-Incisione e Sigillatura",
+            "detail": "Aspirare i residui di micro-polvere di silice. Applicare uno strato spray da 2g di olio minerale o poliuretano satinato per intensificare il nero dello sfondo mantenendo la brillantezza del bianco inciso al laser."
+          }
+        ]
+      },
+      "acrylic-edge-lit-sign": {
+        "id": "acrylic-edge-lit-sign",
+        "title": "Creazione di Insegne LED da Tavolo in Acrilico Retroilluminate tramite Tracciatura Vettoriale Sotto-Superficiale",
+        "summary": "Workflow industriale per l'incisione raster sul lato posteriore e il taglio vettoriale dei bordi di lastre in acrilico colato per display di illuminazione a LED perimetrale. Questa tecnica è ampiamente utilizzata in ambito professionale per creare prodotti personalizzati di alta qualità, come insegne personalizzate, regali su misura e soluzioni di marcatura industriale.",
+        "steps": [
+          {
+            "title": "Selezione del Polimero: PMMA Colato vs Estruso",
+            "detail": "È FONDAMENTALE utilizzare PMMA colato (Cell-Cast). L'acrilico estruso si fonde in filamenti appiccicosi e produce tagli trasparenti quando inciso. L'acrilico colato sublima direttamente da solido a gas, lasciando una finitura micro-satinata bianco neve che rifrange la luce LED."
+          },
+          {
+            "title": "Specchiatura Orizzontale e Incisione Inversa",
+            "detail": "Rifletti il design orizzontalmente in LightBurn. Incidi sul lato POSTERIORE della lastra affinché la superficie anteriore liscia rimanga intatta e facile da pulire."
+          },
+          {
+            "title": "Parametri Incisione Raster (CO2 60W)",
+            "detail": "350 mm/s al 14% di potenza, Intervallo di Linea 0,05 mm (508 DPI), Assistenza Aria DISATTIVATA (o bassissima a 3 PSI) per prevenire increspature da aria fredda sulla superficie acrilica fusa."
+          },
+          {
+            "title": "Taglio Vettoriale di Precisione per Alette e Calcolo del Kerf",
+            "detail": "Misura la larghezza della fessura della base LED (es. 4,15 mm). Applica un Offset Kerf di +0,12 mm al taglio vettoriale dell'aletta della base a 12 mm/s al 68% di potenza con assistenza aria ad alta pressione (25 PSI)."
+          },
+          {
+            "title": "Mitigazione delle Cricche da Tensione (Niente Alcol!)",
+            "detail": "MAI pulire l'acrilico tagliato al laser con alcol isopropilico. Lo stress termico interno causa una micro-fessurazione istantanea (crazing). Pulire esclusivamente con acqua deionizzata e 1% di sapone delicato per piatti."
+          }
+        ]
+      },
+      "fiber-stainless-annealing": {
+        "id": "fiber-stainless-annealing",
+        "title": "Ricottura di Passivazione in Ossido di Cromo Nero su Acciaio Inossidabile",
+        "summary": "Processo metallurgico per generare strati superficiali di ossido non ablativo nero intenso e permanente (Cr2O3/Fe3O4) su acciaio inossidabile senza asportazione di materiale. Questa tecnica è ampiamente utilizzata in ambito professionale per creare prodotti personalizzati di alta qualità, come insegne personalizzate, regali su misura e soluzioni di marcatura industriale.",
+        "steps": [
+          {
+            "title": "Sgrassaggio Chimico e Rimozione dell'Ossido Superficiale",
+            "detail": "Pulisci l'acciaio inossidabile con acetone puro utilizzando un panno senza sfilacciature per eliminare i lipidi organici delle dita che bloccano il trasferimento uniforme del calore."
+          },
+          {
+            "title": "Precisione del Fuoco Ottico Galvo",
+            "detail": "Allinea i doppi punti rossi di messa a fuoco all'esatto piano focale (tolleranza +/- 0,05 mm). Una variazione focale di 100 µm altera la densità di energia del 35%."
+          },
+          {
+            "title": "Calibrazione dei Parametri di Ossidazione Termica (50W MOPA)",
+            "detail": "Velocità = 220 mm/s, Potenza = 45%, Frequenza = 35 kHz, Durata Impulso = 200ns, Tratteggio Linea = 0,012 mm (Tratteggio Incrociato Attivato a 45° e 135°). Metti fuori fuoco verticalmente di +0,3 mm per aumentare l'impronta dello spot del raggio e accumulare energia termica senza ablazione."
+          },
+          {
+            "title": "Test di Corrosione e Verifica della Passivazione",
+            "detail": "Immergere la parte marcata in nebbia salina al 5% (NaCl) per 24 ore. Gli strati di Cr2O3 opportunamente ricotti mostrano lo 0% di ruggine o vaiolatura superficiale."
+          }
+        ]
+      },
+      "surfacing-a-cnc-spoilboard": {
+        "id": "surfacing-a-cnc-spoilboard",
+        "title": "Come Appianare e Spianare un Piano Martire in MDF Genmitsu",
+        "summary": "Scopri come preparare una superficie del piano martire in MDF perfettamente piana e complanare sul tuo router CNC Genmitsu, essenziale per una profondità uniforme nei progetti di incisione delicati.",
+        "steps": [
+          {
+            "title": "Fissare il Pannello in MDF",
+            "detail": "Fissa saldamente il pannello MDF al piano in alluminio utilizzando viti a testa svasata o nastro biadesivo ad alta tenuta per falegnameria."
+          },
+          {
+            "title": "Generare il Percorso Utensile di Spianatura",
+            "detail": "In Candle o nel tuo software CAM (ad es. Candle, Easel o Carbide Create), imposta un percorso utensile raster o svuotamento (pocket) leggermente più grande dell'area di lavoro utilizzando una fresa da spianatura."
+          },
+          {
+            "title": "Impostare Avanzamenti e Velocità",
+            "detail": "Configura una profondità di taglio ridotta (da 0,2 mm a 0,5 mm per passata), velocità del mandrino a 10.000 RPM e velocità di avanzamento a 1000-1200 mm/min."
+          },
+          {
+            "title": "Azzerare l'Asse Z ed Eseguire",
+            "detail": "Azzera l'asse Z nel punto più basso del pannello, accendi l'aspiratore per le polveri ed esegui il G-code per creare una superficie di riferimento planare."
+          }
+        ]
+      },
+      "understanding-feeds-and-speeds": {
+        "id": "understanding-feeds-and-speeds",
+        "title": "Padroneggiare Avanzamenti, Velocità e Carico Truciolo per CNC Genmitsu",
+        "summary": "Padroneggia i concetti fondamentali di velocità di avanzamento, RPM del mandrino e calcolo del carico truciolo per ottimizzare la durata dell'utensile e prevenire la rottura delle frese sui router CNC da banco.",
+        "steps": [
+          {
+            "title": "Comprendere la Formula del Carico Truciolo",
+            "detail": "Calcola il carico truciolo utilizzando la formula: Carico Truciolo = Velocità di Avanzamento / (RPM x Numero di Taglienti). Punta a un valore compreso tra 0,001 e 0,003 pollici per piccole frese da banco."
+          },
+          {
+            "title": "Stabilire i Parametri di Base per il Legno",
+            "detail": "Per il legno tenero utilizzando una fresa a 2 taglienti da 1/8 di pollice, inizia con 10.000 RPM, velocità di avanzamento di 800 mm/min e profondità di taglio (DOC) di 1,5 mm."
+          },
+          {
+            "title": "Eseguire un Taglio di Prova",
+            "detail": "Esegui scanalature di prova su scarti di legno ascoltando il suono del mandrino e controllando che non ci siano bruciature sul legno o vibrazioni eccessive."
+          },
+          {
+            "title": "Regolare in Base ai Trucioli",
+            "detail": "Ispeziona i residui di taglio: sostituisci la polvere fine con trucioli di legno ben definiti aumentando la velocità di avanzamento o diminuendo i RPM del mandrino."
+          }
+        ]
+      },
+      "cnc-bit-selection-guide": {
+        "id": "cnc-bit-selection-guide",
+        "title": "Guida per Principianti alle Frese per Router CNC",
+        "summary": "Scopri come scegliere la giusta geometria della fresa (a elica elicoidale positiva/upcut, negativa/downcut, a compressione, mono-tagliente O-flute o fresa a V) per ottenere risultati puliti su legno, plastica e metalli teneri.",
+        "steps": [
+          {
+            "title": "Identificare le Frese Upcut vs Downcut",
+            "detail": "Utilizza frese upcut per scanalature profonde e rimozione del truciolo; utilizza frese downcut per superfici superiori pulite senza scheggiature sul compensato."
+          },
+          {
+            "title": "Selezionare le Frese per la Plastica",
+            "detail": "Scegli frese monotagliente 'O-flute' per il taglio dell'acrilico per evitare la risaldatura del truciolo e l'accumulo di bordi fusi."
+          },
+          {
+            "title": "Selezionare Frese per Dettagli e Incisione a V (V-Carving)",
+            "detail": "Utilizza frese a V da 60° o 90° per scritte dettagliate e realizzazione di insegne, e frese emisferiche (ball nose) per rilievi 3D sagomati e uniformi."
+          },
+          {
+            "title": "Adattare il Diametro del Gambo alla Pinza",
+            "detail": "Assicurati che la tua pinza Genmitsu ER11 o ER20 corrisponda esattamente alla dimensione del gambo della fresa (1/8 di pollice o 4 mm) per evitare eccentricità (runout)."
+          }
+        ]
+      },
+      "workpiece-holding-methods": {
+        "id": "workpiece-holding-methods",
+        "title": "Tecniche Essenziali di Fissaggio del Pezzo per CNC",
+        "summary": "Esplora le principali strategie di fissaggio del pezzo, tra cui morsetti di trattenuta, nastro da carrozziere con colla cianocrilica (CA) e griglie di nastro a basso profilo, per una stabilità senza scorrimenti.",
+        "steps": [
+          {
+            "title": "Utilizzare Morsetti Meccanici per Scanalature a T (T-Track)",
+            "detail": "Posiziona i morsetti a staffa sui quattro angoli del pezzo di legno grezzo, assicurandoti che i percorsi utensile abbiano almeno 10 mm di distanza dai corpi dei morsetti."
+          },
+          {
+            "title": "Applicare il Metodo Nastro da Carrozziere e Colla CA",
+            "detail": "Applica il nastro blu da carrozziere sia sul piano martire sia sulla superficie inferiore del pezzo. Applica colla CA a media densità sopra una striscia di nastro e spruzza l'attivatore sull'altra."
+          },
+          {
+            "title": "Premere e Incollare il Pezzo",
+            "detail": "Premi saldamente il pezzo verso il basso per 15 secondi per formare un unione rigida e sottile, ideale per operazioni di contornatura piatta senza morsetti esterni."
+          },
+          {
+            "title": "Verificare la Tenuta del Fissaggio",
+            "detail": "Tenta di ruotare manualmente il pezzo. Se si avverte un qualsiasi movimento, riapplica completamente il meccanismo di fissaggio."
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "reviews": {
+      "rev-011": {
+        "id": "rev-011",
+        "summary": "Der Kintix von Genmitsu ist ein revolutionärer Hybrid-Galvo-Laser: Er feuert eine blaue 455-nm-Diode durch Hochgeschwindigkeits-Galvo-Spiegel, die auf einer motorisierten Achse montiert sind, und erreicht Markiergeschwindigkeiten von bis zu 90.000 mm/min. Er ist unsere Empfehlung für kleine Werkstätten und Creator, die Sicherheit der Klasse 1, motorisierten Autofokus und ultraschnelle, detaillierte Markierungen auf Holz, Leder, Edelstahl, Schiefer und Keramik benötigen.",
+        "pros": [
+          "Rasant hohe Galvo-Geschwindigkeit — bis zu 90.000 mm/min für ultraschnelle Serienmarkierung",
+          "Vollständig geschlossenes, augensicheres Gehäuse der Klasse 1 mit integriertem Rauchabzugslüfter",
+          "Elektrischer Z-Achsen-Motorhub für mühelosen Autofokus bei Bauteilen variabler Höhe",
+          "Native Integration von LightBurn & CutLab App über Wi-Fi, Ethernet oder USB-C",
+          "Gestochen scharfe Detailgenauigkeit von 0,01 mm auf Holz, Leder, beschichtetem Metall, Edelstahl & Stein"
+        ],
+        "cons": [
+          "Das Markierfeld von 200 x 100 mm eignet sich für kleine bis mittlere Bauteile, nicht für große Schilder",
+          "Die blaue 455-nm-Diodenquelle kann klares Acryl oder klares Glas ohne Beschichtung nicht durchdringen",
+          "Die Schneidgeschwindigkeit bei dickem Hartholz ab 6 mm ist im Vergleich zu leistungsstarken CO2-Lasern begrenzt"
+        ],
+        "hardwareSpecs": {
+          "frame": "Vollständig geschlossener, eloxierter Rahmen der Klasse 1 mit rotem Filterschutz",
+          "motionSystem": "Galvo-Spiegel auf der Y-Achse mit X-Portal mit drehmomentstarkem Schrittmotor",
+          "focusSystem": "Elektrisch hebbarer, motorisierter Z-Achsen-Fokus mit Doppel-Rotpunkt-Rahmung",
+          "safetyRating": "Lasersicherheit der Klasse 1, Deckel-Sicherheitssensor, Neigungs- und Flammenmelder"
+        },
+        "benchmarks": {
+          "maxSpeed": "90.000 mm/min (1.500 mm/s Galvo)",
+          "woodEngrave": "100 % Leistung @ 45.000 mm/min (1 Durchgang)",
+          "stainlessSteelMark": "100 % Leistung @ 12.000 mm/min (2 Durchgänge, dunkles Oxid)",
+          "plywoodCut3mm": "100 % Leistung @ 400 mm/min (3 Durchgänge mit Air Assist)",
+          "acrylicCut3mm": "Dunkler, opaker Acrylschnitt @ 300 mm/min (4 Durchgänge)"
+        }
+      },
+      "rev-012": {
+        "id": "rev-012",
+        "summary": "Der 5W Kintix bietet die gleiche Hybrid-Galvo-Geschwindigkeit, den motorisierten Fokus und das geschlossene Schutzgehäuse der Klasse 1 wie sein 10W-Geschwistermodell zu einem erschwinglicheren Preis. Er ist ideal für Juweliere, Hobbyisten und Veredler, die an kleinen Metall-, Leder- und Holzrohlingen arbeiten.",
+        "pros": [
+          "Gleiche ultraschnelle 90.000 mm/min Galvo-Bewegungs-Engine wie beim 10W-Modell",
+          "Feiner optischer Spot von 0,01 mm für Mikrotext, Barcodes und detaillierte Grafiken",
+          "Das geschlossene Schutzgehäuse der Klasse 1 macht ihn ideal für Heimstudios und Kunsthandwerkermärkte",
+          "Erheblich günstigerer Einstiegspreis in den Galvo-Laser-Workflow"
+        ],
+        "cons": [
+          "5W optische Ausgangsleistung ist langsamer beim Gravieren von dunklen Harthölzern oder dickem Leder",
+          "Nicht empfohlen für das Vektorschneiden von Material mit einer Dicke von mehr als 2 mm",
+          "Das Feld von 200 x 100 mm erfordert bei langen Gegenständen ein Neupositionieren"
+        ],
+        "hardwareSpecs": {
+          "frame": "Vollständig geschlossener, eloxierter Rahmen der Klasse 1",
+          "motionSystem": "Galvo-Spiegel + Y-Portal",
+          "focusSystem": "Elektrisch hebbarer Z-Achsen-Fokus",
+          "safetyRating": "Lasersicherheit der Klasse 1 mit Sicherheitsverriegelung"
+        },
+        "benchmarks": {
+          "maxSpeed": "90.000 mm/min",
+          "woodEngrave": "100 % Leistung @ 30.000 mm/min",
+          "stainlessSteelMark": "100 % Leistung @ 8.000 mm/min (3 Durchgänge)",
+          "plywoodCut3mm": "100 % Leistung @ 200 mm/min (5 Durchgänge)"
+        }
+      },
+      "rev-001": {
+        "id": "rev-001",
+        "summary": "Der xTool D1 Pro 20W ist ein Maßstäbe setzender Desktop-Diodengravierer. Sein Vierfach-Dioden-Laserkopf und der solide Rahmen mit Stahlrollen liefern saubere Schnitte in 3 mm Sperrholz in einem einzigen Durchgang sowie eine zuverlässige LightBurn-Steuerung für anspruchsvolle Maker-Werkstätten.",
+        "pros": [
+          "Außergewöhnlich starre Rahmenstruktur minimiert Wackeln bei Vektorbewegungen mit hoher Geschwindigkeit",
+          "Vierfach-Dioden-Kompression sorgt für saubere Schnitte in einem Durchgang bei 3–6 mm Sperrholz",
+          "Volle LightBurn-Kompatibilität neben einsteigerfreundlicher XCS-Software",
+          "Umfangreiches Zubehör-Ökosystem inklusive Drehgravur-Modul, Erhöhungsfüßen und Erweiterungssets"
+        ],
+        "cons": [
+          "Der offene Rahmen der Klasse 4 erfordert den Kauf eines optionalen Gehäuses zur Rauchunterdrückung",
+          "Air-Assist-Pumpe ist in der Basiskonfiguration separat erhältlich",
+          "Kann aufgrund der Diodenwellenlänge von 455 nm kein klares oder weißes Acryl schneiden"
+        ],
+        "hardwareSpecs": {
+          "frame": "Reiner Stahlrollen- und Aluminium-Extrusionsprofil-Rahmen",
+          "motionSystem": "Stahl-Synchronriemen mit Edelstahlrollen",
+          "focusSystem": "Manueller, ausklappbarer Fokushebel",
+          "safetyRating": "Offener Rahmen der Klasse 4 (Gehäuse optional)"
+        },
+        "benchmarks": {
+          "maxSpeed": "24.000 mm/min (400 mm/s)",
+          "woodEngrave": "35 % Leistung @ 12.000 mm/min",
+          "plywoodCut3mm": "100 % Leistung @ 360 mm/min (1 Durchgang)",
+          "acrylicCut3mm": "100 % Leistung @ 180 mm/min (1 Durchgang, schwarzes/dunkles Acryl)"
+        }
+      },
+      "rev-002": {
+        "id": "rev-002",
+        "summary": "Der S30 Ultra 33W von Sculpfun kombiniert eine industrielle lineare X-Schiene, eine automatische, über LightBurn gesteuerte Air Assist und eine massive Arbeitsfläche von 600 x 600 mm. Er ist ein absolutes Arbeitstier für das Schneiden großer Schilder, Möbelteile und dicken Sperrholzes.",
+        "pros": [
+          "Riesige Standard-Arbeitsfläche von 600 x 600 mm direkt aus der Verpackung ohne Erweiterungssets",
+          "Automatische, softwaregesteuerte Air-Assist-Pumpe im Lieferumfang enthalten",
+          "33W optische Ausgangsleistung schneidet bis zu 10 mm Kiefernholz in einem einzigen Durchgang",
+          "Enthält eine austauschbare Schutzglaslinse zur Vermeidung von Rauchschäden"
+        ],
+        "cons": [
+          "Der offene Rahmen nimmt eine massive Stellfläche auf der Werkbank ein (ca. 900 x 850 mm)",
+          "Die hochleistungsfähige Diode erzeugt starken Rauch, der einen externen Abluftventilator erfordert",
+          "Der Aufbau dauert nach dem Auspacken etwa 45–60 Minuten"
+        ],
+        "hardwareSpecs": {
+          "frame": "Hochpräzise Linearführungsschiene auf der X-Achse",
+          "motionSystem": "Industrielle Linearschiene + robuste Zahnriemen",
+          "focusSystem": "Austauschbares Schutzlinsenmodul mit Festfokus-Block",
+          "safetyRating": "Offener Rahmen der Klasse 4"
+        },
+        "benchmarks": {
+          "maxSpeed": "18.000 mm/min",
+          "woodEngrave": "25 % Leistung @ 10.000 mm/min",
+          "plywoodCut6mm": "100 % Leistung @ 200 mm/min (1 Durchgang mit Auto Air Assist)",
+          "pineWoodCut10mm": "100 % Leistung @ 100 mm/min (1 Durchgang)"
+        }
+      }
+    },
+    "materials": {},
+    "tutorials": {
+      "wood-coasters-stucki": {
+        "id": "wood-coasters-stucki",
+        "title": "Mastering Photo Engraving on Birch Plywood with Stucki Dithering",
+        "summary": "Umfassende optische und chemische Methodik zur Umwandlung von Familienfotoporträts mit hohem Dynamikumfang in ultra-scharfe, fotorealistische Gravuren auf Birkenholz ohne Rußbildung an feinen Details. Diese Technik wird in professionellen Umgebungen häufig verwendet, um hochwertige, maßgeschneiderte Produkte wie personalisierte Beschilderungen, individuelle Geschenke und industrielle Markierungslösungen herzustellen.",
+        "steps": [
+          {
+            "title": "Fotometrische Vorverarbeitung & Gammakorrektur",
+            "detail": "16-Bit unkomprimiertes TIFF/PNG-Bild in LightBurn importieren. 0,5 Unscharf-maskieren-Filter anwenden. Mittelton-Gamma in den LightBurn-Bildeinstellungen auf 0,85 anpassen, um Schattenwerte zu komprimieren und Mikrodetails in den Mitteltönen von Iris und Hautporen zu verstärken."
+          },
+          {
+            "title": "Auswahl der Dithering-Matrix (Warum Stucki)",
+            "detail": "Wählen Sie unter den Ebeneneinstellungen das Fehlerdiffusions-Dithering 'Stucki' aus. Im Gegensatz zu Floyd-Steinberg oder Atkinson, die bei 300+ DPI gerichtete Punktmuster erzeugen, verwendet Stucki einen Fehlerfortpflanzungskernel mit 48 Koeffizienten über eine 5x5-Pixelmatrix, was glatte 45°-Tonwertverläufe erzeugt und das Clustern von Punkten in der Birkenholzmaserung verhindert."
+          },
+          {
+            "title": "Anpassung der Punktgröße & Zeilenintervall-Berechnung",
+            "detail": "Berechnen Sie das Zeilenintervall mit dem Laserpunktdurchmesser d0 = 0,08 mm. Stellen Sie das Zeilenintervall auf 0,08 mm (exakt 317,5 DPI) ein. Die Anpassung des Zeilenintervalls an die Fokuspunktbreite eliminiert Doppelgravuren durch Zeilenüberlappung und garantiert eine 100%ige Oberflächenabdeckung ohne Streifen aus rohem Holz."
+          },
+          {
+            "title": "Oberflächenvorbereitung des Substrats & Maskierung",
+            "detail": "Schleifen Sie die Birkenoberfläche mit 320er Schleifpapier entlang der Holzmaserung, um den Werksglanz zu entfernen. Bringen Sie 3M 2090 Papiermaskierband mit einem Kunststoffrakel im 45°-Winkel an, um Luftblasen zu entfernen und aufsteigenden verdampften Harzschmutz abzufangen."
+          },
+          {
+            "title": "Ausführung der Laserparameter auf verschiedenen Plattformen",
+            "detail": "Betreiben Sie eine 20W 455nm Diode bei 4500 mm/min @ 28% Leistung; 50W CO2 (10.600nm) bei 350 mm/s @ 12% Leistung; 30W Faser (1064nm) - N/A (1064nm dringt ohne thermische Absorption durch Holz)."
+          },
+          {
+            "title": "Chemische Reinigung & Polymerkonservierung",
+            "detail": "Ziehen Sie das Klebeband ab, wischen Sie die Oberfläche mit 99%igem Isopropylalkohol (IPA) auf einem fusselfreien Mikrofasertuch ab, um Harzrückstände zu lösen, und versiegeln Sie sie mit 5 ml lebensmittelechtem Mineralöl. 40 Minuten Aushärtung bei 20 °C Raumtemperatur zulassen."
+          }
+        ]
+      },
+      "slate-coasters-laser": {
+        "id": "slate-coasters-laser",
+        "title": "Lasergravur auf natürlichen walisischen Schieferuntersetzern mit Rastermatrix",
+        "summary": "Ausgeklügelte Methode zur Erstellung von kontrastreichen, strahlend weißen, dauerhaften Vektor-Line-Art- und Fotoporträts auf natürlichem, schwarzem Metamorphgestein (Schiefer). Diese Technik wird in professionellen Umgebungen häufig verwendet, um hochwertige, maßgeschneiderte Produkte wie personalisierte Beschilderungen, individuelle Geschenke und industrielle Markierungslösungen herzustellen.",
+        "steps": [
+          {
+            "title": "Reinigung des Metamorphgestein-Substrats",
+            "detail": "Entfetten Sie die Schieferoberfläche mit 99%igem Isopropylalkohol und einer Nylonbürste, um eingeschlossenen Steinbruchstaub und Hautöle aus mikroskopisch kleinen Oberflächenporen zu entfernen."
+          },
+          {
+            "title": "Bildinvertierung & Dithering-Dynamik",
+            "detail": "Invertieren Sie das Motiv in LightBurn ('Negativbild' aktivieren). Da der Laser dunklen Schiefer mikroskopisch in strahlend weißen kristallinen Quarz/Glimmer zersplittert, benötigen helle Pixel Laserimpulse, während Schattenbereiche unangetastet schwarz bleiben."
+          },
+          {
+            "title": "Hardware-Ausführung über verschiedene Lasertypen",
+            "detail": "Diode (455nm 20W): 3000 mm/min @ 42% Leistung, 254 DPI (0,10 mm Zeilenintervall). CO2 (10.600nm 60W): 280 mm/s @ 16% Leistung, 254 DPI. Faser (1064nm 30W): 1500 mm/s @ 35% Leistung, 200 kHz Frequenz, 0,05 mm Zeilenabstand."
+          },
+          {
+            "title": "Thermische Staubabsaugung & Versiegelung nach der Gravur",
+            "detail": "Saugen Sie losen Mikrosilika-Staub ab. Tragen Sie eine Sprühschicht von 2 g Mineralöl oder Seidenglanz-Polyurethan auf, um das Hintergrundschwarz zu vertiefen und gleichzeitig das strahlende Laserweiß hervorzuheben."
+          }
+        ]
+      },
+      "acrylic-edge-lit-sign": {
+        "id": "acrylic-edge-lit-sign",
+        "title": "Herstellung von kantenbeleuchteten Acryl-LED-Tischschildern durch Unterflächen-Vektorritzen",
+        "summary": "Industrieller Arbeitsablauf für die rückseitige Rastergravur und den Vektor-Kantenschnitt von gegossenen Acrylplatten für kantenbeleuchtete LED-Displays. Diese Technik wird in professionellen Umgebungen häufig verwendet, um hochwertige, maßgeschneiderte Produkte wie personalisierte Beschilderungen, individuelle Geschenke und industrielle Markierungslösungen herzustellen.",
+        "steps": [
+          {
+            "title": "Polymerauswahl: Gegossenes vs. extrudiertes PMMA",
+            "detail": "Es MUSS gegossenes PMMA verwendet werden. Extrudiertes Acryl schmilzt zu klebrigen Fäden und führt bei Gravuren zu klaren Schnitten. Gegossenes Acryl sublimiert direkt von fest zu gasförmig und hinterlässt eine schneeweiße, mikromattierte Oberfläche, die das LED-Licht bricht."
+          },
+          {
+            "title": "Horizontale Spiegelung & Rückseitengravur",
+            "detail": "Spiegeln Sie das Design in LightBurn horizontal. Gravieren Sie auf der RÜCKSEITE der Platte, damit die glatte Vorderseite makellos bleibt und leicht abgewischt werden kann."
+          },
+          {
+            "title": "Rastergravur-Parameter (CO2 60W)",
+            "detail": "350 mm/s @ 14% Leistung, Zeilenintervall 0,05 mm (508 DPI), Air Assist AUS (oder extrem niedrig auf 3 PSI), um Kaltluftwellen auf der geschmolzenen Acryloberfläche zu verhindern."
+          },
+          {
+            "title": "Präzisions-Vektorschnitt der Lasche & Schnittspaltberechnung",
+            "detail": "Messen Sie die Breite des LED-Sockelschlitzes (z. B. 4,15 mm). Wenden Sie einen Schnittspalt-Offset (Kerf Offset) von +0,12 mm auf den Vektorschnitt der Lasche bei 12 mm/s @ 68% Leistung mit Hochdruck-Air-Assist (25 PSI) an."
+          },
+          {
+            "title": "Vermeidung von Spannungsrissen (Kein Alkohol!)",
+            "detail": "Reinigen Sie lasergeschnittenes Acryl NIEMALS mit Isopropylalkohol. Thermische Eigenspannungen führen zu sofortiger Rissbildung (Mikro-Zersplitterung). Reinigen Sie ausschließlich mit entionisiertem Wasser und 1% mildem Spülmittel."
+          }
+        ]
+      },
+      "fiber-stainless-annealing": {
+        "id": "fiber-stainless-annealing",
+        "title": "Schwarzchromoxid-Passivierungs-Anlassen auf Edelstahl",
+        "summary": "Metallurgisches Verfahren zur Erzeugung permanenter, tiefschwarzer, nicht-ablativer Oxid-Oberflächenschichten (Cr2O3/Fe3O4) auf Edelstahl ohne Materialabtrag. Diese Technik wird in professionellen Umgebungen häufig verwendet, um hochwertige, maßgeschneiderte Produkte wie personalisierte Beschilderungen, individuelle Geschenke und industrielle Markierungslösungen herzustellen.",
+        "steps": [
+          {
+            "title": "Chemische Entfettung & Oberflächenoxid-Entfernung",
+            "detail": "Wischen Sie den Edelstahl mit reinem Aceton und einem fusselfreien Tuch ab, um organische Hautfette zu entfernen, die eine gleichmäßige Wärmeübertragung blockieren."
+          },
+          {
+            "title": "Optische Galvo-Fokuspräzision",
+            "detail": "Richten Sie die beiden roten Fokuspunkte genau auf die Fokusebene aus (+/- 0,05 mm Toleranz). Eine Fokusabweichung von 100 µm verändert die Energiedichte um 35%."
+          },
+          {
+            "title": "Kalibrierung der thermischen Oxidationsparameter (50W MOPA)",
+            "detail": "Geschwindigkeit = 220 mm/s, Leistung = 45%, Frequenz = 35 kHz, Impulsbreite = 200 ns, Zeilenabstand = 0,012 mm (Kreuzschraffur aktiviert bei 45° und 135°). Vertikal um +0,3 mm defokussieren, um die Strahlfleckfläche zu vergrößern und thermische Energie ohne Ablation anzusammeln."
+          },
+          {
+            "title": "Korrosionsprüfung & Passivierungsüberprüfung",
+            "detail": "Tauchen Sie das markierte Teil 24 Stunden lang in 5%igen Salzsprühnebel (NaCl). Ordnungsgemäß angelassene Cr2O3-Schichten zeigen 0% Rost oder Oberflächenfraß."
+          }
+        ]
+      },
+      "surfacing-a-cnc-spoilboard": {
+        "id": "surfacing-a-cnc-spoilboard",
+        "title": "Planfräsen einer Genmitsu MDF-Opferplatte",
+        "summary": "Lernen Sie, wie Sie eine perfekt flache und plane MDF-Opferplattenoberfläche auf Ihrer Genmitsu CNC-Fräse vorbereiten – essenziell für eine gleichmäßige Tiefe bei empfindlichen Gravurprojekten.",
+        "steps": [
+          {
+            "title": "MDF-Platte befestigen",
+            "detail": "Befestigen Sie Ihre MDF-Platte fest mit Senkkopfschrauben oder starkem doppelseitigem Holzbearbeitungsband auf dem Aluminiumbett."
+          },
+          {
+            "title": "Werkzeugpfad zum Planfräsen erstellen",
+            "detail": "Richten Sie in Candle oder Ihrer CAM-Software (z. B. Candle, Easel oder Carbide Create) mit einem Planfräser einen Raster- oder Taschenwerkzeugpfad ein, der etwas größer als Ihr Arbeitsbereich ist."
+          },
+          {
+            "title": "Vorschub und Drehzahl einstellen",
+            "detail": "Konfigurieren Sie eine geringe Schnitttiefe (0,2 mm bis 0,5 mm pro Durchgang), eine Spindeldrehzahl von 10.000 U/min und eine Vorschubgeschwindigkeit von 1000–1200 mm/min."
+          },
+          {
+            "title": "Z-Achse nullen und ausführen",
+            "detail": "Nullen Sie die Z-Achse am niedrigsten Punkt der Platte, schalten Sie Ihre Absauganlage ein und führen Sie den G-Code aus, um eine plane Referenzfläche zu erzeugen."
+          }
+        ]
+      },
+      "understanding-feeds-and-speeds": {
+        "id": "understanding-feeds-and-speeds",
+        "title": "Vorschub, Drehzahl und Spanlast für Genmitsu CNCs meistern",
+        "summary": "Meistern Sie die Grundlagen von Vorschubgeschwindigkeiten, Spindeldrehzahl und Spanlastberechnungen, um die Werkzeugstandzeit zu optimieren und Werkzeugbruch bei Tisch-CNC-Fräsen zu vermeiden.",
+        "steps": [
+          {
+            "title": "Die Spanlast-Formel verstehen",
+            "detail": "Berechnen Sie die Spanlast mit der Formel: Spanlast = Vorschubgeschwindigkeit / (Drehzahl x Anzahl der Schneiden). Zielwert für kleine Tischfräsen ist 0,001 bis 0,003 Zoll."
+          },
+          {
+            "title": "Basiswerte für Holz festlegen",
+            "detail": "Für Weichholz mit einem 1/8-Zoll-Zweischneider beginnen Sie bei 10.000 U/min, 800 mm/min Vorschubgeschwindigkeit und 1,5 mm Schnitttiefe (DOC)."
+          },
+          {
+            "title": "Einen Test-Vorschubschnitt durchführen",
+            "detail": "Führen Sie Testnuten auf Abfallholz aus, während Sie auf das Geräusch der Spindel achten und auf Brandspuren oder übermäßiges Rattern prüfen."
+          },
+          {
+            "title": "Anpassung anhand der Späne",
+            "detail": "Untersuchen Sie die Frässpäne: Ersetzen Sie feinen Staub durch deutliche Holzspäne, indem Sie die Vorschubgeschwindigkeit erhöhen oder die Spindeldrehzahl verringern."
+          }
+        ]
+      },
+      "cnc-bit-selection-guide": {
+        "id": "cnc-bit-selection-guide",
+        "title": "Anfänger-Leitfaden für CNC-Fräser und Schaftfräser",
+        "summary": "Lernen Sie, wie Sie die richtige Werkzeuggeometrie – Upcut, Downcut, Kompression, O-Flute oder V-Bit – für saubere Ergebnisse in Holz, Kunststoff und Weichmetallen auswählen.",
+        "steps": [
+          {
+            "title": "Upcut- vs. Downcut-Schneiden unterscheiden",
+            "detail": "Verwenden Sie Upcut-Fräser für tiefe Nuten und Spanabfuhr; verwenden Sie Downcut-Fräser für saubere Oberflächen ohne Ausfransen bei Sperrholz."
+          },
+          {
+            "title": "Fräser für Kunststoffe auswählen",
+            "detail": "Wählen Sie einschneidige 'O-Flute'-Fräser beim Schneiden von Acryl, um das Wiederverschweißen von Spänen und geschmolzene Kantenaufbauten zu verhindern."
+          },
+          {
+            "title": "Fräser für Details und V-Carving auswählen",
+            "detail": "Verwenden Sie 60°- oder 90°-V-Nutfräser für feine Textbeschriftungen und Schildermachen sowie Kugelkopffräser für glatte 3D-Konturreliefs."
+          },
+          {
+            "title": "Schaftdurchmesser an Spannzange anpassen",
+            "detail": "Stellen Sie sicher, dass Ihre Genmitsu ER11- oder ER20-Spannzange exakt der Schaftgröße des Fräsers entspricht (1/8 Zoll oder 4 mm), um Rundlaufabweichungen zu vermeiden."
+          }
+        ]
+      },
+      "workpiece-holding-methods": {
+        "id": "workpiece-holding-methods",
+        "title": "Wichtige Werkstück-Spanntechniken für CNC",
+        "summary": "Entdecken Sie wichtige Werkstück-Spannstrategien – einschließlich Halteklammern, Malerband mit Sekundenkleber (CA) und flachen Malerband-Gittern – für verschiebungsfreie Stabilität.",
+        "steps": [
+          {
+            "title": "Mechanische T-Nut-Klammern verwenden",
+            "detail": "Positionieren Sie Stufenklammern an den vier Ecken des Rohholzes und stellen Sie sicher, dass die Werkzeugpfade mindestens 10 mm Abstand zu den Klammerkörpern haben."
+          },
+          {
+            "title": "Malerband- & Sekundenkleber-Methode anwenden",
+            "detail": "Bringen Sie blaues Malerband sowohl auf der Opferplatte als auch auf der Unterseite des Werkstücks an. Tragen Sie mittelflüssigen Sekundenkleber (CA-Kleber) auf einen Klebebandstreifen auf und sprühen Sie Aktivator auf den anderen."
+          },
+          {
+            "title": "Werkstück andrücken und verkleben",
+            "detail": "Drücken Sie das Material 15 Sekunden lang fest an, um eine starre, dünne Verbindung zu erzeugen, die sich ideal für flache Konturausschnitte ohne externe Klammern eignet."
+          },
+          {
+            "title": "Haltesicherheit überprüfen",
+            "detail": "Versuchen Sie, das Werkstück manuell zu verdrehen. Wenn eine Bewegung spürbar ist, bringen Sie den Halte-Mechanismus vollständig neu an."
           }
         ]
       }

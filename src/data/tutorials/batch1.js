@@ -1,4 +1,4 @@
-import { IMG } from "../images";
+import { IMG } from "../images.js";
 
 export const BATCH_1 = [
   // 1
@@ -11,7 +11,7 @@ export const BATCH_1 = [
     readTime: "12 min",
     materials: ["3mm Grade-A Baltic Birch Plywood (5-ply)", "Blue Painter's Masking Tape (3M 2090)", "Food-Grade Pure Mineral Oil"],
     tools: ["LightBurn DSP/GRBL Software v1.6+", "320-Grit Silicon Carbide Sandpaper", "Static-Free Microfiber Cloth"],
-    summary: "Comprehensive optical and chemical methodology for converting high-dynamic-range family photo portraits into ultra-crisp, zero-halo photo engravings on birch wood without charring fine detail.",
+    summary: "Comprehensive optical and chemical methodology for converting high-dynamic-range family photo portraits into ultra-crisp, zero-halo photo engravings on birch wood without charring fine detail. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_action,
     steps: [
       {
@@ -24,7 +24,7 @@ export const BATCH_1 = [
       },
       {
         title: "Spot Size Matching & Line Interval Math",
-        detail: "Calculate line interval using laser spot diameter d0 = 0.08mm. Set Line Interval to 0.08mm (exactly 317.5 DPI). Matching line interval to focal spot width eliminates line overlap double-burning while guaranteeing 100% surface coverage without raw wood stripes."
+        detail: "Calculate line interval using laser spot diameter d0 = 0.08mm. Set Line Interval to 0.08mm (exactly 317.5 DPI). Matching line interval to focal spot width eliminates line overlap double-engraving while guaranteeing 100% surface coverage without raw wood stripes."
       },
       {
         title: "Substrate Surface Preparation & Masking",
@@ -56,7 +56,7 @@ export const BATCH_1 = [
     readTime: "10 min",
     materials: ["Natural Welsh Slate Coaster Blanks (10x10cm)", "Satin Clear Polyurethane Spray", "Self-Adhesive 2mm Felt Pads"],
     tools: ["LightBurn Software", "99% Isopropyl Alcohol", "Soft Nylon Bristle Brush"],
-    summary: "Engineered method for creating high-contrast bright white permanent vector line art and photographic portraits on natural metamorphic black slate.",
+    summary: "Engineered method for creating high-contrast bright white permanent vector line art and photographic portraits on natural metamorphic black slate. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.slate_coaster,
     steps: [
       {
@@ -93,7 +93,7 @@ export const BATCH_1 = [
     readTime: "14 min",
     materials: ["4mm Cast Acrylic (PMMA - PolyMethyl MethAcrylate)", "LED Wooden Base (6000K White)", "Deionized Water & Dish Soap"],
     tools: ["60W+ CO2 Laser", "LightBurn Software", "Digital Vernier Caliper (0.01mm resolution)"],
-    summary: "Industrial workflow for reverse-side raster engraving and vector edge cutting of cell-cast acrylic plates for edge-lit LED illumination displays.",
+    summary: "Industrial workflow for reverse-side raster engraving and vector edge cutting of cell-cast acrylic plates for edge-lit LED illumination displays. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.neon1,
     steps: [
       {
@@ -134,7 +134,7 @@ export const BATCH_1 = [
     readTime: "16 min",
     materials: ["304/316 Industrial Stainless Steel Metal Cards", "Acetone Degreaser (C3H6O)"],
     tools: ["30W/50W MOPA Fiber Laser", "EZCAD3 or LightBurn Galvo", "Dual-Red Pointer Focus Gauge"],
-    summary: "Metallurgical process for generating permanent jet-black non-ablative oxide surface layers (Cr2O3/Fe3O4) on stainless steel without material removal.",
+    summary: "Metallurgical process for generating permanent jet-black non-ablative oxide surface layers (Cr2O3/Fe3O4) on stainless steel without material removal. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -171,7 +171,7 @@ export const BATCH_1 = [
     readTime: "8 min",
     materials: ["Laserable Dual-Color Leatherette Sheet (PVC-Free)", "Blank Snapback Hats", "Heat-Activated Adhesive Film (3M 300LSE)"],
     tools: ["Diode / CO2 Laser", "Hat Heat Press (160°C)", "Microfiber Wipe"],
-    summary: "Production workflow for batch-manufacturing dual-tone synthetic leather cap patches with mock-stitch vector borders and heat-activated backing.",
+    summary: "Production workflow for batch-manufacturing dual-tone synthetic leather cap patches with mock-stitch vector borders and heat-activated backing. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.leather_engrave,
     steps: [
       {
@@ -208,7 +208,7 @@ export const BATCH_1 = [
     readTime: "15 min",
     materials: ["White Glazed Ceramic Wall Tiles (15x15cm)", "Titanium Dioxide Powder (TiO2 Anatase)", "Polyvinyl Alcohol (PVA) Liquid Binder", "Ethanol 95% Solvent"],
     tools: ["HVLP Spray Gun / Airbrush", "Precision Scale (0.1g accuracy)", "Diode Laser 10W-20W"],
-    summary: "Photochemical reaction protocol fusing Titanium Dioxide (TiO2) into the ceramic silica glass matrix using blue diode laser light to create indestructible photo tiles.",
+    summary: "Photochemical reaction protocol fusing Titanium Dioxide (TiO2) into the ceramic silica glass matrix using blue diode laser light to create indestructible photo tiles. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.laser_badge,
     steps: [
       {
@@ -245,7 +245,7 @@ export const BATCH_1 = [
     readTime: "18 min",
     materials: ["Yeti/Hydroflask Style Powder Coated Stainless Steel Tumblers", "Simple Green Degreaser", "Denatured Alcohol"],
     tools: ["Chuck or Roller Rotary Attachment", "Laser Distance Gauge / Rotary Caliper", "CO2 or Diode Laser"],
-    summary: "Rotary geometry, steps-per-rotation calibration, and laser ablation settings for stripping tough polyester powder coatings down to mirror steel.",
+    summary: "Rotary geometry, steps-per-rotation calibration, and laser ablation settings for stripping tough polyester powder coatings down to mirror steel. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.tumbler,
     steps: [
       {
@@ -282,7 +282,7 @@ export const BATCH_1 = [
     readTime: "22 min",
     materials: ["Solid American Walnut Board (25mm thick, kiln-dried 8% moisture)", "Danishing Oil / Tung Oil Finish"],
     tools: ["100W+ CO2 Laser with Short Focus Lens (1.5 inch or 2.0 inch)", "LightBurn 3D Slice Mode", "Brass Wire Detail Brush"],
-    summary: "Multi-pass 3D laser relief sculpting technique utilizing 16-bit depth maps to carve organic 12mm deep hardwood bas-relief sculptures with zero step-banding.",
+    summary: "Multi-pass 3D laser relief sculpting technique utilizing 16-bit depth maps to carve organic 12mm deep hardwood bas-relief sculptures with zero step-banding. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_relief,
     steps: [
       {
@@ -295,7 +295,7 @@ export const BATCH_1 = [
       },
       {
         title: "Pass Structure & Beam Optics (CO2 100W)",
-        detail: "Pass 1 (Deep Sculpt): 250 mm/s @ 70% power, 300 DPI, 1.5\" lens focused 3mm into material. Pass 2 (Cleaning/Smoothing Pass): 400 mm/s @ 20% power, 400 DPI, 2.0\" lens focused on top surface to burn away remaining depth wood fuzz."
+        detail: "Pass 1 (Deep Sculpt): 250 mm/s @ 70% power, 300 DPI, 1.5\" lens focused 3mm into material. Pass 2 (Cleaning/Smoothing Pass): 400 mm/s @ 20% power, 400 DPI, 2.0\" lens focused on top surface to engrave away remaining depth wood fuzz."
       },
       {
         title: "Carbon Ash Scrubbing & Botanical Oil Sealing",
@@ -319,7 +319,7 @@ export const BATCH_1 = [
     readTime: "20 min",
     materials: ["Grade 2 Titanium Sheet (1.5mm polished finish)", "Pure Acetone"],
     tools: ["60W MOPA Fiber Laser (2ns - 500ns pulse adjustable)", "EZCAD3 / LightBurn Galvo", "F-Theta 160mm Focal Lens"],
-    summary: "Physics-based optical color tuning on titanium by controlling nano-scale TiO2 oxide layer thickness via MOPA laser pulse width and frequency manipulation.",
+    summary: "Physics-based optical color tuning on titanium by controlling nano-scale TiO2 oxide layer thickness via MOPA laser pulse width and frequency manipulation. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -356,7 +356,7 @@ export const BATCH_1 = [
     readTime: "11 min",
     materials: ["Tempered Glass / Glassware / Pint Glasses", "Black Washable Tempera Paint", "Dish Soap"],
     tools: ["CO2 Laser (40W-100W) or Diode Laser (20W)", "Foam Brush", "LightBurn Software"],
-    summary: "Controlled thermal shock methodology for generating smooth frosted glassware markings without chipping or micro-shattering glass substrates.",
+    summary: "Controlled thermal shock methodology for generating smooth frosted glassware markings without chipping or micro-shattering glass substrates. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.lab,
     steps: [
       {
@@ -393,7 +393,7 @@ export const BATCH_1 = [
     readTime: "9 min",
     materials: ["Anodized Aluminum Metal Business Card Blanks (0.4mm thick, Matte Black)", "Isopropyl Alcohol 99%"],
     tools: ["Fiber Galvo Laser (20W-50W) or Diode Laser (10W-20W)", "LightBurn Software / EZCAD"],
-    summary: "High-speed laser bleaching and vaporization of the dyed organic anodic layer on aluminum cards to reveal bright silver aluminum substrate.",
+    summary: "High-speed laser bleaching and vaporization of the dyed organic anodic layer on aluminum cards to reveal bright silver aluminum substrate. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -426,7 +426,7 @@ export const BATCH_1 = [
     readTime: "14 min",
     materials: ["Laser-Grade Low-Odor Natural Rubber Vulcanized Sheet (2.3mm)", "Wooden Stamp Mount Blocks", "Double-Sided Cushion Mounting Tape"],
     tools: ["CO2 Laser (50W-100W)", "LightBurn Software", "Nylon Scrub Brush"],
-    summary: "Precision engraving of high-resolution text and logos into vulcanized rubber sheets with engineered trapezoidal shoulder walls for ink rigidity.",
+    summary: "Precision engraving of high-resolution text and logos into vulcanized rubber sheets with engineered trapezoidal shoulder walls for ink rigidity. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc1,
     steps: [
       {
@@ -450,7 +450,7 @@ export const BATCH_1 = [
       "Always verify rubber is labeled 'Laser-Grade Low-Odor'. Non-laserable rubber produces sulfurous fumes that linger for weeks.",
       "Store rubber sheets flat at 20°C to prevent curling."
     ],
-    safety: "Rubber burning generates strong sulfur vapor. Ensure high-volume extraction (200+ CFM) with activated charcoal gas filtration."
+    safety: "Rubber engraving generates strong sulfur vapor. Ensure high-volume extraction (200+ CFM) with activated charcoal gas filtration."
   },
 
   // 13
@@ -463,12 +463,12 @@ export const BATCH_1 = [
     readTime: "10 min",
     materials: ["Single-Wall E-Flute Corrugated Cardboard (1.5mm)", "Kraft Board 350gsm"],
     tools: ["CO2 Laser (40W-80W) or Diode Laser (10W-20W)", "Bone Folder Folding Tool"],
-    summary: "Methodology for cutting packaging prototypes with laser-scored perforation folding lines and zero edge-burn soot.",
+    summary: "Methodology for cutting packaging prototypes with laser-scored perforation folding lines and zero edge-engrave soot. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
         title: "Vector Fold Line Engineering: Score vs Perforate",
-        detail: "For tight 90° box folds, do not use continuous vector lines which burn through outer paper liners. Use a dashed perforation vector line (e.g., 3mm cut, 2mm skip) to weaken the inner flute without tearing the outer liner."
+        detail: "For tight 90° box folds, do not use continuous vector lines which engrave through outer paper liners. Use a dashed perforation vector line (e.g., 3mm cut, 2mm skip) to weaken the inner flute without tearing the outer liner."
       },
       {
         title: "High-Speed Laser Parameters",
@@ -483,7 +483,7 @@ export const BATCH_1 = [
       "Use honeycomb bed pins to hold cardboard dead flat; bowed cardboard changes focal height and leaves un-cut tabs.",
       "Air assist must be directed straight down into the cut line to snuff out internal cardboard flute embers."
     ],
-    safety: "Cardboard flutes trap air pockets and burn readily. NEVER leave cardboard laser cutting unattended. Keep a spray bottle of water nearby."
+    safety: "Cardboard flutes trap air pockets and engrave readily. NEVER leave cardboard laser cutting unattended. Keep a spray bottle of water nearby."
   },
 
   // 14
@@ -496,7 +496,7 @@ export const BATCH_1 = [
     readTime: "12 min",
     materials: ["100% Cotton Indigo Dyed Denim Jeans / Jackets", "Textile Starch Spray"],
     tools: ["CO2 Galvo or Flatbed Laser", "LightBurn Software", "Commercial Washing Machine"],
-    summary: "Photothermal degradation of indigo dye molecules on cotton fibers to create vintage whiskering, destruction holes, and graphic patterns.",
+    summary: "Photothermal degradation of indigo dye molecules on cotton fibers to create vintage whiskering, destruction holes, and graphic patterns. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.denim_jacket,
     steps: [
       {
@@ -533,7 +533,7 @@ export const BATCH_1 = [
     readTime: "25 min",
     materials: ["Solid Brass Challenge Coin Blanks (40mm x 3mm)", "Brass Cleaner / Brasso Polish", "Acetone"],
     tools: ["50W/100W MOPA Fiber Laser", "3D Slice Software / LightBurn Galvo", "Ultrasonic Cleaner"],
-    summary: "Multi-layer 250-pass galvo laser ablation protocol for carving 1.5mm deep 3D sculptural reliefs into solid brass coin stock.",
+    summary: "Multi-layer 250-pass galvo laser ablation protocol for carving 1.5mm deep 3D sculptural reliefs into solid brass coin stock. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -546,7 +546,7 @@ export const BATCH_1 = [
       },
       {
         title: "Laser Layer Parameters (50W Fiber Galvo)",
-        detail: "Deep Ablation Layer: 1200 mm/s @ 85% power, 35 kHz frequency, 0.02mm hatch pitch. Cleaning Pass (Every 20 layers): 3000 mm/s @ 20% power, 80 kHz frequency to burn off accumulated brass slag oxidation."
+        detail: "Deep Ablation Layer: 1200 mm/s @ 85% power, 35 kHz frequency, 0.02mm hatch pitch. Cleaning Pass (Every 20 layers): 3000 mm/s @ 20% power, 80 kHz frequency to engrave off accumulated brass slag oxidation."
       },
       {
         title: "Chemical Antique Patina Finish",
@@ -570,7 +570,7 @@ export const BATCH_1 = [
     readTime: "13 min",
     materials: ["Glazed Porcelain Plates / Mugs", "Laser Ceramic Marking Paste (CerMark LDM6000)"],
     tools: ["CO2 Laser 50W+", "Airbrush / Foam Applicator", "Ultrasound Cleaner"],
-    summary: "High-temperature bonding of thermal ceramic marking compounds onto high-fired porcelain and stoneware glazes.",
+    summary: "High-temperature bonding of thermal ceramic marking compounds onto high-fired porcelain and stoneware glazes. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.laser_badge,
     steps: [
       {
@@ -607,7 +607,7 @@ export const BATCH_1 = [
     readTime: "14 min",
     materials: ["Artist Canvas Board", "Acrylic Spray Paint (Layer 1 Black, Layer 2 Red, Layer 3 White Primer)"],
     tools: ["Diode Laser 10W-20W or CO2 Laser 40W", "LightBurn Software"],
-    summary: "Selective laser vaporization of top paint layers to reveal underlying vibrant color coats, generating multi-color laser photographic art.",
+    summary: "Selective laser vaporization of top paint layers to reveal underlying vibrant color coats, generating multi-color laser photographic art. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_action,
     steps: [
       {
@@ -644,7 +644,7 @@ export const BATCH_1 = [
     readTime: "16 min",
     materials: ["3K Twill Weave Carbon Fiber Plate (1.5mm thick, Epoxy Matrix)"],
     tools: ["100W+ CO2 Laser or 1064nm Fiber Laser", "High-Pressure Nitrogen/Air Assist System (60 PSI)", "HEPA/Carbon Extraction System"],
-    summary: "Industrial parameters for cutting carbon fiber reinforced polymers (CFRP) without thermal matrix epoxy degradation or edge fiber fraying.",
+    summary: "Industrial parameters for cutting carbon fiber reinforced polymers (CFRP) without thermal matrix epoxy degradation or edge fiber fraying. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.machine_fiber,
     steps: [
       {
@@ -677,7 +677,7 @@ export const BATCH_1 = [
     readTime: "15 min",
     materials: ["Natural Mother of Pearl (Nacre) Shell Sheets (0.3mm thick on transfer paper)", "Cyanoacrylate Glue (CA Medium)", "Ebony Wood Fretboard"],
     tools: ["CO2 Laser (40W-60W) with 1.5\" Focal Lens", "LightBurn Software", "Jeweler's Loupe"],
-    summary: "Precision vector cutting of fragile aragonite calcium carbonate shell veneers and matching wood pocket engraving for musical instrument luthiery.",
+    summary: "Precision vector cutting of fragile aragonite calcium carbonate shell veneers and matching wood pocket engraving for musical instrument luthiery. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.shell_mother_pearl,
     steps: [
       {
@@ -714,7 +714,7 @@ export const BATCH_1 = [
     readTime: "9 min",
     materials: ["100% Medical-Grade Silicone Wristbands", "Silicone-Based Ink / Oil-Based Paint Pens"],
     tools: ["CO2 Laser 40W+", "LightBurn Software", "Denatured Alcohol Wipes"],
-    summary: "Deep laser ablation into silicone rubber bands followed by contrast ink infilling for durable custom medical alerts and event wristbands.",
+    summary: "Deep laser ablation into silicone rubber bands followed by contrast ink infilling for durable custom medical alerts and event wristbands. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.silicone_band,
     steps: [
       {
@@ -747,7 +747,7 @@ export const BATCH_1 = [
     readTime: "17 min",
     materials: ["Polished Black Shanxi Granite Slab (20mm thick)", "White Monument Litho Highlighter Paint"],
     tools: ["CO2 Laser 80W-150W", "LightBurn Software", "Squeegee / Microfiber Towel"],
-    summary: "Precision micro-spalling methodology for permanently etching fine serif typography and photographic portraits onto polished black memorial granite.",
+    summary: "Precision micro-spalling methodology for permanently etching fine serif typography and photographic portraits onto polished black memorial granite. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.granite_monument,
     steps: [
       {
@@ -784,7 +784,7 @@ export const BATCH_1 = [
     readTime: "11 min",
     materials: ["Standard Glass Wall Mirror (4mm thick)", "Black Acrylic Backing Spray Paint", "Glass Cleaner"],
     tools: ["Diode Laser 10W-20W or CO2 Laser 50W", "LightBurn Software"],
-    summary: "Engineered removal of rear protective paint and reflective silver coating from mirrors without damaging the front glass surface, allowing LED backlighting.",
+    summary: "Engineered removal of rear protective paint and reflective silver coating from mirrors without damaging the front glass surface, allowing LED backlighting. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.glass_mirror,
     steps: [
       {
@@ -821,7 +821,7 @@ export const BATCH_1 = [
     readTime: "12 min",
     materials: ["High-Density EVA Cosplay Foam Sheets (5mm & 10mm thickness, 100kg/m3)", "Contact Cement Adhesive"],
     tools: ["CO2 Laser 60W-130W", "LightBurn Software", "Heat Gun (1500W)"],
-    summary: "Clean vector cutting and v-groove score lines in thick high-density ethylene-vinyl acetate (EVA) foam for costume armor construction.",
+    summary: "Clean vector cutting and v-groove score lines in thick high-density ethylene-vinyl acetate (EVA) foam for costume armor construction. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.foam_insert,
     steps: [
       {
@@ -858,7 +858,7 @@ export const BATCH_1 = [
     readTime: "7 min",
     materials: ["Natural High-Density Grain Cork Sheets (4mm thick)", "Transfer Tape Masking"],
     tools: ["Diode Laser 10W-20W or CO2 Laser 40W+", "LightBurn Software"],
-    summary: "Parameters for crisp dark brown laser marking and burn-free contour cutting of natural suberin-rich cork wood sheets.",
+    summary: "Parameters for crisp dark brown laser marking and engrave-free contour cutting of natural suberin-rich cork wood sheets. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cork_pad,
     steps: [
       {
@@ -891,12 +891,12 @@ export const BATCH_1 = [
     readTime: "22 min",
     materials: ["FR4 Double-Sided Copper Clad PCB Laminate (35um copper thickness / 1oz)"],
     tools: ["355nm UV Laser or 30W Fiber Galvo Laser", "LightBurn / EZCAD3 Software", "Digital Multimeter"],
-    summary: "Direct non-chemical isolation routing and copper ablation on FR4 circuit boards using high-frequency short-pulse laser galvo systems.",
+    summary: "Direct non-chemical isolation routing and copper ablation on FR4 circuit boards using high-frequency short-pulse laser galvo systems. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.pcb_etch,
     steps: [
       {
         title: "Copper Ablation Threshold Physics",
-        detail: "Copper has ultra-high thermal conductivity (400 W/mK) and reflects 95% of 1064nm NIR light. Short pulse widths (<10ns) or 355nm UV laser light are required to exceed copper's thermal ablation threshold without burning the FR4 fiberglass substrate below."
+        detail: "Copper has ultra-high thermal conductivity (400 W/mK) and reflects 95% of 1064nm NIR light. Short pulse widths (<10ns) or 355nm UV laser light are required to exceed copper's thermal ablation threshold without engraving the FR4 fiberglass substrate below."
       },
       {
         title: "Gerber to Vector Isolation Outline Conversion",

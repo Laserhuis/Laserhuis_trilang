@@ -1,4 +1,4 @@
-import { IMG } from "../images";
+import { IMG } from "../images.js";
 
 export const BATCH_2 = [
   // 26
@@ -11,7 +11,7 @@ export const BATCH_2 = [
     readTime: "15 min",
     materials: ["Grade-1 Pure Titanium Foil (0.1mm thickness)", "Acetone Degreaser"],
     tools: ["MOPA Fiber Laser (20W-50W)", "Vacuum Retention Honeycomb Bed", "F-Theta 100mm Lens"],
-    summary: "Micro-machining protocol for cutting ultra-fine heat shields and chemical stencils from 100-micron pure titanium foil without warping.",
+    summary: "Micro-machining protocol for cutting ultra-fine heat shields and chemical stencils from 100-micron pure titanium foil without warping. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.titanium_foil,
     steps: [
       {
@@ -48,7 +48,7 @@ export const BATCH_2 = [
     readTime: "16 min",
     materials: ["Moso Bamboo Cutting Board (20mm thick)", "Food-Safe Epoxy Resin (FDA 175.300 compliant)", "Liquid Resin Pigment Paste"],
     tools: ["CO2 Laser (60W-100W)", "LightBurn Software", "Orbital Sander (80 to 400 grit)"],
-    summary: "Deep 3mm cavity engraving into end-grain bamboo boards with undercut sidewall profiling for mechanical locking of food-safe epoxy resin inlays.",
+    summary: "Deep 3mm cavity engraving into end-grain bamboo boards with undercut sidewall profiling for mechanical locking of food-safe epoxy resin inlays. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.bamboo_cutting_board,
     steps: [
       {
@@ -85,7 +85,7 @@ export const BATCH_2 = [
     readTime: "9 min",
     materials: ["4mm Synthetic Rubber Neoprene Sleeves", "Polyurethane Heat Transfer Vinyl (PU HTV - PVC Free)"],
     tools: ["Diode Laser 10W or CO2 Laser 40W", "Heat Press (150°C)", "Weeding Hook Tool"],
-    summary: "Precision vector kiss-cutting of polyurethane heat-transfer vinyl films for heat-pressing onto synthetic neoprene gear sleeves.",
+    summary: "Precision vector kiss-cutting of polyurethane heat-transfer vinyl films for heat-pressing onto synthetic neoprene gear sleeves. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.denim_jacket,
     steps: [
       {
@@ -118,7 +118,7 @@ export const BATCH_2 = [
     readTime: "16 min",
     materials: ["Natural Bleached Cattle Bone Blanks (2.5mm)", "Water-Soluble Masking Tape", "Cyanoacrylate Glue"],
     tools: ["CO2 Laser (50W-80W) with 1.5\" Focal Optics", "Digital Caliper", "Diamond Needle Files"],
-    summary: "High-density hydroxyapatite calcium phosphate bone carving for decorative knife handle scales and musical instrument inlay nuts.",
+    summary: "High-density hydroxyapatite calcium phosphate bone carving for decorative knife handle scales and musical instrument inlay nuts. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.bone_ivory,
     steps: [
       {
@@ -155,11 +155,11 @@ export const BATCH_2 = [
     readTime: "11 min",
     materials: ["300gsm Heavy Cotton Acid-Free Paper", "3D Shadow Box Frame (25x25cm)", "Acrylic Spacer Standoffs"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W)", "LightBurn Software"],
-    summary: "Multi-layered delicate paper cut art featuring sub-millimeter feather barb vectors and 3D floating shadow box assembly.",
+    summary: "Multi-layered delicate paper cut art featuring sub-millimeter feather barb vectors and 3D floating shadow box assembly. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.feather_art,
     steps: [
       {
-        title: "Paper Fiber Kerf & Flash-Burn Prevention",
+        title: "Paper Fiber Kerf & Flash-engrave Prevention",
         detail: "Paper consists of cellulose fibers. Excess power ignites edges into yellow smoke stains. High speed + low power + maximum air assist (30 PSI) yields pristine snow-white cut edges."
       },
       {
@@ -188,7 +188,7 @@ export const BATCH_2 = [
     readTime: "12 min",
     materials: ["0.8mm Polypropylene (PP) Sheet (Chemical Resistant Grade)"],
     tools: ["CO2 Laser (50W-80W)", "LightBurn Software", "Metal Deburring Tool"],
-    summary: "Clean vector cutting of durable, solvent-proof polypropylene sheets for industrial spray paint marking and solvent washing.",
+    summary: "Clean vector cutting of durable, solvent-proof polypropylene sheets for industrial spray paint marking and solvent washing. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -221,7 +221,7 @@ export const BATCH_2 = [
     readTime: "18 min",
     materials: ["Brass Nameplate Stock (2mm thickness)", "Brass Black Oxidation Liquid (Selenium Dioxide solution)", "Acetone"],
     tools: ["30W/50W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3", "Microfiber Towel"],
-    summary: "Precision deep galvo engraving into solid brass followed by targeted chemical oxidation for high-contrast architectural signs.",
+    summary: "Precision deep galvo engraving into solid brass followed by targeted chemical oxidation for high-contrast architectural signs. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.brass_coin,
     steps: [
       {
@@ -258,7 +258,7 @@ export const BATCH_2 = [
     readTime: "15 min",
     materials: ["12mm Clear Cell-Cast PMMA Acrylic Block", "Deionized Water"],
     tools: ["100W-150W CO2 Laser with 2.5\" or 3.0\" Long Focal Lens", "LightBurn Software"],
-    summary: "Optical focus placement, gas pressure tuning, and power density settings for achieving glass-clear flame-polished cut edges on 12mm thick acrylic.",
+    summary: "Optical focus placement, gas pressure tuning, and power density settings for achieving glass-clear flame-polished cut edges on 12mm thick acrylic. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_glow,
     steps: [
       {
@@ -295,7 +295,7 @@ export const BATCH_2 = [
     readTime: "14 min",
     materials: ["3mm Cherry Wood Veneer / Basswood Precision Sheets", "Wood Glue (Titebond II)"],
     tools: ["CO2 Laser (50W-80W) or Diode Laser (20W)", "LightBurn Kerf Offset Wizard"],
-    summary: "Precision kerf-calibrated vector cutting of delicate interlocking Japanese Kumiko pattern lattices requiring zero adhesive friction assembly.",
+    summary: "Precision kerf-calibrated vector cutting of delicate interlocking Japanese Kumiko pattern lattices requiring zero adhesive friction assembly. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.walnut_inlay,
     steps: [
       {
@@ -328,7 +328,7 @@ export const BATCH_2 = [
     readTime: "16 min",
     materials: ["Glass Wine Bottles (750ml)", "Thermal Shock Ice Water Bath", "Silicon Carbide Sandpaper (120 to 1000 grit)"],
     tools: ["CO2 Laser (60W-100W)", "Chuck Rotary Attachment", "Diamond Hand Sanding Pads"],
-    summary: "Controlled circumference score line thermal cracking to cleanly sever wine bottles into glass tumblers and candle holders.",
+    summary: "Controlled circumference score line thermal cracking to cleanly sever wine bottles into glass tumblers and candle holders. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.glass_bottle,
     steps: [
       {
@@ -365,7 +365,7 @@ export const BATCH_2 = [
     readTime: "20 min",
     materials: ["C11000 Pure Copper Sheet (1.0mm thickness)", "High-Purity Nitrogen Gas Cylinder (99.999% N2)"],
     tools: ["1000W+ CW Fiber Cutting Laser or 100W MOPA Fiber Galvo", "Nitrogen High Pressure Regulator (150 PSI)"],
-    summary: "High-power fiber laser cutting of reflective pure copper sheets using high-pressure Nitrogen assist gas to prevent copper back-reflection damage.",
+    summary: "High-power fiber laser cutting of reflective pure copper sheets using high-pressure Nitrogen assist gas to prevent copper back-reflection damage. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -386,7 +386,7 @@ export const BATCH_2 = [
       }
     ],
     proTips: [
-      "Never use Oxygen assist gas on copper unless heavy oxidation scale is acceptable; O2 creates violent exothermal burning.",
+      "Never use Oxygen assist gas on copper unless heavy oxidation scale is acceptable; O2 creates violent exothermal engraving.",
       "Apply anti-reflective coating spray for low-power galvo fiber setups."
     ],
     safety: "High pressure gas cylinders require secure chains and certified high-pressure lines."
@@ -402,7 +402,7 @@ export const BATCH_2 = [
     readTime: "17 min",
     materials: ["Solid Brass Wax Seal Blanks (25mm round x 5mm thick)", "Acetone Degreaser", "Wax Seal Beads & Melting Spoon"],
     tools: ["30W/50W Fiber Galvo Laser", "LightBurn / EZCAD3", "Brass Wire Wheel"],
-    summary: "3D deep inverted vector carving of custom heraldic wax seal stamp heads into solid brass blanks.",
+    summary: "3D deep inverted vector carving of custom heraldic wax seal stamp heads into solid brass blanks. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.brass_coin,
     steps: [
       {
@@ -439,7 +439,7 @@ export const BATCH_2 = [
     readTime: "11 min",
     materials: ["1.8mm Full-Grain Vegetable-Tanned Leather", "Waxed Linen Thread (0.8mm)", "Neatsfoot Oil"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W-20W)", "Saddle Stitching Needles", "Pricking Iron Calibration Tool"],
-    summary: "Precision laser vector punching of 1.0mm stitching holes and edge perimeter cutting for hand-stitched leather goods.",
+    summary: "Precision laser vector punching of 1.0mm stitching holes and edge perimeter cutting for hand-stitched leather goods. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.leather_book,
     steps: [
       {
@@ -476,7 +476,7 @@ export const BATCH_2 = [
     readTime: "10 min",
     materials: ["250gsm Shimmer Pearlized Cardstock Sheets"],
     tools: ["CO2 Galvo Laser (30W-60W) or Flatbed Laser with Honeycomb Bed", "LightBurn Software"],
-    summary: "Ultra-fast galvo mirror vector cutting of delicate filigree lace wedding invitations without edge charring.",
+    summary: "Ultra-fast galvo mirror vector cutting of delicate filigree lace wedding invitations without edge charring. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.feather_art,
     steps: [
       {
@@ -509,7 +509,7 @@ export const BATCH_2 = [
     readTime: "18 min",
     materials: ["316L Stainless Steel Medical Instruments / Automotive Castings"],
     tools: ["Fiber Galvo Laser (20W-50W)", "Cognex / Keyence Industrial Barcode Verifier", "LightBurn Barcode Generator"],
-    summary: "Engineering setup for marking 2D DataMatrix QR codes onto industrial metal parts achieving ISO 15415 Grade A verification scores.",
+    summary: "Engineering setup for marking 2D DataMatrix QR codes onto industrial metal parts achieving ISO 15415 Grade A verification scores. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -546,7 +546,7 @@ export const BATCH_2 = [
     readTime: "19 min",
     materials: ["Kiln-Dried American Black Walnut Board (30mm)", "Walnut Oil / Shellac Sealer"],
     tools: ["CO2 Laser (80W-130W)", "LightBurn 3D Mode", "Brass Detail Brush"],
-    summary: "Deep 8mm bas-relief carving into solid black walnut timber using 16-bit grayscale depth maps and post-laser shellac sealing.",
+    summary: "Deep 8mm bas-relief carving into solid black walnut timber using 16-bit grayscale depth maps and post-laser shellac sealing. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_relief,
     steps: [
       {
@@ -583,7 +583,7 @@ export const BATCH_2 = [
     readTime: "13 min",
     materials: ["3mm Acetal / Delrin (POM - PolyOxyMethylene) Sheet"],
     tools: ["CO2 Laser (50W-100W)", "Digital Vernier Caliper (0.01mm resolution)", "LightBurn Software"],
-    summary: "Precision vector cutting of slippery engineering acetal (Delrin) for low-friction gears and mechanical bushings with exact gear tooth kerf offset.",
+    summary: "Precision vector cutting of slippery engineering acetal (Delrin) for low-friction gears and mechanical bushings with exact gear tooth kerf offset. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc1,
     steps: [
       {
@@ -620,7 +620,7 @@ export const BATCH_2 = [
     readTime: "21 min",
     materials: ["14K Yellow Gold Sheet / 925 Sterling Silver Sheet (0.8mm)", "Deionized Water"],
     tools: ["50W/100W MOPA Fiber Laser with High-Peak Power", "Cyclone Precious Metal Scrap Filter Trap", "F-Theta 100mm Lens"],
-    summary: "High-peak power galvo cutting of precious metal jewelry pendants with 99% precious metal dust recovery systems.",
+    summary: "High-peak power galvo cutting of precious metal jewelry pendants with 99% precious metal dust recovery systems. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -657,7 +657,7 @@ export const BATCH_2 = [
     readTime: "15 min",
     materials: ["3mm Baltic Birch Plywood", "Wood Glue (Titebond II)"],
     tools: ["CO2 Laser (50W-80W) or Diode Laser (20W)", "Boxes.py / LightBurn Box Generator"],
-    summary: "Parametric design, kerf compensation, and vector lattice cut calculations for building wooden electronics enclosures with flexible curved living hinges.",
+    summary: "Parametric design, kerf compensation, and vector lattice cut calculations for building wooden electronics enclosures with flexible curved living hinges. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_letter,
     steps: [
       {
@@ -694,7 +694,7 @@ export const BATCH_2 = [
     readTime: "12 min",
     materials: ["Basswood / Maple Board", "Baking Soda (Sodium Bicarbonate - NaHCO3)", "Warm Water"],
     tools: ["Diode Laser 10W-20W", "Sponge Applicator", "LightBurn Software"],
-    summary: "Pre-treating light hardwoods with Sodium Bicarbonate solution to trigger chemical tanning dark wood contrast under blue diode lasers.",
+    summary: "Pre-treating light hardwoods with Sodium Bicarbonate solution to trigger chemical tanning dark wood contrast under blue diode lasers. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_tech,
     steps: [
       {
@@ -707,7 +707,7 @@ export const BATCH_2 = [
       },
       {
         title: "Laser Engraving Parameters (20W Diode)",
-        detail: "6000 mm/min @ 18% power, 300 DPI. Compared to untreated wood (which requires 35% power), chemical contrast yields jet-black marks with 0% wood burning smoke soot."
+        detail: "6000 mm/min @ 18% power, 300 DPI. Compared to untreated wood (which requires 35% power), chemical contrast yields jet-black marks with 0% wood engraving smoke soot."
       },
       {
         title: "Rinse & Clear Sealing",
@@ -731,7 +731,7 @@ export const BATCH_2 = [
     readTime: "18 min",
     materials: ["K9 Optical Glass Crystal Blocks"],
     tools: ["532nm Green Pulsed SSLE Laser or Ultra-Short Pulse UV Laser", "3D Point Cloud Software"],
-    summary: "Focusing high-peak green laser pulses inside K9 optical glass blocks to create 3D micro-crack point clouds without touching outer glass surfaces.",
+    summary: "Focusing high-peak green laser pulses inside K9 optical glass blocks to create 3D micro-crack point clouds without touching outer glass surfaces. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.lab,
     steps: [
       {
@@ -768,7 +768,7 @@ export const BATCH_2 = [
     readTime: "12 min",
     materials: ["NBR Nitrile Rubber Gasket Sheet (1.5mm & 3.0mm thickness)"],
     tools: ["CO2 Laser (60W-100W)", "LightBurn Software", "Digital Caliper"],
-    summary: "High-precision vector cutting of oil-resistant nitrile rubber gasket sheets for custom engine headers and fluid pump housings.",
+    summary: "High-precision vector cutting of oil-resistant nitrile rubber gasket sheets for custom engine headers and fluid pump housings. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc1,
     steps: [
       {
@@ -805,7 +805,7 @@ export const BATCH_2 = [
     readTime: "17 min",
     materials: ["Corroded Heavy Structural Steel Plates (Fe2O3 Rust)"],
     tools: ["100W-1000W Pulsed Fiber Cleaning Laser", "Handheld Galvo Wobble Head", "HEPA Vacuum Extraction"],
-    summary: "Non-abrasive laser ablation stripping of heavy iron oxide rust scale from structural steel without removing base metal.",
+    summary: "Non-abrasive laser ablation stripping of heavy iron oxide rust scale from structural steel without removing base metal. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.machine_fiber,
     steps: [
       {
@@ -842,7 +842,7 @@ export const BATCH_2 = [
     readTime: "16 min",
     materials: ["3mm Baltic Birch Plywood (8 Sheets 30x30cm)", "Wood Stain (Oak, Walnut, Mahogany, Teak)", "Wood Glue"],
     tools: ["CO2 Laser (50W-80W) or Diode Laser (20W)", "LightBurn Software", "4x Corner Dowel Alignment Pins"],
-    summary: "Vector nesting, multi-color wood staining, and 8-layer alignment pin assembly for intricate 3D architectural mandala wall art.",
+    summary: "Vector nesting, multi-color wood staining, and 8-layer alignment pin assembly for intricate 3D architectural mandala wall art. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_wall,
     steps: [
       {
@@ -879,12 +879,12 @@ export const BATCH_2 = [
     readTime: "17 min",
     materials: ["ABS Plastic Housings", "Polycarbonate (PC) Keycaps", "Nylon 66 Cable Ties"],
     tools: ["20W/30W/50W MOPA Fiber Laser (2ns-500ns pulse)", "LightBurn Galvo / EZCAD3"],
-    summary: "High-contrast foaming and color-change laser marking on industrial polymers using adjustable MOPA pulse frequency tuning.",
+    summary: "High-contrast foaming and color-change laser marking on industrial polymers using adjustable MOPA pulse frequency tuning. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
         title: "Polymer Foaming vs Carbonization Mechanics",
-        detail: "Standard 1064nm fiber lasers burn plastic into ugly char. MOPA short pulses (2ns-10ns) at high frequency (200-500 kHz) melt polymer surface gently, expanding microscopic gas bubbles ('foaming') that scatter light into bright snow-white text without burning."
+        detail: "Standard 1064nm fiber lasers engrave plastic into ugly char. MOPA short pulses (2ns-10ns) at high frequency (200-500 kHz) melt polymer surface gently, expanding microscopic gas bubbles ('foaming') that scatter light into bright snow-white text without engraving."
       },
       {
         title: "Material Frequency Tuning Matrix (30W MOPA)",
