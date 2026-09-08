@@ -1,5 +1,5 @@
-import { IMG } from "./images";
-import { KINTIX_VIDEOS } from "./videos";
+import { IMG } from "./images.js";
+import { KINTIX_VIDEOS } from "./videos.js";
 
 export const REVIEWS = [
   // ---------------- FEATURED: Genmitsu Kintix (hybrid galvo) ----------------

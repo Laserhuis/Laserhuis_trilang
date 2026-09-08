@@ -1,4 +1,4 @@
-import { IMG } from "../images";
+import { IMG } from "../images.js";
 
 export const BATCH_3 = [
   // 51
@@ -11,7 +11,7 @@ export const BATCH_3 = [
     readTime: "14 min",
     materials: ["1.5mm & 4.0mm Cell-Cast Clear Acrylic Sheets", "Cherry MX Keyboard Switches"],
     tools: ["CO2 Laser (50W-80W)", "Digital Vernier Caliper (0.01mm resolution)", "LightBurn Software"],
-    summary: "Precision vector cutting of 14.00mm square keyboard switch cutouts with kerf compensation for snap-fit Cherry MX mechanical switches.",
+    summary: "Precision vector cutting of 14.00mm square keyboard switch cutouts with kerf compensation for snap-fit Cherry MX mechanical switches. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_blue,
     steps: [
       {
@@ -44,7 +44,7 @@ export const BATCH_3 = [
     readTime: "15 min",
     materials: ["Lead-Free Crystal Glass Champagne Flutes", "Paper Towel / Masking Paper", "Water"],
     tools: ["CO2 Laser (40W-60W)", "Chuck Rotary Attachment", "LightBurn Software"],
-    summary: "Rotary glass laser etching on fragile ultra-thin crystal flutes using wet paper masking to prevent thermal glass shattering.",
+    summary: "Rotary glass laser etching on fragile ultra-thin crystal flutes using wet paper masking to prevent thermal glass shattering. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.glass_etch,
     steps: [
       {
@@ -81,7 +81,7 @@ export const BATCH_3 = [
     readTime: "22 min",
     materials: ["316L Mirror Polished Stainless Steel Sheet (1.5mm)", "Pure Acetone Degreaser"],
     tools: ["60W MOPA Fiber Laser (2ns-500ns pulse adjustable)", "EZCAD3 / LightBurn Galvo", "F-Theta 160mm Lens"],
-    summary: "Full optical color spectrum marking (Gold, Red, Blue, Green, Purple) on stainless steel 316L using MOPA pulse width control.",
+    summary: "Full optical color spectrum marking (Gold, Red, Blue, Green, Purple) on stainless steel 316L using MOPA pulse width control. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -118,7 +118,7 @@ export const BATCH_3 = [
     readTime: "18 min",
     materials: ["Solid Brass Plate Block (8mm thickness)", "Acetone", "Leather Book Covers"],
     tools: ["50W Fiber Galvo Laser", "LightBurn / EZCAD3 3D", "Hot Foil Stamping Press"],
-    summary: "Deep 3D galvo engraving of raised brass embossing dies for hot foil stamping and leather bookbinding covers.",
+    summary: "Deep 3D galvo engraving of raised brass embossing dies for hot foil stamping and leather bookbinding covers. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.brass_coin,
     steps: [
       {
@@ -151,7 +151,7 @@ export const BATCH_3 = [
     readTime: "11 min",
     materials: ["50-Micron Dupont Kapton Polyimide Film (Amber)", "Silicone Sticky Mat Base"],
     tools: ["CO2 Laser (40W-60W) or 355nm UV Laser", "LightBurn Software"],
-    summary: "Micro-vector cutting of high-temperature Kapton polyimide films for flexible printed circuits (FPC) and aerospace thermal insulation.",
+    summary: "Micro-vector cutting of high-temperature Kapton polyimide films for flexible printed circuits (FPC) and aerospace thermal insulation. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -188,7 +188,7 @@ export const BATCH_3 = [
     readTime: "15 min",
     materials: ["End-Grain Maple & Walnut Cutting Board (40mm thick)", "Food-Grade Beeswax/Mineral Oil Paste"],
     tools: ["CO2 Laser (80W-130W)", "LightBurn 3D Grayscale Mode", "Brass Wire Wheel"],
-    summary: "Carving 6mm deep rounded juice collection channels into heavy end-grain butcher block boards using 16-bit gradient vector profiles.",
+    summary: "Carving 6mm deep rounded juice collection channels into heavy end-grain butcher block boards using 16-bit gradient vector profiles. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_relief,
     steps: [
       {
@@ -221,7 +221,7 @@ export const BATCH_3 = [
     readTime: "10 min",
     materials: ["Anodized Black Aluminum Medical Trays / Equipment Housings"],
     tools: ["Fiber Galvo Laser (20W-50W)", "LightBurn Galvo / EZCAD3"],
-    summary: "High-speed dye vaporization on black anodized aluminum to create bright white high-contrast text and UDI logos.",
+    summary: "High-speed dye vaporization on black anodized aluminum to create bright white high-contrast text and UDI logos. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.laser_badge,
     steps: [
       {
@@ -254,7 +254,7 @@ export const BATCH_3 = [
     readTime: "18 min",
     materials: ["3mm Baltic Birch Plywood (6 Layers)", "Blue Wood Stain (Water Depths)", "Wood Glue"],
     tools: ["CO2 Laser (50W-80W)", "QGIS Software / LightBurn", "Acrylic Layer Spacers"],
-    summary: "Converting GIS digital elevation models (DEM) into multi-layer vector contour maps with laser-etched bathymetric lake depth lines.",
+    summary: "Converting GIS digital elevation models (DEM) into multi-layer vector contour maps with laser-etched bathymetric lake depth lines. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_wall,
     steps: [
       {
@@ -291,7 +291,7 @@ export const BATCH_3 = [
     readTime: "13 min",
     materials: ["2.0mm FKM Viton Fluoropolymer Rubber Sheet"],
     tools: ["CO2 Laser (60W-100W)", "High-Pressure Air Assist (40 PSI)", "Digital Caliper"],
-    summary: "Precision vector cutting of fluoroelastomer Viton rubber gaskets for high-temperature chemical and hydraulic systems.",
+    summary: "Precision vector cutting of fluoroelastomer Viton rubber gaskets for high-temperature chemical and hydraulic systems. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc1,
     steps: [
       {
@@ -328,7 +328,7 @@ export const BATCH_3 = [
     readTime: "12 min",
     materials: ["Natural Black Slate Mortar and Pestle Set", "Mineral Oil"],
     tools: ["Diode Laser 20W or CO2 Laser 50W", "LightBurn Rotary Setup", "Nylon Brush"],
-    summary: "Rotary photo and text engraving on natural slate mortar bowls followed by food-safe mineral oil seasoning.",
+    summary: "Rotary photo and text engraving on natural slate mortar bowls followed by food-safe mineral oil seasoning. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.slate_coaster,
     steps: [
       {
@@ -361,7 +361,7 @@ export const BATCH_3 = [
     readTime: "16 min",
     materials: ["Grade 5 Titanium (Ti-6Al-4V ELI) Medical Screws"],
     tools: ["MOPA Fiber Galvo Laser (20W-30W)", "Rotary Indexing Fixture", "Keyence Barcode Verifier"],
-    summary: "Passivated non-ablative black matrix UDI barcode marking on titanium medical bone screws compliant with FDA regulations.",
+    summary: "Passivated non-ablative black matrix UDI barcode marking on titanium medical bone screws compliant with FDA regulations. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -394,7 +394,7 @@ export const BATCH_3 = [
     readTime: "17 min",
     materials: ["6mm Optical Grade Cell-Cast Acrylic Sheet", "Edge-Lit LED Strip (6000K)"],
     tools: ["CO2 Laser (60W-100W)", "LightBurn LGP Grid Generator", "Photometer Light Meter"],
-    summary: "Engineered raster micro-dot density gradient engraving on optical acrylic plates for uniform LED backlighting panel displays.",
+    summary: "Engineered raster micro-dot density gradient engraving on optical acrylic plates for uniform LED backlighting panel displays. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_glow,
     steps: [
       {
@@ -431,7 +431,7 @@ export const BATCH_3 = [
     readTime: "14 min",
     materials: ["6mm High-Density Fiberboard (HDF / Masonite)", "Wood Glue"],
     tools: ["CO2 Laser (80W-130W)", "High-Pressure Air Assist (35 PSI)", "LightBurn Software"],
-    summary: "Industrial parameters for cutting dense 6mm HDF sheets with minimal edge charring and zero kerf taper.",
+    summary: "Industrial parameters for cutting dense 6mm HDF sheets with minimal edge charring and zero kerf taper. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.mdf_board,
     steps: [
       {
@@ -468,7 +468,7 @@ export const BATCH_3 = [
     readTime: "11 min",
     materials: ["12mm Commercial White HDPE Cutting Board Sheets"],
     tools: ["CO2 Laser (50W-80W) or MOPA Fiber Laser", "LightBurn Software", "Scraper Tool"],
-    summary: "Surface melt-foaming and high-contrast vector marking on commercial white HDPE plastic cutting boards.",
+    summary: "Surface melt-foaming and high-contrast vector marking on commercial white HDPE plastic cutting boards. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -501,7 +501,7 @@ export const BATCH_3 = [
     readTime: "20 min",
     materials: ["999 Fine Silver Bullion Rounds (1 oz / 31.1g)", "Acetone Degreaser"],
     tools: ["50W MOPA Fiber Galvo Laser", "Precision Scale (0.01g accuracy)", "Enclosed Cyclone Vacuum Filter"],
-    summary: "High-precision 3D deep galvo engraving on pure silver bullion rounds with 99.5% silver scrap dust recovery system.",
+    summary: "High-precision 3D deep galvo engraving on pure silver bullion rounds with 99.5% silver scrap dust recovery system. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -534,7 +534,7 @@ export const BATCH_3 = [
     readTime: "8 min",
     materials: ["3mm Pressed Polyester Synthetic Felt Sheets (Charcoal, Heather Gray, Cream)"],
     tools: ["Diode Laser 10W-20W or CO2 Laser 40W", "Fabric Glue", "LightBurn Software"],
-    summary: "Precision vector cut sealing of synthetic polyester felt sheets and interlocking geometric color inlay desk pads.",
+    summary: "Precision vector cut sealing of synthetic polyester felt sheets and interlocking geometric color inlay desk pads. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.laser_badge,
     steps: [
       {
@@ -567,7 +567,7 @@ export const BATCH_3 = [
     readTime: "13 min",
     materials: ["Anodized Aluminum Baseball Bats"],
     tools: ["Fiber Galvo Laser or CO2 Laser with Rotary", "Roller Rotary Attachment", "LightBurn Software"],
-    summary: "High-speed 360° rotary laser ablation of anodized coating on aluminum baseball bats for custom team branding.",
+    summary: "High-speed 360° rotary laser ablation of anodized coating on aluminum baseball bats for custom team branding. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_artisan,
     steps: [
       {
@@ -600,7 +600,7 @@ export const BATCH_3 = [
     readTime: "16 min",
     materials: ["1.0mm Maple Veneer", "1.0mm Rosewood Veneer", "Mother of Pearl Shell Strips"],
     tools: ["CO2 Laser (40W-60W) with 1.5\" Lens", "LightBurn Software", "Digital Caliper"],
-    summary: "Micro-vector cutting of concentric wooden ring rosettes and soundhole channel inlays for custom luthiery.",
+    summary: "Micro-vector cutting of concentric wooden ring rosettes and soundhole channel inlays for custom luthiery. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.walnut_inlay,
     steps: [
       {
@@ -633,7 +633,7 @@ export const BATCH_3 = [
     readTime: "15 min",
     materials: ["3K Carbon Fiber FPV Drone Arms / Top Plates (3.0mm thickness)"],
     tools: ["30W/50W MOPA Fiber Laser", "LightBurn Galvo / EZCAD3", "HEPA Vacuum Extraction"],
-    summary: "Galvo laser vector marking of motor numbers and logo graphics onto 3K carbon fiber FPV drone frame plates.",
+    summary: "Galvo laser vector marking of motor numbers and logo graphics onto 3K carbon fiber FPV drone frame plates. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.machine_fiber,
     steps: [
       {
@@ -666,7 +666,7 @@ export const BATCH_3 = [
     readTime: "22 min",
     materials: ["Grade 5 Titanium / Stainless Steel 304 Plates", "Deionized Water"],
     tools: ["50W MOPA Fiber Laser", "EZCAD3 / LightBurn Galvo", "Contact Angle Goniometer"],
-    summary: "Creating hydrophobic self-cleaning metal surfaces by galvo laser texturing micro-pillar array patterns.",
+    summary: "Creating hydrophobic self-cleaning metal surfaces by galvo laser texturing micro-pillar array patterns. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.metal_macro,
     steps: [
       {
@@ -703,7 +703,7 @@ export const BATCH_3 = [
     readTime: "9 min",
     materials: ["2.0mm Black High-Density Chipboard / Cardstock", "PVA Bookbinding Glue"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W)", "LightBurn Software"],
-    summary: "Precision vector cutting of heavy black chipboard sheets for custom board game box storage trays and card organizers.",
+    summary: "Precision vector cutting of heavy black chipboard sheets for custom board game box storage trays and card organizers. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.cnc2,
     steps: [
       {
@@ -736,7 +736,7 @@ export const BATCH_3 = [
     readTime: "15 min",
     materials: ["8mm Clear Cell-Cast PMMA Acrylic Plates"],
     tools: ["CO2 Laser (80W-130W) with Defocused Beam Optics", "LightBurn Software"],
-    summary: "Defocus thermal re-flowing of saw-cut acrylic edges to achieve optical crystal clarity without manual flame polishing.",
+    summary: "Defocus thermal re-flowing of saw-cut acrylic edges to achieve optical crystal clarity without manual flame polishing. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.acrylic_glow,
     steps: [
       {
@@ -773,7 +773,7 @@ export const BATCH_3 = [
     readTime: "10 min",
     materials: ["FDA Food-Grade Silicone Baking Molds / Spatulas"],
     tools: ["CO2 Laser 50W+" , "LightBurn Software", "Denatured Alcohol Wipes"],
-    summary: "Deep laser vector engraving into FDA food-grade silicone kitchenware without additive inks or chemical residues.",
+    summary: "Deep laser vector engraving into FDA food-grade silicone kitchenware without additive inks or chemical residues. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.silicone_band,
     steps: [
       {
@@ -806,7 +806,7 @@ export const BATCH_3 = [
     readTime: "19 min",
     materials: ["Solid Brass Printing Blocks (10mm thick)", "Acetone"],
     tools: ["50W Fiber Galvo Laser", "LightBurn / EZCAD3 3D", "Hot Stamping Machine"],
-    summary: "Precision galvo carving of raised brass printing blocks for hot foil stamping on leather, paper, and book covers.",
+    summary: "Precision galvo carving of raised brass printing blocks for hot foil stamping on leather, paper, and book covers. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.brass_coin,
     steps: [
       {
@@ -839,7 +839,7 @@ export const BATCH_3 = [
     readTime: "12 min",
     materials: ["1.5mm & 3.0mm Aircraft Grade Birch Plywood (3-ply)", "CA Thin Glue"],
     tools: ["CO2 Laser (40W-60W) or Diode Laser (10W-20W)", "LightBurn Software", "Gram Precision Scale"],
-    summary: "Precision vector cutting of lightweight airframe wing ribs and interlocking spars for radio-controlled model aircraft.",
+    summary: "Precision vector cutting of lightweight airframe wing ribs and interlocking spars for radio-controlled model aircraft. This technique is widely used in professional settings to create high-quality, custom products such as personalized signage, bespoke gifts, and industrial marking solutions.",
     image: IMG.wood_letter,
     steps: [
       {

@@ -19,6 +19,7 @@ import Brands from "@/pages/Brands";
 import Gallery from "@/pages/Gallery";
 import KintixReview from "@/pages/KintixReview";
 import Sainsmart from "@/pages/Sainsmart";
+import CNCTutorials from "@/pages/CNCTutorials";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -51,6 +52,7 @@ function App() {
               <Route path="/compare" element={<Compare />} />
               <Route path="/favourites" element={<Favourites />} />
               <Route path="*" element={<Home />} />
+              <Route path="/cnc-tutorials" element={<CNCTutorials />} />
             </Routes>
           </main>
           <Footer />
