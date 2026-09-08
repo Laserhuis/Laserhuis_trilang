@@ -1,0 +1,135 @@
+const fs = require('fs');
+
+let content = fs.readFileSync('src/context/LanguageContext.jsx', 'utf8');
+
+// The English block
+const enPatch = `    // About Page
+    "about.eyebrow": "Precision Laser Crafting & Engineering",
+    "about.welcome": "Welcome to",
+    "about.hero_desc": "Laserhuis is the definitive digital hub for laser engraving, cutting, and industrial marking. Designed for hobbyists, makers, and production workshops, we eliminate trial-and-error material scorching with tested parameters, expert technical documentation, and smart browser software.",
+    "about.mission_title": "Our Mission",
+    "about.mission_p1": "We started Laserhuis with a simple goal: to make laser technology accessible, predictable, and remarkably precise. Whether you are operating a 10W desktop diode, a 50W CO2 tube cutter, or a 60W MOPA fiber galvo system, getting clean cuts and crisp engravings shouldn't mean wasting expensive raw materials on endless test grids.",
+    "about.mission_p2": "Every tutorial, review, and material parameter on Laserhuis is rigorously verified by master artisans and material scientists. We break down focal optics, air assist dynamics, gas extraction, and wavelength absorption so you achieve Grade-A output every time.",
+    "about.mission_suite": "Active hardware test suite covering Diode, CO2, and Fiber/Galvo sources.",
+    "about.stat_tutorials": "Technical Tutorials",
+    "about.stat_tutorials_sub": "Grade A++++ Guides",
+    "about.stat_reviews": "In-Depth Reviews",
+    "about.stat_reviews_sub": "Hands-on Hardware Tests",
+    "about.stat_makers": "Makers Helped",
+    "about.stat_makers_sub": "Global Community",
+    "about.stat_dither": "Dither Algorithms",
+    "about.stat_dither_sub": "Photo-to-Laser Studio",
+    "about.what_you_find": "What You'll Find On Laserhuis",
+    "about.pillar1_title": "Step-by-Step Tutorials",
+    "about.pillar1_desc": "Over 100+ deep technical guides spanning Diode, CO2, and Fiber/Galvo workflows with precise physics, chemistry, and power settings.",
+    "about.pillar2_title": "Unbiased Machine Reviews",
+    "about.pillar2_desc": "Hands-on benchmark testing across leading diode engravers, CO2 glass-tube cutters, and industrial fiber galvo workstations.",
+    "about.pillar3_title": "Dynamic Settings Library",
+    "about.pillar3_desc": "A comprehensive material parameter database scaled automatically to your specific laser source wattage.",
+    "about.pillar4_title": "Browser-Based Tools",
+    "about.pillar4_desc": "Instant web utilities like our 20+ algorithm Dithering Studio, rotary step calculators, and jig layout tools.",
+    "about.fb_eyebrow": "OFFICIAL LASERHUIS COMMUNITY",
+    "about.fb_title_pre": "Join the",
+    "about.fb_title_highlight": "Laserhuis",
+    "about.fb_title_post": "Facebook Community!",
+    "about.fb_desc1": "Connect with over ",
+    "about.fb_desc_strong": "15,000+ laser engravers, makers, and workshop owners",
+    "about.fb_desc2": ". Get daily setting cheat sheets, free LightBurn vector file drops, and instant peer troubleshooting support for all diode, CO2, and galvo systems.",
+    "about.fb_bullet1": "<strong>Daily Setting Cheat Sheets</strong> dropped weekly",
+    "about.fb_bullet2": "<strong>Free SVG / LightBurn Files</strong> for members",
+    "about.fb_bullet3": "<strong>Project Showcases</strong> & feedback",
+    "about.fb_bullet4": "<strong>Instant Q&A</strong> with master artisans",
+    "about.fb_cta": "Follow @laserhuis on Facebook",
+    "about.fb_cta_sub": "15K+ Followers • Daily Updates",`;
+
+const nlPatch = `    // About Page
+    "about.eyebrow": "Precisie Laservakmanschap & Techniek",
+    "about.welcome": "Welkom bij",
+    "about.hero_desc": "Laserhuis is hét digitale platform voor lasergraveren, -snijden en industriële markering. Ontworpen voor hobbyisten, makers en productiewerkplaatsen. We elimineren trial-and-error materiaalverbranding met geteste parameters, deskundige technische documentatie en slimme browser-software.",
+    "about.mission_title": "Onze Missie",
+    "about.mission_p1": "We zijn Laserhuis gestart met een eenvoudig doel: lasertechnologie toegankelijk, voorspelbaar en opmerkelijk nauwkeurig maken. Of je nu een 10W desktop diode, een 50W CO2-buissnijder of een 60W MOPA fiber galvo-systeem bedient, strakke sneden en scherpe gravures zouden niet moeten betekenen dat je dure ruwe materialen verspilt aan eindeloze testroosters.",
+    "about.mission_p2": "Elke handleiding, review en materiaalparameter op Laserhuis wordt streng geverifieerd door meestervakmensen en materiaalwetenschappers. We analyseren focusoptiek, luchtondersteuningsdynamiek, gasafzuiging en golflengte-absorptie zodat je elke keer Grade-A resultaten behaalt.",
+    "about.mission_suite": "Actieve hardware-testsuite voor Diode-, CO2- en Fiber/Galvo-bronnen.",
+    "about.stat_tutorials": "Technische Handleidingen",
+    "about.stat_tutorials_sub": "Klasse A++++ Gidsen",
+    "about.stat_reviews": "Diepgaande Reviews",
+    "about.stat_reviews_sub": "Praktijk Hardware Tests",
+    "about.stat_makers": "Geholpen Makers",
+    "about.stat_makers_sub": "Wereldwijde Community",
+    "about.stat_dither": "Dithering Algoritmes",
+    "about.stat_dither_sub": "Foto-naar-Laser Studio",
+    "about.what_you_find": "Wat je vindt op Laserhuis",
+    "about.pillar1_title": "Stapsgewijze Handleidingen",
+    "about.pillar1_desc": "Meer dan 100 diepgaande technische gidsen voor Diode, CO2 en Fiber/Galvo workflows met nauwkeurige fysica, chemie en vermogensinstellingen.",
+    "about.pillar2_title": "Onafhankelijke Machine Reviews",
+    "about.pillar2_desc": "Praktische benchmarktests van toonaangevende diode-graveerders, CO2 glazen-buis snijders en industriële fiber galvo-werkstations.",
+    "about.pillar3_title": "Dynamische Instellingen Bibliotheek",
+    "about.pillar3_desc": "Een uitgebreide materiaalparameterdatabase die automatisch schaalt naar jouw specifieke laserbronvermogen.",
+    "about.pillar4_title": "Browser-Gebaseerde Tools",
+    "about.pillar4_desc": "Directe webhulpmiddelen zoals onze Dithering Studio met 20+ algoritmes, roterende stapcalculators en mal-layout tools.",
+    "about.fb_eyebrow": "OFFICIËLE LASERHUIS COMMUNITY",
+    "about.fb_title_pre": "Word lid van de",
+    "about.fb_title_highlight": "Laserhuis",
+    "about.fb_title_post": "Facebook Community!",
+    "about.fb_desc1": "Maak contact met meer dan ",
+    "about.fb_desc_strong": "15.000+ lasergraveurs, makers en werkplaatseigenaren",
+    "about.fb_desc2": ". Krijg wekelijkse spiekbriefjes met instellingen, gratis LightBurn vectorbestanden en directe peer-to-peer probleemoplossing voor alle diode, CO2 en galvo-systemen.",
+    "about.fb_bullet1": "<strong>Dagelijkse Instellingen Spiekbriefjes</strong> wekelijks gedeeld",
+    "about.fb_bullet2": "<strong>Gratis SVG / LightBurn Bestanden</strong> voor leden",
+    "about.fb_bullet3": "<strong>Project Showcases</strong> & feedback",
+    "about.fb_bullet4": "<strong>Directe Q&A</strong> met meestervakmensen",
+    "about.fb_cta": "Volg @laserhuis op Facebook",
+    "about.fb_cta_sub": "15K+ Volgers • Dagelijkse Updates",`;
+
+const frPatch = `    // About Page
+    "about.eyebrow": "Artisanat Laser & Ingénierie de Haute Précision",
+    "about.welcome": "Bienvenue sur",
+    "about.hero_desc": "Laserhuis est la plateforme numérique de référence pour la gravure, la découpe et le marquage industriel au laser. Conçu pour les amateurs, les créateurs et les ateliers de production, nous éliminons les essais et erreurs grâce à des paramètres testés, une documentation technique experte et des logiciels en ligne intelligents.",
+    "about.mission_title": "Notre Mission",
+    "about.mission_p1": "Nous avons créé Laserhuis avec un objectif simple : rendre la technologie laser accessible, prévisible et remarquablement précise. Que vous utilisiez une diode de bureau de 10W, un tube CO2 de 50W ou un système galvo fibre MOPA de 60W, obtenir des découpes nettes et des gravures précises ne devrait pas signifier gaspiller des matériaux coûteux dans des grilles de test interminables.",
+    "about.mission_p2": "Chaque tutoriel, test et paramètre matériel sur Laserhuis est rigoureusement vérifié par des maîtres artisans et des scientifiques des matériaux. Nous décomposons l'optique focale, la dynamique de l'assistance à air, l'extraction des gaz et l'absorption des longueurs d'onde pour que vous obteniez un résultat de Classe A à chaque fois.",
+    "about.mission_suite": "Banc d'essai matériel actif couvrant les sources Diode, CO2 et Fibre/Galvo.",
+    "about.stat_tutorials": "Tutoriels Techniques",
+    "about.stat_tutorials_sub": "Guides Qualité Supérieure",
+    "about.stat_reviews": "Tests Approfondis",
+    "about.stat_reviews_sub": "Tests Matériels Pratiques",
+    "about.stat_makers": "Créateurs Aidés",
+    "about.stat_makers_sub": "Communauté Mondiale",
+    "about.stat_dither": "Algorithmes de Tramage",
+    "about.stat_dither_sub": "Studio Photo vers Laser",
+    "about.what_you_find": "Ce que vous trouverez sur Laserhuis",
+    "about.pillar1_title": "Tutoriels Étape par Étape",
+    "about.pillar1_desc": "Plus de 100 guides techniques approfondis couvrant les workflows Diode, CO2 et Fibre/Galvo avec des paramètres précis de physique, chimie et puissance.",
+    "about.pillar2_title": "Avis Impartiaux sur les Machines",
+    "about.pillar2_desc": "Tests de performances pratiques sur les principaux graveurs à diode, les découpeuses CO2 à tube de verre et les stations de travail galvo industrielles.",
+    "about.pillar3_title": "Bibliothèque de Paramètres Dynamique",
+    "about.pillar3_desc": "Une base de données complète de paramètres matériels qui s'adapte automatiquement à la puissance de votre source laser.",
+    "about.pillar4_title": "Outils Basés sur le Navigateur",
+    "about.pillar4_desc": "Des utilitaires web instantanés comme notre Studio de Tramage avec plus de 20 algorithmes, des calculateurs de pas rotatifs et des outils de mise en page.",
+    "about.fb_eyebrow": "COMMUNAUTÉ OFFICIELLE LASERHUIS",
+    "about.fb_title_pre": "Rejoignez la",
+    "about.fb_title_highlight": "Communauté Facebook",
+    "about.fb_title_post": "Laserhuis !",
+    "about.fb_desc1": "Connectez-vous avec plus de ",
+    "about.fb_desc_strong": "15 000+ graveurs laser, créateurs et propriétaires d'ateliers",
+    "about.fb_desc2": ". Obtenez des fiches de paramètres quotidiennes, des fichiers vectoriels LightBurn gratuits, et un support de dépannage instantané par des pairs pour tous les systèmes diode, CO2 et galvo.",
+    "about.fb_bullet1": "<strong>Fiches de paramètres quotidiennes</strong> partagées chaque semaine",
+    "about.fb_bullet2": "<strong>Fichiers SVG / LightBurn gratuits</strong> pour les membres",
+    "about.fb_bullet3": "<strong>Présentations de projets</strong> & retours d'expérience",
+    "about.fb_bullet4": "<strong>Questions & Réponses instantanées</strong> avec des maîtres artisans",
+    "about.fb_cta": "Suivez @laserhuis sur Facebook",
+    "about.fb_cta_sub": "15K+ Abonnés • Mises à jour quotidiennes",`;
+
+let idxEn = content.indexOf('    // About Page');
+let idxNl = content.indexOf('    // About Page', idxEn + 1);
+let idxFr = content.indexOf('    // About Page', idxNl + 1);
+
+const enEnd = content.indexOf('    // Footer', idxEn);
+const nlEnd = content.indexOf('    // Footer', idxNl);
+const frEnd = content.indexOf('    // Footer', idxFr);
+
+content = content.slice(0, idxFr) + frPatch + "\n\n" + content.slice(frEnd);
+content = content.slice(0, idxNl) + nlPatch + "\n\n" + content.slice(nlEnd);
+content = content.slice(0, idxEn) + enPatch + "\n\n" + content.slice(enEnd);
+
+fs.writeFileSync('src/context/LanguageContext.jsx', content);

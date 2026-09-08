@@ -1,0 +1,6 @@
+{
+  "name": "Laserhuis",
+  "description": "Comprehensive laser engraving & cutting settings database, AI advisor, review hub, and tutorial guide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
