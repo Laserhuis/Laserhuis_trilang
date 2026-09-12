@@ -29,6 +29,7 @@ import {
 import { getReview } from "@/data/reviews";
 import { IMG } from "@/data/images";
 import { FavouriteButton } from "@/components/FavouriteButton";
+import { SainsmartVideoSection } from "@/components/SainsmartVideoSection";
 import { useLanguage } from "@/context/LanguageContext";
 
 const sainsmartHero = "/images/sainsmart_hero_1786084432276.jpg";
@@ -580,6 +581,9 @@ export default function Sainsmart() {
         <a href="#cnc-preview" className="text-xs font-mono text-slate-400 hover:text-orange-300 transition-colors py-1 px-2.5 rounded-lg hover:bg-orange-500/5">
           {t("sainsmart.nav_cnc", "# Heavy-Duty CNC")}
         </a>
+        <a href="#proverxl-video-spotlight" className="text-xs font-mono text-slate-400 hover:text-red-300 transition-colors py-1 px-2.5 rounded-lg hover:bg-red-500/5">
+          {t("sainsmart.nav_video", "# 4030S Video Guide")}
+        </a>
         <a href="#curated-gear" className="text-xs font-mono text-slate-400 hover:text-cyan-300 transition-colors py-1 px-2.5 rounded-lg hover:bg-cyan-500/5">
           {t("sainsmart.nav_gear", "# Recommended Gear")}
         </a>
@@ -752,7 +756,7 @@ export default function Sainsmart() {
 
                 <div className="flex flex-wrap items-center gap-3">
                   <a 
-                    href="https://www.sainsmart.com/products/proverxl-4030s" 
+                    href="https://www.sainsmart.com/products/proverxl-4030s?_gl=1*1qkeulm*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjw8JPVBhD-ARIsAO691sHZmy_BU4FLAEubmUWX9Vzqy7klcQY-MiHMArAIM4Z5BdNGpU_98TYaAip1EALw_wcB&gbraid=0AAAAADMWa4LtDZAS1VVmK1aPlphllf_WX" 
                     target="_blank" 
                     rel="sponsored noopener noreferrer" 
                     className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-orange-600 hover:bg-orange-500 text-white text-sm font-semibold shadow-[0_0_15px_rgba(249,115,22,0.3)] transition-colors"
@@ -831,6 +835,9 @@ export default function Sainsmart() {
           </div>
         </div>
       </div>
+
+      {/* #2.5: Video Guide & Assembly of Genmitsu PROVerXL 4030S */}
+      <SainsmartVideoSection />
 
       {/* #3: Curated Product Showcases / Advertisements */}
       <div className="mb-12" id="curated-gear">

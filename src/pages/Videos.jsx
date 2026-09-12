@@ -1,10 +1,18 @@
-import { Youtube, ExternalLink } from "lucide-react";
+import { useState } from "react";
+import { Youtube, ExternalLink, Filter } from "lucide-react";
 import { VIDEOS, CHANNEL_URL } from "@/data/videos";
 import { VideoCard } from "@/components/YouTube";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Videos() {
   const { t } = useLanguage();
+  const [activeTag, setActiveTag] = useState("All");
+
+  const tags = ["All", ...Array.from(new Set(VIDEOS.map((v) => v.tag).filter(Boolean)))];
+
+  const filteredVideos = activeTag === "All"
+    ? VIDEOS
+    : VIDEOS.filter((v) => v.tag === activeTag);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-8">
@@ -31,8 +39,31 @@ export default function Videos() {
         </div>
       </div>
 
+      {/* Tag filters */}
+      <div className="flex flex-wrap items-center gap-2 mb-8">
+        <span className="text-xs font-mono uppercase text-slate-500 mr-2 flex items-center gap-1.5">
+          <Filter className="w-3.5 h-3.5" /> Filter:
+        </span>
+        {tags.map((tag) => {
+          const count = tag === "All" ? VIDEOS.length : VIDEOS.filter((v) => v.tag === tag).length;
+          return (
+            <button
+              key={tag}
+              onClick={() => setActiveTag(tag)}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
+                activeTag === tag
+                  ? "bg-red-500/20 text-red-300 border border-red-500/40 font-semibold"
+                  : "bg-slate-900/80 text-slate-400 border border-slate-800 hover:text-slate-200 hover:border-slate-700"
+              }`}
+            >
+              {tag} ({count})
+            </button>
+          );
+        })}
+      </div>
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" data-testid="videos-grid">
-        {VIDEOS.map((v) => <VideoCard key={v.id} video={v} />)}
+        {filteredVideos.map((v) => <VideoCard key={v.id} video={v} />)}
       </div>
     </div>
   );

@@ -42,6 +42,8 @@ export const MATERIAL_SETTINGS = M.map((m, idx) => {
   };
 });
 
+export const MATERIALS = MATERIAL_SETTINGS;
+
 // Common machine wattages offered in the Settings Finder, per laser type.
 export const LASER_WATTS = {
   diode: [5, 10, 20, 33, 40],
