@@ -35,7 +35,7 @@ interface HeaderProps {
   modifiedCount: number;
 }
 
-export const Header: React.FC<HeaderProps> = ({
+export const CncHeader: React.FC<HeaderProps> = ({
   database,
   unitMode,
   onChangeUnitMode,

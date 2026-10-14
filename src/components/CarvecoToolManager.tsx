@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Header as CncHeader } from './Header';
+import { CncHeader } from './CncHeader';
 import { SpindleTunerBar, SpindleTuningOptions } from './SpindleTunerBar';
 import { ToolTable } from './ToolTable';
 import { BulkModifierModal } from './BulkModifierModal';
