@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Search, Zap, Menu, X, Layers, BookOpen, Cpu, Image, Youtube, Package, Info, Heart, Wand2, GitCompare, Sparkles } from "lucide-react";
+import { Search, Zap, Menu, X, Layers, BookOpen, Cpu, Image, Youtube, Package, Info, Heart, Wand2, GitCompare, Sparkles, Wrench, ChevronDown } from "lucide-react";
 import { searchAll } from "@/lib/search";
 import { useLanguage } from "@/context/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -12,7 +12,18 @@ const NAV_BASE = [
   { to: "/gallery", key: "nav.gallery", defaultLabel: "Gallery", icon: Image },
   { to: "/videos", key: "nav.videos", defaultLabel: "Videos", icon: Youtube },
   { to: "/brands", key: "nav.brands", defaultLabel: "Brands", icon: Package },
-  { to: "/sainsmart", key: "nav.sainsmart", defaultLabel: "SainSmart", icon: Sparkles },
+  { 
+    to: "/sainsmart", 
+    key: "nav.sainsmart", 
+    defaultLabel: "SainSmart", 
+    icon: Sparkles,
+    hasSubmenu: true,
+    subItems: [
+      { to: "/sainsmart", label: "SainSmart Hub", icon: Sparkles },
+      { to: "/carveco-bit-studio", label: "Carveco Bit Studio", icon: Wrench },
+    ]
+  },
+  { to: "/carveco-bit-studio", key: "nav.carveco", defaultLabel: "Carveco Bit Studio", icon: Wrench },
   { to: "/about", key: "nav.about", defaultLabel: "About", icon: Info },
 ];
 
@@ -23,12 +34,19 @@ export const Header = () => {
   const [q, setQ] = useState("");
   const [results, setResults] = useState(null);
   const [open, setOpen] = useState(false);
+  const [sainsmartMenuOpen, setSainsmartMenuOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const boxRef = useRef(null);
+  const sainsmartRef = useRef(null);
 
-  useEffect(() => { setMobileOpen(false); setOpen(false); setQ(""); }, [location.pathname]);
+  useEffect(() => { 
+    setMobileOpen(false); 
+    setOpen(false); 
+    setSainsmartMenuOpen(false);
+    setQ(""); 
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!q.trim()) { setResults(null); return; }
@@ -37,12 +55,15 @@ export const Header = () => {
   }, [q]);
 
   useEffect(() => {
-    const onClick = (e) => { if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false); };
+    const onClick = (e) => { 
+      if (boxRef.current && !boxRef.current.contains(e.target)) setOpen(false); 
+      if (sainsmartRef.current && !sainsmartRef.current.contains(e.target)) setSainsmartMenuOpen(false);
+    };
     document.addEventListener("mousedown", onClick);
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const isActive = (to) => location.pathname.startsWith(to);
+  const isActive = (to) => location.pathname === to || (to !== "/" && location.pathname.startsWith(to));
   const totalResults = results ? results.tutorials.length + results.reviews.length + results.materials.length : 0;
 
   return (
@@ -61,13 +82,57 @@ export const Header = () => {
           <nav className="hidden lg:flex items-center gap-0.5 ml-1">
             {NAV_BASE.map((n) => {
               const label = t(n.key, n.defaultLabel);
+              const active = isActive(n.to);
+
+              if (n.hasSubmenu) {
+                return (
+                  <div key={n.to} ref={sainsmartRef} className="relative group">
+                    <button
+                      onClick={() => setSainsmartMenuOpen((v) => !v)}
+                      onMouseEnter={() => setSainsmartMenuOpen(true)}
+                      data-testid={`nav-${n.defaultLabel.toLowerCase().replace(/\s+/g, "-")}`}
+                      className={`inline-flex items-center gap-1 px-2.5 py-2 rounded-md text-sm font-medium transition-colors ${
+                        active || location.pathname.includes("sainsmart") || location.pathname.includes("carveco")
+                          ? "text-cyan-400 bg-cyan-500/10" 
+                          : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                      }`}
+                    >
+                      {label}
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${sainsmartMenuOpen ? "rotate-180" : ""}`} />
+                    </button>
+
+                    {sainsmartMenuOpen && (
+                      <div 
+                        onMouseLeave={() => setSainsmartMenuOpen(false)}
+                        className="absolute left-0 top-full mt-1 w-56 rounded-xl bg-slate-950 border border-slate-800 shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150"
+                      >
+                        <p className="px-3 py-1.5 text-[10px] uppercase font-mono tracking-widest text-slate-500">SainSmart Portal</p>
+                        {n.subItems.map((sub) => (
+                          <Link
+                            key={sub.to}
+                            to={sub.to}
+                            onClick={() => setSainsmartMenuOpen(false)}
+                            className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+                              location.pathname === sub.to ? "bg-cyan-500/15 text-cyan-300" : "text-slate-300 hover:bg-slate-800/80 hover:text-white"
+                            }`}
+                          >
+                            <sub.icon className="w-4 h-4 text-cyan-400" />
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={n.to}
                   to={n.to}
                   data-testid={`nav-${n.defaultLabel.toLowerCase().replace(/\s+/g, "-")}`}
                   className={`px-2.5 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(n.to) ? "text-cyan-400 bg-cyan-500/10" : "text-slate-300 hover:text-white hover:bg-slate-800/60"
+                    active ? "text-cyan-400 bg-cyan-500/10" : "text-slate-300 hover:text-white hover:bg-slate-800/60"
                   }`}
                 >
                   {label}

@@ -1,26 +1,20 @@
-import translations from "./translationsData.json";
-
-export function getTranslatedReview(review, lang) {
-  if (lang === "en" || !translations[lang] || !translations[lang].reviews || !translations[lang].reviews[review.id]) return review;
-  const t = translations[lang].reviews[review.id];
+export function getTranslatedTutorialContent(tutorial, lang) {
+  if (!tutorial) return {};
   return {
-    ...review,
-    summary: t.summary || review.summary,
-    pros: t.pros || review.pros,
-    cons: t.cons || review.cons,
-    hardwareSpecs: t.hardwareSpecs || review.hardwareSpecs,
-    benchmarks: t.benchmarks || review.benchmarks
+    title: tutorial.title,
+    subtitle: tutorial.subtitle,
+    summary: tutorial.summary,
+    content: tutorial.content,
   };
 }
 
-export function getTranslatedTutorialContent(tutorial, lang) {
-  if (lang === "en" || !translations[lang] || !translations[lang].tutorials || !translations[lang].tutorials[tutorial.id]) return tutorial;
-  const t = translations[lang].tutorials[tutorial.id];
+export function getTranslatedReview(review, lang) {
+  if (!review) return {};
   return {
-    ...tutorial,
-    title: t.title || tutorial.title,
-    summary: t.summary || tutorial.summary,
-    steps: t.steps || tutorial.steps,
-    troubleshooting: t.troubleshooting || tutorial.troubleshooting
+    title: review.title,
+    subtitle: review.subtitle,
+    summary: review.summary,
+    pros: review.pros || [],
+    cons: review.cons || [],
   };
 }

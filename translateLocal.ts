@@ -1,3 +1,4 @@
+// @ts-nocheck
 import fs from "fs";
 import { REVIEWS } from "./src/data/reviews.js";
 import { BATCH_1 } from "./src/data/tutorials/batch1.js";

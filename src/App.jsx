@@ -19,6 +19,8 @@ import Brands from "@/pages/Brands";
 import Gallery from "@/pages/Gallery";
 import KintixReview from "@/pages/KintixReview";
 import Sainsmart from "@/pages/Sainsmart";
+import CarvecoBitStudio from "@/pages/CarvecoBitStudio";
+import SainsmartCncCalculator from "@/pages/SainsmartCncCalculator";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +49,10 @@ function App() {
               <Route path="/videos" element={<Videos />} />
               <Route path="/brands" element={<Brands />} />
               <Route path="/sainsmart" element={<Sainsmart />} />
+              <Route path="/sainsmart/carveco-bit-studio" element={<CarvecoBitStudio />} />
+              <Route path="/sainsmart/cnc-calculator" element={<CarvecoBitStudio />} />
+              <Route path="/carveco-bit-studio" element={<CarvecoBitStudio />} />
+              <Route path="/cnc-calculator" element={<SainsmartCncCalculator />} />
               <Route path="/about" element={<About />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/favourites" element={<Favourites />} />

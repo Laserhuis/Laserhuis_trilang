@@ -570,6 +570,31 @@ export default function Sainsmart() {
         </div>
       </div>
 
+      {/* Carveco Bit Studio Spotlight Banner */}
+      <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-slate-900 via-cyan-950/40 to-slate-900 border border-cyan-500/30 shadow-2xl relative overflow-hidden group">
+        <div className="absolute -right-12 -bottom-12 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition-all pointer-events-none" />
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+          <div className="space-y-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+              <Wrench className="w-3.5 h-3.5" /> Full Native Application
+            </span>
+            <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
+              Carveco CNC Bit Studio & Tool Database Manager
+            </h2>
+            <p className="text-slate-300 text-sm max-w-2xl leading-relaxed">
+              Manage your Carveco / ArtCAM tool databases (.tdb / .tbd binary & JSON/CSV import/export), 
+              calculate chipload feeds & speeds for wood, aluminum, MDF, acrylic, and tune VFD spindle speeds directly inside Laserhuis!
+            </p>
+          </div>
+          <Link
+            to="/carveco-bit-studio"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-sm shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all shrink-0 hover:scale-105"
+          >
+            <Wrench className="w-4 h-4" /> Open Carveco Bit Studio ↗
+          </Link>
+        </div>
+      </div>
+
       {/* Quick Jump SEO Anchor Links */}
       <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 sm:gap-4 mb-10 py-3.5 px-4 sm:px-6 rounded-2xl bg-slate-900/30 border border-slate-800/80 backdrop-blur-sm">
         <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold mr-1 flex items-center gap-1.5">

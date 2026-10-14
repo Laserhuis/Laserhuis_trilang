@@ -1,43 +1,37 @@
 import { useState, useEffect } from "react";
 
-const KEY = "pf_favourites";
-const EMPTY = { tutorial: [], review: [], material: [] };
-const EVT = "pf-fav-change";
+const FAV_KEY = "laserhuis_favourites";
 
-function read() {
+export function getFavourites() {
   try {
-    return { ...EMPTY, ...(JSON.parse(localStorage.getItem(KEY)) || {}) };
+    const raw = localStorage.getItem(FAV_KEY);
+    return raw ? JSON.parse(raw) : [];
   } catch {
-    return { ...EMPTY };
+    return [];
   }
 }
 
-function write(value) {
-  localStorage.setItem(KEY, JSON.stringify(value));
-  window.dispatchEvent(new Event(EVT));
-}
-
-export function isFavourite(type, id) {
-  return (read()[type] || []).includes(id);
-}
-
-export function toggleFavourite(type, id) {
-  const v = read();
-  const arr = v[type] || [];
-  v[type] = arr.includes(id) ? arr.filter((x) => x !== id) : [...arr, id];
-  write(v);
+export function toggleFavourite(id) {
+  const current = getFavourites();
+  const exists = current.includes(id);
+  const updated = exists ? current.filter((x) => x !== id) : [...current, id];
+  localStorage.setItem(FAV_KEY, JSON.stringify(updated));
+  window.dispatchEvent(new Event("favourites_changed"));
+  return !exists;
 }
 
 export function useFavourites() {
-  const [fav, setFav] = useState(read);
+  const [favs, setFavs] = useState(getFavourites);
+
   useEffect(() => {
-    const handler = () => setFav(read());
-    window.addEventListener(EVT, handler);
-    window.addEventListener("storage", handler);
+    const handleStorage = () => setFavs(getFavourites());
+    window.addEventListener("favourites_changed", handleStorage);
+    window.addEventListener("storage", handleStorage);
     return () => {
-      window.removeEventListener(EVT, handler);
-      window.removeEventListener("storage", handler);
+      window.removeEventListener("favourites_changed", handleStorage);
+      window.removeEventListener("storage", handleStorage);
     };
   }, []);
-  return fav;
+
+  return favs;
 }
