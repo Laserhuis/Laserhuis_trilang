@@ -53,8 +53,9 @@ export const Header: React.FC<HeaderProps> = ({
   onLoadBrandPreset,
   modifiedCount,
 }) => {
-  const metricCount = database.tools.filter(t => t.unitFlag === 1 || t.unit === 'mm').length;
-  const imperialCount = database.tools.length - metricCount;
+  const tools = database?.tools || [];
+  const metricCount = tools.filter(t => t.unitFlag === 1 || t.unit === 'mm').length;
+  const imperialCount = tools.length - metricCount;
   const [isBrandDropdownOpen, setIsBrandDropdownOpen] = useState(false);
   const brandDropdownRef = useRef<HTMLDivElement>(null);
 
@@ -86,9 +87,9 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             {/* Metadata clean unboxed text */}
             <div className="flex items-center gap-2 text-xs text-zinc-400 flex-wrap mt-0.5">
-              <span className="font-mono text-amber-300 font-semibold">{database.fileName}</span>
+              <span className="font-mono text-amber-300 font-semibold">{database?.fileName || 'Tool Database'}</span>
               <span aria-hidden="true" className="text-zinc-600">·</span>
-              <span>{database.tools.length} bits</span>
+              <span>{tools.length} bits</span>
               <span aria-hidden="true" className="text-zinc-600">·</span>
               <span className="text-zinc-400">
                 {metricCount > 0 && imperialCount > 0
