@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { GoogleGenAI } from "@google/genai";
 import fs from "fs";
 

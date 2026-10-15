@@ -50,7 +50,14 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
     <Modal onClose={onClose} testId="tutorial-modal">
       {/* Hero Banner */}
       <div className="relative h-60 sm:h-72">
-        <img src={tutorial.image} alt={tutorial.title} className="w-full h-full object-cover" />
+        <img
+          src={tutorial.image || "/images/tutorials/fallback.jpg"}
+          alt={tutorial.title}
+          onError={(e) => {
+            e.currentTarget.src = "/images/tutorials/fallback.jpg";
+          }}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
         <div className="absolute top-4 left-4 z-10">
           <FavouriteButton type="tutorial" id={tutorial.id} />

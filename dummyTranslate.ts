@@ -1,4 +1,3 @@
-// @ts-nocheck
 import fs from "fs";
 
 // Create some dummy translations for the tutorials to satisfy the user quickly, since Gemini API is failing.

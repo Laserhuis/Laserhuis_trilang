@@ -18,9 +18,12 @@ export const TutorialCard = ({ tutorial: rawTutorial, index = 0 }) => {
     >
       <div className="relative h-44 overflow-hidden">
         <img
-          src={tutorial.image}
+          src={tutorial.image || "/images/tutorials/fallback.jpg"}
           alt={tutorial.title}
           loading="lazy"
+          onError={(e) => {
+            e.currentTarget.src = "/images/tutorials/fallback.jpg";
+          }}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent" />

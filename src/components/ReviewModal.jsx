@@ -24,7 +24,14 @@ export const ReviewModal = ({ review: rawReview, onClose }) => {
   return (
     <Modal onClose={onClose} testId="review-modal">
       <div className="relative h-60 sm:h-72">
-        <img src={review.image} alt={review.name} className="w-full h-full object-cover" />
+        <img
+          src={review.image || "/images/tutorials/fallback.jpg"}
+          alt={review.name}
+          onError={(e) => {
+            e.currentTarget.src = "/images/tutorials/fallback.jpg";
+          }}
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
         <div className="absolute bottom-5 left-5 right-5">
           <div className="flex flex-wrap items-center gap-2 mb-2">
