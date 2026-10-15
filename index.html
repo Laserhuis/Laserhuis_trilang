@@ -3,6 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var target = window;
+          var desc = Object.getOwnPropertyDescriptor(target, 'fetch');
+          if (!desc) {
+            var proto = Object.getPrototypeOf(target);
+            if (proto) desc = Object.getOwnPropertyDescriptor(proto, 'fetch');
+          }
+          if (desc && desc.get && !desc.set) {
+            var val = desc.get.call(window);
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return val; },
+              set: function(v) { val = v; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (err) {
+          // Ignore
+        }
+
+        window.addEventListener('error', function(e) {
+          if (e.filename && e.filename.indexOf('chrome-extension://') !== -1) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        }, true);
+      })();
+    </script>
     <meta name="theme-color" content="#020617" />
     <title>Laserhuis — Laser Engraving & Cutting Hub, Material Settings & Tutorials</title>
     <meta name="description" content="Laserhuis is the premier laser engraving and cutting reference hub. Explore 50+ step-by-step LightBurn & EZCAD tutorials, tested material speed & power settings, honest machine reviews, and curated project galleries." />

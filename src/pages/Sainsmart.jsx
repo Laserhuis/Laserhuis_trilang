@@ -546,6 +546,12 @@ export default function Sainsmart() {
           </p>
           
           <div className="mt-6 flex flex-wrap items-center gap-4">
+            <Link 
+              to="/sainsmart/cnc-calculator" 
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-semibold shadow-[0_0_18px_rgba(16,185,129,0.35)] transition-colors text-sm"
+            >
+              <Wrench className="w-4 h-4" /> Launch CNC Calculator
+            </Link>
             <a 
               href={generalAffiliateUrl} 
               target="_blank" 
@@ -575,6 +581,9 @@ export default function Sainsmart() {
         <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold mr-1 flex items-center gap-1.5">
           <Compass className="w-3.5 h-3.5 text-cyan-400" /> {t("sainsmart.nav_title", "Navigation:")}
         </span>
+        <Link to="/sainsmart/cnc-calculator" className="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-bold transition-colors py-1 px-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
+          <Wrench className="w-3.5 h-3.5" /> CNC Calculator Sub-App
+        </Link>
         <a href="#flagship-laser" className="text-xs font-mono text-slate-400 hover:text-cyan-300 transition-colors py-1 px-2.5 rounded-lg hover:bg-cyan-500/5">
           {t("sainsmart.nav_flagship", "# Flagship Laser")}
         </a>
