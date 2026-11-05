@@ -3,6 +3,7 @@ import "@/App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "sonner";
 import { Loader2 } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -49,6 +50,7 @@ function App() {
     <LanguageProvider>
       <div className="App dark min-h-screen bg-[#020617] text-slate-100">
         <BrowserRouter>
+          <Analytics />
           <ScrollToTop />
           <PageSEO />
           <Header />
