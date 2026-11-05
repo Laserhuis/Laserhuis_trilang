@@ -207,13 +207,59 @@ const ROUTES = [
   },
   {
     path: '/brands',
-    title: 'Top Laser Engraver Brands & Manufacturer Partnerships | Laserhuis',
-    description: 'Compare leading manufacturers of diode, CO2, and fiber lasers. See how xTool, Ortur, Sculpfun, OMTech, Gweike, and EM-Smart stack up.',
-    h1: 'Top Laser Engraver Brands & Manufacturer Partnerships',
+    title: 'Laser Engraving Manufacturers & Brands | Laserhuis',
+    description: 'Explore leading laser engraving manufacturers across Diode, CO2, Fiber, and MOPA technologies. Compare brand specs, hands-on reviews, and machine guides.',
+    h1: 'Laser Engraving Manufacturers & Brands',
     content: `
-      <header><h1>Top Laser Engraver Brands & Manufacturer Partnerships</h1></header>
+      <header><h1>Laser Engraving Manufacturers & Brands</h1></header>
       <main>
-        <p>Laserhuis partners with leading equipment brands to deliver objective bench reviews and hands-on video tutorials.</p>
+        <p>Welcome to the Laserhuis reference directory of laser engraving manufacturers and laser engraver brands. Explore diode laser manufacturers, CO2 laser manufacturers, Fiber laser manufacturers, and MOPA laser manufacturers with verified brand specs, review links, and technical machine resources.</p>
+
+        <section>
+          <h2>Fiber and MOPA Laser Manufacturers</h2>
+          <ul>
+            <li><strong>Genmitsu (SainSmart):</strong> Hybrid galvo systems (Kintix 10W) and desktop engravers. <a href="/sainsmart">View SainSmart Hub</a> | <a href="/reviews/kintix">Kintix 10W Review</a></li>
+            <li><strong>EM-Smart:</strong> Portable desktop fiber galvo engravers and dual-source systems. <a href="/em-smart">View EM-Smart Hub</a></li>
+            <li><strong>Gweike Cloud:</strong> High-speed galvo fiber (G2 Max 50W) and MOPA fiber split systems. <a href="/gweike">View Gweike Hub</a></li>
+            <li><strong>OMTech Laser:</strong> Raycus fiber galvo workstations (30W Fiber Galvo). <a href="/reviews/omtech-30w-fiber-galvo">OMTech 30W Fiber Review</a></li>
+            <li><strong>ComMarker:</strong> MOPA and fiber galvo lasers for deep metal relief and color marking.</li>
+            <li><strong>Cloudray:</strong> Turnkey LiteMarker fiber galvo machines and laser optics.</li>
+            <li><strong>Monport Laser:</strong> Entry-level galvo fiber marking systems.</li>
+            <li><strong>Epilog Laser & Trotec Laser:</strong> Industrial commercial CO2 and fiber laser systems.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>CO2 Laser Manufacturers</h2>
+          <ul>
+            <li><strong>OMTech Laser:</strong> Enclosed desktop CO2 lasers (Polar 50W) with Ruida DSP control. <a href="/reviews/omtech-polar-50w-co2">Polar 50W Review</a></li>
+            <li><strong>Thunder Laser:</strong> Industrial-grade RECI glass tube CO2 laser cutters (Nova 35). <a href="/reviews/thunder-laser-nova-35">Nova 35 Review</a></li>
+            <li><strong>Gweike Cloud:</strong> 55W desktop CO2 laser cutters with 5MP lid vision camera. <a href="/gweike">View Gweike Hub</a></li>
+            <li><strong>xTool:</strong> Enclosed desktop CO2 lasers (xTool P2 55W). <a href="/reviews/xtool-d1-pro-20w">xTool D1 Pro Review</a></li>
+            <li><strong>Glowforge:</strong> Consumer cloud-connected CO2 desktop lasers.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Diode and Hybrid Laser Manufacturers</h2>
+          <ul>
+            <li><strong>Genmitsu (SainSmart):</strong> Desktop diode lasers and hybrid galvo machines. <a href="/sainsmart">View SainSmart Hub</a></li>
+            <li><strong>Sculpfun:</strong> Large-format desktop diode engravers with linear guide rails. <a href="/reviews/sculpfun-s30-ultra-33w">Sculpfun S30 Ultra Review</a></li>
+            <li><strong>Acmer:</strong> Dual linear rail desktop diode engravers. <a href="/reviews/acmer-p2-33w">Acmer P2 33W Review</a></li>
+            <li><strong>Ortur:</strong> Desktop GRBL diode engravers and craft lasers.</li>
+            <li><strong>LaserPecker:</strong> Portable dual-wavelength galvo engravers.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How to Compare Laser Manufacturers</h2>
+          <p>Choosing a laser engraver manufacturer depends on substrate requirements (wood vs acrylic vs raw metals), optical power density, scan speed, software platform (LightBurn vs EZCAD vs proprietary), safety enclosures, and European availability. Read our <a href="/fiber-laser">Fiber Laser Guide</a> or browse <a href="/reviews">Laserhuis Machine Reviews</a>.</p>
+        </section>
+
+        <section>
+          <h2>Editorial Disclosure</h2>
+          <p>Laserhuis publishes hands-on reviews, specification-based overviews, and manufacturer reference information. Each item is labeled according to its source and testing status. A listing does not imply an official endorsement or commercial partnership unless explicitly stated.</p>
+        </section>
       </main>
     `
   },
