@@ -218,7 +218,22 @@ export function parseBinaryTdb(
         const fCount = detectFluteCount(item.text);
         const tAngle = detectToolAngle(item.text, tType, param2);
         const tTipSize = detectTipSize(item.text, tType, diam, param2, detected.unit);
-        const sOver = detectStepover(diam, tType, param2);
+        let binaryStepoverVal: number | undefined = undefined;
+        if (paramsOffset > 0) {
+          for (const testOffset of [paramsOffset + 93, paramsOffset + 37, paramsOffset + 90, paramsOffset + 107]) {
+            if (testOffset + 8 <= len) {
+              const testSO = view.getFloat64(testOffset, true);
+              if (!isNaN(testSO) && testSO > 0.0001 && testSO <= diam) {
+                binaryStepoverVal = testSO;
+                break;
+              }
+            }
+          }
+        }
+        const sOver =
+          binaryStepoverVal !== undefined
+            ? parseStepoverValue(binaryStepoverVal, diam, tType)
+            : detectStepover(diam, tType, param2);
         const sDiameter = detectShankDiameter(item.text, diam, detected.unit);
         const fLength = detectFluteLength(item.text, diam, detected.unit);
         const matGroup = detectMaterialGroup(currentGroup, item.text);
@@ -743,6 +758,66 @@ export function detectStepover(
 }
 
 /**
+ * Smart stepover parser supporting explicit percentages ("10%"),
+ * whole-number percentages ("10"), ratios (0.10), or absolute distances ("0.3175mm")
+ */
+export function parseStepoverValue(
+  rawVal: string | number | undefined | null,
+  diameter: number,
+  toolType: ToolType
+): { stepover: number; stepoverPercent: number } {
+  if (rawVal === undefined || rawVal === null || rawVal === '') {
+    return detectStepover(diameter, toolType);
+  }
+
+  const str = String(rawVal).trim();
+  const hasPercent = str.includes('%');
+  // Strip %, quotes, spaces, and handle European comma decimals (e.g. 0,3175 or 10,5)
+  const normalized = str.replace('%', '').trim().replace(/["'\s]/g, '');
+  const cleanStr =
+    normalized.includes(',') && !normalized.includes('.')
+      ? normalized.replace(',', '.')
+      : normalized.replace(',', '');
+  const num = parseFloat(cleanStr);
+
+  if (isNaN(num) || num <= 0) {
+    return detectStepover(diameter, toolType);
+  }
+
+  // Safe non-zero diameter fallback
+  const d = diameter > 0 ? diameter : 3.175;
+
+  // 1. Explicit percent symbol: e.g. "10%", "50%", "8.5%"
+  if (hasPercent) {
+    const pct = Math.min(100, Math.max(1, Math.round(num * 10) / 10));
+    const dist = Math.round((d * (pct / 100)) * 10000) / 10000;
+    return { stepover: dist, stepoverPercent: Math.round(pct) };
+  }
+
+  // 2. If number exceeds diameter (or equals common percentage integers like 10, 15, 20, 25, 30, 40, 50, 60, 70)
+  // CNC stepover distance can never exceed bit diameter.
+  // If num > d and num <= 100, it is 100% a percentage without '%' sign!
+  if (num > d && num <= 100) {
+    const pct = Math.min(100, Math.max(1, Math.round(num * 10) / 10));
+    const dist = Math.round((d * (pct / 100)) * 10000) / 10000;
+    return { stepover: dist, stepoverPercent: Math.round(pct) };
+  }
+
+  // 3. For decimal numbers <= 1.0 (e.g. 0.10, 0.20, 0.40):
+  // If bit diameter is metric (> 2.0mm) and num is a classic ratio (<= 0.95) and unusually small relative to diameter:
+  if (d > 2.0 && num > 0.01 && num < 0.95 && (num / d) < 0.04) {
+    const pct = Math.round(num * 100);
+    const dist = Math.round((d * num) * 10000) / 10000;
+    return { stepover: dist, stepoverPercent: pct };
+  }
+
+  // Standard absolute distance (e.g. 0.3175 mm for 3.175 bit, or 1.27 mm for 3.175 bit)
+  const pct = Math.min(100, Math.max(1, Math.round((num / d) * 100)));
+  const dist = Math.round(num * 10000) / 10000;
+  return { stepover: dist, stepoverPercent: pct };
+}
+
+/**
  * Detect Shank Diameter from name or fallback to cutting diameter
  */
 export function detectShankDiameter(name: string, diameter: number, unit: 'mm' | 'inch' = 'mm'): number {
@@ -848,6 +923,14 @@ export function writeBinaryTdb(tools: CarvecoTool[], originalBuffer: ArrayBuffer
       view.setFloat64(tool.paramsOffset + 8, tool.spindleSpeed, true);
       view.setFloat64(tool.paramsOffset + 16, tool.feedRate, true);
       view.setFloat64(tool.paramsOffset + 24, tool.plungeRate, true);
+
+      // Write updated stepover if offset exists in binary format
+      const targetStepover =
+        tool.stepover ??
+        Math.round((tool.diameter * ((tool.stepoverPercent ?? 40) / 100)) * 10000) / 10000;
+      if (tool.paramsOffset + 93 + 8 <= targetBuffer.byteLength) {
+        view.setFloat64(tool.paramsOffset + 93, targetStepover, true);
+      }
 
       if (tool.nameOffset !== undefined) {
         let strLen = new Uint8Array(targetBuffer)[tool.nameOffset + 3];
@@ -964,6 +1047,8 @@ export function parseTextTools(
   let colToolNo = -1;
   let colDiameter = -1;
   let colStepdown = -1;
+  let colStepover = -1;
+  let colStepoverPercent = -1;
   let colSpindle = -1;
   let colFeed = -1;
   let colPlunge = -1;
@@ -984,6 +1069,29 @@ export function parseTextTools(
       colDiameter = idx;
     } else if (colStepdown === -1 && (h.includes('stepdown') || h.includes('pass depth') || h.includes('depth per pass') || h.includes('diepte') || h.includes('snedediepte') || h.includes('doc') || h.includes('depth of cut') || h.includes('ap'))) {
       colStepdown = idx;
+    } else if (
+      colStepoverPercent === -1 &&
+      (h.includes('stepover %') ||
+        h.includes('stepover%') ||
+        h.includes('stepover pct') ||
+        h.includes('% stepover') ||
+        h.includes('overstap %') ||
+        h.includes('ueberdeckung %'))
+    ) {
+      colStepoverPercent = idx;
+    } else if (
+      colStepover === -1 &&
+      (h.includes('stepover') ||
+        h.includes('step over') ||
+        h.includes('step-over') ||
+        h.includes('overstap') ||
+        h.includes('ueberdeckung') ||
+        h.includes('pas transversal') ||
+        h.includes('ae') ||
+        h.includes('woc') ||
+        h === 'so')
+    ) {
+      colStepover = idx;
     } else if (colSpindle === -1 && (h.includes('spindle') || h.includes('rpm') || h.includes('speed') || h.includes('toerental') || h.includes('rotatie') || h.includes('toeren') || h === 's')) {
       colSpindle = idx;
     } else if (colFeed === -1 && (h.includes('feed') || h.includes('feedrate') || h.includes('feed rate') || h.includes('voeding') || h.includes('snelheid') || h === 'f')) {
@@ -1026,6 +1134,7 @@ export function parseTextTools(
     let toolNo = tools.length + 1;
     let diameter = 3.175;
     let stepdown = 1.0;
+    let rawStepoverInput: string | number | undefined = undefined;
     let spindleSpeed = 18000;
     let feedRate = 800;
     let plungeRate = 200;
@@ -1039,6 +1148,13 @@ export function parseTextTools(
       if (colToolNo !== -1 && parts[colToolNo]) toolNo = parseInt(parts[colToolNo], 10) || toolNo;
       if (colDiameter !== -1 && parts[colDiameter]) diameter = parseNumberClean(parts[colDiameter], diameter);
       if (colStepdown !== -1 && parts[colStepdown]) stepdown = parseNumberClean(parts[colStepdown], stepdown);
+      if (colStepoverPercent !== -1 && parts[colStepoverPercent]) {
+        rawStepoverInput = parts[colStepoverPercent].includes('%')
+          ? parts[colStepoverPercent]
+          : `${parts[colStepoverPercent]}%`;
+      } else if (colStepover !== -1 && parts[colStepover]) {
+        rawStepoverInput = parts[colStepover];
+      }
       if (colSpindle !== -1 && parts[colSpindle]) spindleSpeed = Math.round(parseNumberClean(parts[colSpindle], spindleSpeed));
       if (colFeed !== -1 && parts[colFeed]) feedRate = parseNumberClean(parts[colFeed], feedRate);
       if (colPlunge !== -1 && parts[colPlunge]) plungeRate = parseNumberClean(parts[colPlunge], plungeRate);
@@ -1102,10 +1218,18 @@ export function parseTextTools(
     const fCount = flutes || detectFluteCount(name);
     const tAngle = detectToolAngle(name, tType, diameter);
     const tTipSize = detectTipSize(name, tType, diameter, undefined, detected.unit);
-    const sOver = detectStepover(diameter, tType);
+    const sOver = parseStepoverValue(rawStepoverInput, diameter, tType);
     const sDiameter = detectShankDiameter(name, diameter, detected.unit);
     const fLength = detectFluteLength(name, diameter, detected.unit);
     const matGroup = detectMaterialGroup(group, name);
+    const param2Val =
+      tType === 'endmill'
+        ? sOver.stepover
+        : tAngle !== undefined
+        ? tAngle
+        : tTipSize !== undefined
+        ? tTipSize
+        : sOver.stepover;
 
     tools.push({
       id: `tool-${tools.length + 1}`,
@@ -1116,7 +1240,7 @@ export function parseTextTools(
       unitFlag: detected.unitFlag,
       unit: detected.unit,
       diameter,
-      param2: diameter,
+      param2: param2Val,
       tipSize: tTipSize,
       angle: tAngle,
       stepover: sOver.stepover,
@@ -1134,7 +1258,7 @@ export function parseTextTools(
       fluteCount: fCount,
       originalValues: {
         diameter,
-        param2: diameter,
+        param2: param2Val,
         stepdown,
         spindleSpeed,
         feedRate,
@@ -1237,6 +1361,10 @@ export function parseJsonTools(
         forcedUnit
       );
 
+      const tType = detectToolType(name);
+      const sOver = parseStepoverValue(preset.stepover, diameter, tType);
+      const param2Val = tType === 'endmill' ? sOver.stepover : sOver.stepover;
+
       tools.push({
         id: `tool-${tools.length + 1}`,
         name,
@@ -1246,22 +1374,26 @@ export function parseJsonTools(
         unitFlag: detected.unitFlag,
         unit: detected.unit,
         diameter,
-        param2: diameter,
+        param2: param2Val,
         stepdown,
         spindleSpeed,
         feedRate,
         plungeRate,
+        stepover: sOver.stepover,
+        stepoverPercent: sOver.stepoverPercent,
         feedUnit: detected.unit === 'mm' ? 2 : 4,
         plungeUnit: detected.unit === 'mm' ? 2 : 3,
-        toolType: detectToolType(name),
+        toolType: tType,
         fluteCount: flutes,
         originalValues: {
           diameter,
-          param2: diameter,
+          param2: param2Val,
           stepdown,
           spindleSpeed,
           feedRate,
           plungeRate,
+          stepover: sOver.stepover,
+          stepoverPercent: sOver.stepoverPercent,
           name,
           notes: '',
         },
@@ -1309,6 +1441,13 @@ export function parseJsonTools(
         forcedUnit
       );
 
+      const tType = detectToolType(name);
+      const sOver = parseStepoverValue(
+        item.stepover || item.stepoverPercent || item.stepover_percent,
+        diameter,
+        tType
+      );
+
       tools.push({
         id: `tool-${tools.length + 1}`,
         name,
@@ -1318,22 +1457,26 @@ export function parseJsonTools(
         unitFlag: detected.unitFlag,
         unit: detected.unit,
         diameter,
-        param2: diameter,
+        param2: sOver.stepover,
         stepdown,
         spindleSpeed,
         feedRate,
         plungeRate,
+        stepover: sOver.stepover,
+        stepoverPercent: sOver.stepoverPercent,
         feedUnit: detected.unit === 'mm' ? 2 : 4,
         plungeUnit: detected.unit === 'mm' ? 2 : 3,
-        toolType: detectToolType(name),
+        toolType: tType,
         fluteCount: flutes,
         originalValues: {
           diameter,
-          param2: diameter,
+          param2: sOver.stepover,
           stepdown,
           spindleSpeed,
           feedRate,
           plungeRate,
+          stepover: sOver.stepover,
+          stepoverPercent: sOver.stepoverPercent,
           name,
           notes: '',
         },
@@ -1364,28 +1507,43 @@ export function parseJsonTools(
           forcedUnit
         );
 
+        const tType = item.toolType || detectToolType(item.name);
+        const sOver = parseStepoverValue(
+          item.stepoverPercent !== undefined
+            ? `${item.stepoverPercent}%`
+            : item.stepover !== undefined
+            ? item.stepover
+            : item.param2,
+          diam,
+          tType
+        );
+
         tools.push({
           ...item,
           id: item.id || `tool-${tools.length + 1}`,
           diameter: diam,
-          param2: item.param2 || diam,
+          param2: item.param2 || sOver.stepover,
           stepdown: step,
           spindleSpeed: rpm,
           feedRate: feed,
           plungeRate: plunge,
+          stepover: sOver.stepover,
+          stepoverPercent: sOver.stepoverPercent,
           unitFlag: detected.unitFlag,
           unit: detected.unit,
           feedUnit: item.feedUnit || (detected.unit === 'mm' ? 2 : 4),
           plungeUnit: item.plungeUnit || (detected.unit === 'mm' ? 2 : 3),
-          toolType: item.toolType || detectToolType(item.name),
+          toolType: tType,
           fluteCount: item.fluteCount || detectFluteCount(item.name),
           originalValues: item.originalValues || {
             diameter: diam,
-            param2: item.param2 || diam,
+            param2: item.param2 || sOver.stepover,
             stepdown: step,
             spindleSpeed: rpm,
             feedRate: feed,
             plungeRate: plunge,
+            stepover: sOver.stepover,
+            stepoverPercent: sOver.stepoverPercent,
             name: item.name,
             notes: item.notes || '',
           },
@@ -1562,6 +1720,8 @@ export function exportToCsv(tools: CarvecoTool[]): string {
     'Group',
     'Tool Number',
     'Diameter',
+    'Stepover',
+    'Stepover %',
     'Stepdown',
     'Spindle Speed (RPM)',
     'Feed Rate',
@@ -1573,21 +1733,32 @@ export function exportToCsv(tools: CarvecoTool[]): string {
     'Notes',
   ];
 
-  const rows = tools.map(t => [
-    escapeCsv(t.name),
-    escapeCsv(t.group),
-    t.toolNo,
-    t.diameter,
-    t.stepdown,
-    t.spindleSpeed,
-    t.feedRate,
-    t.plungeRate,
-    t.feedUnit === 4 ? 'in/min' : t.feedUnit === 2 ? 'mm/min' : t.feedUnit === 1 ? 'mm/sec' : 'in/sec',
-    t.plungeUnit === 3 ? 'in/min' : t.plungeUnit === 2 ? 'mm/min' : t.plungeUnit === 1 ? 'mm/sec' : 'in/sec',
-    t.toolType,
-    t.fluteCount,
-    escapeCsv(t.notes),
-  ]);
+  const rows = tools.map(t => {
+    const sDist =
+      t.stepover ??
+      Math.round((t.diameter * ((t.stepoverPercent ?? 40) / 100)) * 10000) / 10000;
+    const sPct =
+      t.stepoverPercent ??
+      (t.diameter > 0 ? Math.round((sDist / t.diameter) * 100) : 40);
+
+    return [
+      escapeCsv(t.name),
+      escapeCsv(t.group),
+      t.toolNo,
+      t.diameter,
+      sDist,
+      `${sPct}%`,
+      t.stepdown,
+      t.spindleSpeed,
+      t.feedRate,
+      t.plungeRate,
+      t.feedUnit === 4 ? 'in/min' : t.feedUnit === 2 ? 'mm/min' : t.feedUnit === 1 ? 'mm/sec' : 'in/sec',
+      t.plungeUnit === 3 ? 'in/min' : t.plungeUnit === 2 ? 'mm/min' : t.plungeUnit === 1 ? 'mm/sec' : 'in/sec',
+      t.toolType,
+      t.fluteCount,
+      escapeCsv(t.notes),
+    ];
+  });
 
   return [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
 }
@@ -1690,13 +1861,17 @@ export function exportToVectricCsv(tools: CarvecoTool[]): string {
         ? 'Fly Cutter'
         : 'End Mill';
 
+    const sDist =
+      t.stepover ??
+      Math.round((t.diameter * ((t.stepoverPercent ?? 40) / 100)) * 1000) / 1000;
+
     return [
       escapeCsv(t.name),
       vType,
       t.diameter,
       isMetric ? 'mm' : 'inches',
       t.stepdown,
-      t.param2 || Math.round(t.diameter * 0.4 * 1000) / 1000,
+      sDist,
       t.spindleSpeed,
       t.feedRate,
       t.plungeRate,
@@ -1767,7 +1942,9 @@ export function exportToFusion360Tools(tools: CarvecoTool[]): string {
             v_f_plunge: Math.round(plungeMmMin),
             v_f_ramp: Math.round(feedMmMin * 0.5),
             stepdown: Math.round(stepdownMm * 1000) / 1000,
-            stepover: Math.round(diamMm * 0.4 * 1000) / 1000,
+            stepover: t.stepover
+              ? Math.round((isMetric ? t.stepover : t.stepover * 25.4) * 1000) / 1000
+              : Math.round((diamMm * ((t.stepoverPercent ?? 40) / 100)) * 1000) / 1000,
           },
         ],
       },
@@ -1802,6 +1979,10 @@ export function exportToCarbideCreateCsv(tools: CarvecoTool[]): string {
   ];
 
   const rows = tools.map(t => {
+    const sDist =
+      t.stepover ??
+      Math.round((t.diameter * ((t.stepoverPercent ?? 40) / 100)) * 1000) / 1000;
+
     return [
       t.toolNo,
       escapeCsv(t.name),
@@ -1812,7 +1993,7 @@ export function exportToCarbideCreateCsv(tools: CarvecoTool[]): string {
       t.feedRate,
       t.plungeRate,
       t.stepdown,
-      t.param2 || Math.round(t.diameter * 0.5 * 1000) / 1000,
+      sDist,
     ];
   });
 

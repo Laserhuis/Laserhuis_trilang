@@ -262,6 +262,25 @@ export default function App() {
         newVal = Math.round(newVal * 10000) / 10000;
       }
 
+      if (config.field === 'stepover') {
+        const sPct = tool.diameter > 0 ? Math.round((newVal / tool.diameter) * 100) : tool.stepoverPercent;
+        return {
+          ...tool,
+          stepover: newVal,
+          stepoverPercent: sPct,
+          param2: tool.toolType === 'endmill' ? newVal : tool.param2,
+        };
+      }
+      if (config.field === 'stepoverPercent') {
+        const sDist = Math.round((tool.diameter * (newVal / 100)) * 10000) / 10000;
+        return {
+          ...tool,
+          stepoverPercent: newVal,
+          stepover: sDist,
+          param2: tool.toolType === 'endmill' ? sDist : tool.param2,
+        };
+      }
+
       return {
         ...tool,
         [config.field]: newVal,
@@ -286,6 +305,12 @@ export default function App() {
         const newStep = needsScale ? Math.round(tool.stepdown * 25.4 * 100) / 100 : tool.stepdown;
         const newFeed = needsScale ? Math.round(tool.feedRate * 25.4) : tool.feedRate;
         const newPlunge = needsScale ? Math.round(tool.plungeRate * 25.4) : tool.plungeRate;
+        const newStepover = needsScale && tool.stepover
+          ? Math.round(tool.stepover * 25.4 * 10000) / 10000
+          : tool.stepover !== undefined
+          ? tool.stepover
+          : Math.round((newDiam * ((tool.stepoverPercent ?? 40) / 100)) * 10000) / 10000;
+        const newParam2 = tool.toolType === 'endmill' ? newStepover : tool.param2;
 
         return {
           ...tool,
@@ -295,6 +320,9 @@ export default function App() {
           stepdown: newStep,
           feedRate: newFeed,
           plungeRate: newPlunge,
+          stepover: newStepover,
+          stepoverPercent: tool.stepoverPercent,
+          param2: newParam2,
           feedUnit: 2,
           plungeUnit: 2,
         };
@@ -304,6 +332,12 @@ export default function App() {
         const newStep = needsScale ? Math.round((tool.stepdown / 25.4) * 10000) / 10000 : tool.stepdown;
         const newFeed = needsScale ? Math.round((tool.feedRate / 25.4) * 10) / 10 : tool.feedRate;
         const newPlunge = needsScale ? Math.round((tool.plungeRate / 25.4) * 10) / 10 : tool.plungeRate;
+        const newStepover = needsScale && tool.stepover
+          ? Math.round((tool.stepover / 25.4) * 10000) / 10000
+          : tool.stepover !== undefined
+          ? tool.stepover
+          : Math.round((newDiam * ((tool.stepoverPercent ?? 40) / 100)) * 10000) / 10000;
+        const newParam2 = tool.toolType === 'endmill' ? newStepover : tool.param2;
 
         return {
           ...tool,
@@ -313,6 +347,9 @@ export default function App() {
           stepdown: newStep,
           feedRate: newFeed,
           plungeRate: newPlunge,
+          stepover: newStepover,
+          stepoverPercent: tool.stepoverPercent,
+          param2: newParam2,
           feedUnit: 4,
           plungeUnit: 3,
         };

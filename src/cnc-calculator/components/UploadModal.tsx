@@ -305,11 +305,11 @@ export const UploadModal: React.FC<UploadModalProps> = ({
                 {loading ? 'Analyzing tools and converting schemas...' : 'Drop your CNC tool library file here'}
               </p>
               <p className="text-[11px] text-zinc-400 mt-0.5">
-                or click to browse (.tbd, .tdb, .csv, .json, .tools, .nc)
+                or click to browse (.tdb, .csv, .json, .tools, .nc)
               </p>
 
               <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5 text-[10px] text-zinc-400">
-                <span className="bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">Carveco (.tbd, .tdb)</span>
+                <span className="bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">Carveco & ArtCAM (.tdb)</span>
                 <span className="bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">European / Dutch Excel (;, comma)</span>
                 <span className="bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">Easel (.json, .csv)</span>
                 <span className="bg-zinc-800/80 px-2 py-0.5 rounded border border-zinc-700">Candle GRBL (.nc, .gcode)</span>

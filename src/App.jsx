@@ -20,6 +20,8 @@ import Gallery from "@/pages/Gallery";
 import KintixReview from "@/pages/KintixReview";
 import Sainsmart from "@/pages/Sainsmart";
 import CncCalculator from "@/pages/CncCalculator";
+import EmSmart from "@/pages/EmSmart";
+import Gweike from "@/pages/Gweike";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +52,8 @@ function App() {
               <Route path="/sainsmart" element={<Sainsmart />} />
               <Route path="/sainsmart/cnc-calculator" element={<CncCalculator />} />
               <Route path="/cnc-calculator" element={<CncCalculator />} />
+              <Route path="/em-smart" element={<EmSmart />} />
+              <Route path="/gweike" element={<Gweike />} />
               <Route path="/about" element={<About />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/favourites" element={<Favourites />} />

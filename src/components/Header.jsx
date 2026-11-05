@@ -13,6 +13,8 @@ const NAV_BASE = [
   { to: "/videos", key: "nav.videos", defaultLabel: "Videos", icon: Youtube },
   { to: "/brands", key: "nav.brands", defaultLabel: "Brands", icon: Package },
   { to: "/sainsmart", key: "nav.sainsmart", defaultLabel: "SainSmart", icon: Sparkles },
+  { to: "/em-smart", key: "nav.emsmart", defaultLabel: "EM-Smart", icon: Zap },
+  { to: "/gweike", key: "nav.gweike", defaultLabel: "Gweike", icon: Sparkles },
   { to: "/about", key: "nav.about", defaultLabel: "About", icon: Info },
 ];
 

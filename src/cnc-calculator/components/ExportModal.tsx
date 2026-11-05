@@ -52,8 +52,9 @@ export const ExportModal: React.FC<ExportModalProps> = ({
 
   if (!isOpen) return null;
 
-  // Base filename without extension
-  const baseName = fileName.replace(/\.(tbd|tdb|csv|json|tools|nc|gcode)$/i, '') || 'calibrated_tools';
+  // Base filename without extension (safely strip any existing extensions like .tdb, .tbd, .csv, etc.)
+  const cleanBaseName =
+    fileName.replace(/(\.(tbd|tdb|csv|json|tools|nc|gcode|txt))+$/i, '').trim() || 'calibrated_tools';
 
   const triggerDownload = (blob: Blob, name: string) => {
     const url = URL.createObjectURL(blob);
@@ -71,67 +72,61 @@ export const ExportModal: React.FC<ExportModalProps> = ({
   const handleDownloadCandleGrbl = () => {
     const content = exportToCandleGrblTools(tools);
     const blob = new Blob([content], { type: 'text/plain;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_candle_grbl.nc`);
+    triggerDownload(blob, `${cleanBaseName}_candle_grbl.nc`);
   };
 
   const handleDownloadUgsCsv = () => {
     const csv = exportToUgsCsv(tools);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_ugs_tools.csv`);
-  };
-
-  const handleDownloadTbd = () => {
-    const binary = writeBinaryTdb(tools, rawBuffer);
-    const blob = new Blob([binary], { type: 'application/octet-stream' });
-    triggerDownload(blob, `${baseName}.tbd`);
+    triggerDownload(blob, `${cleanBaseName}_ugs_tools.csv`);
   };
 
   const handleDownloadTdb = () => {
     const binary = writeBinaryTdb(tools, rawBuffer);
     const blob = new Blob([binary], { type: 'application/octet-stream' });
-    triggerDownload(blob, `${baseName}.tdb`);
+    triggerDownload(blob, `${cleanBaseName}.tdb`);
   };
 
   const handleDownloadEaselJson = () => {
     const json = exportToEaselJson(tools);
     const blob = new Blob([json], { type: 'application/json' });
-    triggerDownload(blob, `${baseName}_easel_tools.json`);
+    triggerDownload(blob, `${cleanBaseName}_easel_tools.json`);
   };
 
   const handleDownloadEaselCsv = () => {
     const csv = exportToEaselCsv(tools);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_easel.csv`);
+    triggerDownload(blob, `${cleanBaseName}_easel.csv`);
   };
 
   const handleDownloadVectricCsv = () => {
     const csv = exportToVectricCsv(tools);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_vectric_tool_database.csv`);
+    triggerDownload(blob, `${cleanBaseName}_vectric_tool_database.csv`);
   };
 
   const handleDownloadFusion360 = () => {
     const toolsJson = exportToFusion360Tools(tools);
     const blob = new Blob([toolsJson], { type: 'application/json' });
-    triggerDownload(blob, `${baseName}_fusion360.tools`);
+    triggerDownload(blob, `${cleanBaseName}_fusion360.tools`);
   };
 
   const handleDownloadCarbideCreate = () => {
     const csv = exportToCarbideCreateCsv(tools);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_carbide_create.csv`);
+    triggerDownload(blob, `${cleanBaseName}_carbide_create.csv`);
   };
 
   const handleDownloadCsv = () => {
     const csv = exportToCsv(tools);
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    triggerDownload(blob, `${baseName}_spreadsheet.csv`);
+    triggerDownload(blob, `${cleanBaseName}_spreadsheet.csv`);
   };
 
   const handleDownloadJson = () => {
     const json = exportToJson(tools);
     const blob = new Blob([json], { type: 'application/json' });
-    triggerDownload(blob, `${baseName}_backup.json`);
+    triggerDownload(blob, `${cleanBaseName}_backup.json`);
   };
 
   const toggleInstructions = (software: string) => {
@@ -309,42 +304,26 @@ export const ExportModal: React.FC<ExportModalProps> = ({
                 <FileCode className="h-4 w-4 text-amber-400" />
                 <span>Carveco Maker, Pro & ArtCAM</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 gap-2">
                 <button
                   type="button"
-                  onClick={handleDownloadTbd}
+                  onClick={handleDownloadTdb}
                   className="flex items-center justify-between rounded-lg border border-amber-500/40 bg-zinc-900/90 p-3 hover:border-amber-500 hover:bg-zinc-900 transition-all text-left group"
                 >
                   <div>
                     <div className="flex items-center gap-1.5">
                       <span className="text-xs font-semibold text-zinc-100 group-hover:text-amber-300">
-                        Carveco .TBD Binary
+                        Carveco & ArtCAM .TDB Binary
                       </span>
                       <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded font-mono font-medium">
-                        Standard
+                        Standard .tdb
                       </span>
                     </div>
                     <p className="text-[11px] text-zinc-400 mt-0.5">
-                      Native binary tool database file with .tbd extension
+                      Native binary tool database file (.tdb) compatible with Carveco Maker, Pro, and ArtCAM
                     </p>
                   </div>
                   <Download className="h-4 w-4 text-amber-400 shrink-0 ml-2" />
-                </button>
-
-                <button
-                  type="button"
-                  onClick={handleDownloadTdb}
-                  className="flex items-center justify-between rounded-lg border border-zinc-800 bg-zinc-900/70 p-3 hover:border-zinc-700 hover:bg-zinc-900 transition-all text-left group"
-                >
-                  <div>
-                    <span className="text-xs font-semibold text-zinc-100 group-hover:text-zinc-200">
-                      Carveco .TDB Binary
-                    </span>
-                    <p className="text-[11px] text-zinc-400 mt-0.5">
-                      Standard Tool Database format compatible with ArtCAM
-                    </p>
-                  </div>
-                  <Download className="h-4 w-4 text-zinc-400 group-hover:text-zinc-200 shrink-0 ml-2" />
                 </button>
               </div>
             </div>
@@ -560,7 +539,7 @@ export const ExportModal: React.FC<ExportModalProps> = ({
                 <ol className="mt-2 list-decimal list-inside text-[11px] text-zinc-400 space-y-1">
                   <li>In Carveco, open <strong>Toolpath</strong> &gt; <strong>Tool Database</strong>.</li>
                   <li>Click <strong>Import...</strong> at bottom left.</li>
-                  <li>Choose your downloaded <code className="text-amber-300">.tbd</code> or <code className="text-amber-300">.tdb</code>.</li>
+                  <li>Choose your downloaded <code className="text-amber-300">.tdb</code> file.</li>
                 </ol>
               )}
             </div>

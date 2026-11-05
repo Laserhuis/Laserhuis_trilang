@@ -38,10 +38,27 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({
 
   useEffect(() => {
     if (tool) {
+      const d = tool.diameter > 0 ? tool.diameter : 3.175;
+      const initialStepover =
+        tool.stepover ??
+        (tool.stepoverPercent !== undefined
+          ? Math.round((d * (tool.stepoverPercent / 100)) * 10000) / 10000
+          : tool.toolType === 'ballnose' || tool.toolType === 'conical'
+          ? Math.round(d * 0.1 * 10000) / 10000
+          : Math.round(d * 0.4 * 10000) / 10000);
+
+      const initialStepoverPercent =
+        tool.stepoverPercent ??
+        (tool.stepover !== undefined && d > 0
+          ? Math.round((tool.stepover / d) * 100)
+          : tool.toolType === 'ballnose' || tool.toolType === 'conical'
+          ? 10
+          : 40);
+
       setFormData({
         ...tool,
-        stepover: tool.stepover ?? (tool.toolType === 'ballnose' || tool.toolType === 'conical' ? Math.round(tool.diameter * 0.1 * 1000) / 1000 : Math.round(tool.diameter * 0.4 * 1000) / 1000),
-        stepoverPercent: tool.stepoverPercent ?? (tool.toolType === 'ballnose' || tool.toolType === 'conical' ? 10 : 40),
+        stepover: initialStepover,
+        stepoverPercent: initialStepoverPercent,
         tipSize: tool.tipSize ?? (tool.toolType === 'ballnose' ? Math.round((tool.diameter / 2) * 1000) / 1000 : tool.toolType === 'engraving' ? 0.1 : undefined),
         angle: tool.angle ?? (tool.toolType === 'vbit' ? 60 : tool.toolType === 'conical' ? 3.82 : tool.toolType === 'engraving' ? 30 : undefined),
         fluteLength: tool.fluteLength ?? Math.round(tool.diameter * 3 * 100) / 100,
@@ -61,11 +78,15 @@ export const ToolDetailModal: React.FC<ToolDetailModalProps> = ({
         if (next.diameter > 0) {
           next.stepoverPercent = Math.round((numDist / next.diameter) * 100);
         }
-        next.param2 = numDist;
+        if (next.toolType === 'endmill') {
+          next.param2 = numDist;
+        }
       } else if (field === 'stepoverPercent') {
         const numPct = parseFloat(value) || 0;
         next.stepover = Math.round((next.diameter * (numPct / 100)) * 10000) / 10000;
-        next.param2 = next.stepover;
+        if (next.toolType === 'endmill') {
+          next.param2 = next.stepover;
+        }
       } else if (field === 'diameter') {
         const numDiam = parseFloat(value) || 0;
         if (next.stepoverPercent && next.stepoverPercent > 0) {

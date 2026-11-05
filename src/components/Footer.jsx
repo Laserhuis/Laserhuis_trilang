@@ -158,6 +158,24 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a
+                    href="/em-smart"
+                    className="inline-flex items-center gap-2 hover:text-cyan-300 transition-colors group"
+                  >
+                    <Zap className="w-3.5 h-3.5 text-cyan-400 group-hover:scale-110 transition-transform" />
+                    <span>EM-Smart Lasers Hub</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/gweike"
+                    className="inline-flex items-center gap-2 hover:text-indigo-400 transition-colors group"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-indigo-400 group-hover:scale-110 transition-transform" />
+                    <span>Gweike Cloud Lasers Hub</span>
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="https://facebook.com/laserhuis"
                     target="_blank"
                     rel="noopener noreferrer"

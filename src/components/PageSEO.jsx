@@ -61,6 +61,16 @@ const SEO_MAP = {
     title: "SainSmart Genmitsu CNC Routers, Bits & 3D Printers Review | Laserhuis",
     description: "Expert hands-on review of SainSmart Genmitsu CNC routers (including the PROVerXL 4030S with 710W spindle), premium carbide bits, and 3D printers like the Ender-3 V3 SE. Discover setup guides, calibration tips, and direct deals.",
     keywords: "SainSmart Genmitsu, CNC Router, Genmitsu 4030S review, 3018-PROVer, CNC bits, laser assist pump, 3D printers, Ender-3 V3 SE"
+  },
+  "/em-smart": {
+    title: "EM-Smart Fiber & Dual-Source Desktop Laser Machines | Laserhuis",
+    description: "Discover EM-Smart 20W/30W Fiber Lasers, DualSE Fiber+Diode, and AXI True 3D Desktop engravers. Compact galvo laser engraving systems for metals and jewelry.",
+    keywords: "EM-Smart laser, EM-Smart Basic 20W, EM-Smart 30W fiber, EM-Smart DualSE, EM-Smart AXI 3D, fiber laser engraver, metal laser marking"
+  },
+  "/gweike": {
+    title: "Gweike Cloud Lasers — G2 Max 50W Fiber, G3 CO2 & G6 Split | Laserhuis",
+    description: "Explore Gweike Cloud laser machines including G2 Max 50W Fiber Galvo, G3 Basic 55W CO2 cutter, M-Core, and G6 Split MOPA Fiber engravers for metal & wood.",
+    keywords: "Gweike Cloud, Gweike G2 Max, Gweike G3 Basic, Gweike M-Core, Gweike G6 Split, CO2 laser cutter, galvo fiber laser, metal engraving"
   }
 };
 
