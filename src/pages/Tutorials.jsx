@@ -16,6 +16,8 @@ export default function Tutorials() {
   useEffect(() => {
     const laser = params.get("laser");
     if (laser) setFilters((f) => ({ ...f, laserType: laser }));
+    const searchQuery = params.get("search") || params.get("q");
+    if (searchQuery) setSearch(searchQuery);
   }, [params]);
 
   const laserOptions = useMemo(() => [

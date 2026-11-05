@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
 
 const NAV_BASE = [
+  { to: "/fiber-laser", key: "nav.fiber", defaultLabel: "Fiber Laser", icon: Zap },
   { to: "/reviews", key: "nav.reviews", defaultLabel: "Reviews", icon: Cpu },
   { to: "/tutorials", key: "nav.tutorials", defaultLabel: "Tutorials", icon: BookOpen },
   { to: "/materials", key: "nav.materials", defaultLabel: "Materials", icon: Layers },

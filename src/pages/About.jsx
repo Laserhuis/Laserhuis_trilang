@@ -180,6 +180,59 @@ export default function About() {
         </a>
       </div>
 
+      {/* ---------------- E-E-A-T & EDITORIAL GOVERNANCE STANDARDS ---------------- */}
+      <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 sm:p-10 mb-16 shadow-2xl">
+        <div className="max-w-3xl mb-8">
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-mono mb-3">
+            <ShieldCheck className="w-4 h-4 text-cyan-400" /> Editorial Integrity & Testing Standards
+          </span>
+          <h2 className="font-heading font-black text-2xl sm:text-3xl text-white tracking-tight">
+            How We Test, Verify & Publish Information
+          </h2>
+          <p className="text-sm text-slate-300 mt-2 leading-relaxed">
+            Laserhuis maintains strict editorial independence and testing protocols to ensure every speed, power, frequency, and pulse setting in our database is safe, accurate, and actionable.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 text-xs text-slate-300">
+          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h3 className="font-bold text-white text-sm text-cyan-400 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-cyan-400" /> 1. Bench Testing & Data Verification
+            </h3>
+            <p className="leading-relaxed text-slate-300">
+              All machine reviews and tutorial parameters marked as "Verified Test" undergo hands-on bench testing in our workshop. We measure laser power output with optical power meters, inspect spot sizes under digital microscopes, and record kerf widths on precision calipers.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h3 className="font-bold text-white text-sm text-amber-400 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-amber-400" /> 2. Machine Acquisition & Independence
+            </h3>
+            <p className="leading-relaxed text-slate-300">
+              Machines featured on Laserhuis are either purchased directly by our lab or supplied by manufacturers for review. Manufacturers have zero editorial oversight or approval rights over our review conclusions, benchmark data, pros, or cons.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h3 className="font-bold text-white text-sm text-emerald-400 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400" /> 3. Affiliate & Commercial Disclosure
+            </h3>
+            <p className="leading-relaxed text-slate-300">
+              Some links on Laserhuis are affiliate links. If you click a link and purchase a laser or accessory, Laserhuis may earn a small referral commission at no additional cost to you. This funds our material testing supplies and optical lab equipment.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <h3 className="font-bold text-white text-sm text-red-400 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-red-400" /> 4. Laser Safety & Toxic Material Rules
+            </h3>
+            <p className="leading-relaxed text-slate-300">
+              We strictly prohibit cutting or engraving PVC, vinyl, or chlorine-based polymers due to lethal toxic chlorine gas (HCl) generation. Always wear wavelength-certified OD6+ safety glasses and operate high-CFM fume extraction. All published parameters are reference starting points.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="text-center pt-4">
         <Link to="/brands" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold text-sm transition-colors">
           Are you a machine manufacturer or tool brand? Partner with Laserhuis <ArrowRight className="w-4 h-4" />

@@ -1,0 +1,935 @@
+You are acting as a senior technical SEO specialist, SEO content architect, international SEO expert, UX specialist and experienced web developer.
+
+PROJECT
+Website: https://www.laserhuis.com/
+Brand: Laserhuis
+Primary subject: laser engraving and laser cutting
+Main technologies: diode lasers, CO2 lasers, Fiber/Galvo lasers and MOPA fiber lasers
+Main content types: tutorials, machine reviews, brand pages, material settings, tools, calculators, videos, gallery content and technical reference guides
+Deployment: Vercel
+Target audiences:
+1. Hobby laser users
+2. Makers and creators
+3. Small engraving businesses
+4. Professional laser users
+5. Prospective buyers comparing laser machines
+6. Users searching for practical speed, power, frequency, pulse-width and material settings
+7. Laser manufacturers and distributors looking for credible review and content partners
+
+PRIMARY OBJECTIVE
+
+Transform Laserhuis into a technically authoritative, search-optimized and internationally scalable reference platform for laser engraving, laser cutting, machine reviews and tested material settings.
+
+Laserhuis should not be positioned only as a review website. Its long-term positioning should be:
+
+“The technical reference and settings database for laser engraving.”
+
+The SEO strategy must connect:
+
+Machine reviews
+→ manufacturer pages
+→ tested materials
+→ parameter settings
+→ tutorials
+→ comparisons
+→ calculators and tools
+→ recurring organic traffic
+
+IMPORTANT SAFETY AND IMPLEMENTATION RULES
+
+1. First perform a complete audit before changing code.
+2. After the audit, implement all safe and clearly beneficial technical SEO improvements.
+3. Do not delete or materially shorten existing content.
+4. Do not remove existing functionality.
+5. Do not remove or disable the settings finder, AI assistant, tutorials, reviews, tools, gallery, videos, brands or language support.
+6. Do not invent review results, machine tests, traffic statistics, customer testimonials, awards, manufacturer relationships or performance claims.
+7. Do not state that Laserhuis personally tested a machine unless the existing content confirms that it was tested.
+8. Do not fabricate author credentials or experience.
+9. Do not automatically publish large amounts of low-quality AI-generated content.
+10. Do not create fake ratings or aggregate ratings.
+11. Do not change public URLs without creating permanent 301 redirects from every old URL.
+12. Prevent redirect chains and redirect loops.
+13. Preserve existing indexed URLs wherever practical.
+14. Before modifying routing, data structures or localization, create a backup or a reversible implementation.
+15. Ensure all changes build and deploy successfully on Vercel.
+16. Do not expose API keys, environment variables, credentials or private data.
+17. Do not make unsupported legal, safety or compliance claims.
+18. All laser settings must retain an appropriate warning that users should test on scrap material, supervise the machine and follow the manufacturer’s safety instructions.
+19. Keep the design professional, modern and responsive.
+20. Performance, accessibility and usability must not be sacrificed for SEO.
+
+PHASE 1: COMPLETE TECHNICAL SEO AUDIT
+
+Audit the entire website and produce a structured report before implementation.
+
+For every issue, report:
+
+- Issue
+- Affected pages or templates
+- Severity: Critical, High, Medium or Low
+- SEO impact
+- Recommended correction
+- Implementation risk
+- Whether it can be corrected safely and automatically
+- Validation method
+
+At minimum, inspect the following:
+
+A. CRAWLING AND INDEXABILITY
+
+Check:
+
+- HTTP response codes
+- HTTPS enforcement
+- www versus non-www canonical host
+- indexability of all public pages
+- accidental noindex directives
+- robots meta tags
+- X-Robots-Tag headers
+- robots.txt
+- XML sitemap or sitemap index
+- sitemap coverage
+- orphan pages
+- blocked resources
+- crawl traps
+- faceted navigation
+- URL parameters
+- pagination
+- duplicate routes
+- soft 404 pages
+- genuine 404 pages
+- redirect chains
+- redirect loops
+- mixed content
+- broken internal links
+- broken external links
+- JavaScript rendering problems
+- whether essential content appears in server-rendered HTML
+
+Verify that these files are available and valid:
+
+- /robots.txt
+- /sitemap.xml or an appropriate sitemap index
+
+Robots.txt must:
+
+- allow crawling of public SEO pages
+- block only genuinely private or technical routes where appropriate
+- reference the XML sitemap
+- not accidentally block CSS, JavaScript, images, reviews, tutorials, materials, brands or localized pages
+
+The sitemap must:
+
+- include canonical, indexable pages only
+- exclude redirects, 404s, parameter duplicates and noindex pages
+- include correct last-modified dates where technically reliable
+- update automatically when new content is published
+- support all appropriate localized URLs
+
+B. URL ARCHITECTURE
+
+Review the current URL structure.
+
+SEO-friendly permanent routes should be used for all important content.
+
+Recommended patterns:
+
+/reviews/[manufacturer]-[model]
+/brands/[manufacturer]
+/tutorials/[topic]
+/materials/[material]
+/settings/[laser-type]-[material]-[operation]
+/fiber-laser/
+/fiber-laser/mopa/
+/fiber-laser/materials/
+/fiber-laser/settings/
+/comparisons/[machine-a]-vs-[machine-b]
+/tools/[tool-name]
+
+Replace or canonicalize weak parameter-based content routes such as:
+
+/?review=rev-007
+/?tutorial=example
+
+Prefer permanent descriptive routes such as:
+
+/reviews/omtech-30w-fiber-galvo
+/tutorials/laser-engraving-slate-coasters
+
+If an existing URL is changed:
+
+- create a direct 301 redirect from the old URL to the new URL
+- update all internal links
+- update canonicals
+- update the sitemap
+- avoid redirect chains
+- preserve query parameters only where they are functionally required
+
+Do not create multiple indexable URLs for the same content.
+
+C. TITLES AND META DESCRIPTIONS
+
+Audit every indexable page for:
+
+- missing titles
+- duplicate titles
+- titles that are too generic
+- titles that are unnecessarily long
+- missing or duplicate meta descriptions
+- incorrect localized metadata
+- keyword stuffing
+- conflicting branding
+
+Generate unique, natural metadata for each indexable page.
+
+Recommended title patterns:
+
+Homepage:
+Laserhuis | Laser Engraving Tutorials, Reviews & Settings
+
+Review:
+[Machine Model] Review: Tests, Features & Results | Laserhuis
+
+Brand:
+[Brand] Laser Reviews, Machines & Tutorials | Laserhuis
+
+Material:
+[Material] Laser Engraving: Settings & Techniques | Laserhuis
+
+Settings:
+[Laser Type] Settings for Speed & Power | Laserhuis
+
+Tutorial:
+[Specific Task]: Step-by-Step Laser Guide | Laserhuis
+
+Comparison:
+[Machine A] vs [Machine B]: Detailed Comparison | Laserhuis
+
+Meta descriptions should:
+
+- describe the page accurately
+- include the primary benefit
+- use natural language
+- avoid unverified superlatives
+- avoid repeating the title
+- be appropriate for the page’s language
+- encourage relevant clicks without clickbait
+
+D. HEADING STRUCTURE AND SEMANTIC HTML
+
+Check every template for:
+
+- one clear H1
+- logical H2 and H3 hierarchy
+- no headings used only for visual styling
+- descriptive navigation
+- semantic main, article, section, header, footer and nav elements
+- accessible buttons and links
+- meaningful anchor text
+- no repetitive “click here” links
+- proper table semantics for settings tables
+
+Do not change the visual design unnecessarily.
+
+E. CANONICALIZATION
+
+Implement accurate self-referencing canonical URLs for all canonical pages.
+
+Ensure:
+
+- parameter variations canonicalize correctly
+- localized pages do not all canonicalize to English
+- paginated, filtered and search-result pages are handled appropriately
+- HTTP, HTTPS, www and non-www variations resolve consistently
+- trailing slash behavior is consistent
+- canonical URLs use the production domain
+- preview and Vercel deployment URLs are not canonicalized or indexed as production pages
+
+F. INTERNATIONAL SEO
+
+Laserhuis supports multiple languages. Audit and correct the complete localization configuration.
+
+For each localized page, verify:
+
+- correct language-specific URL
+- correct html lang attribute
+- fully translated visible content
+- fully translated title
+- fully translated meta description
+- correct canonical
+- reciprocal hreflang annotations
+- correct x-default behavior
+- no accidental Dutch text on French pages
+- no accidental French text on English pages
+- no untranslated navigation or footer labels
+- no mixed-language structured data
+- no automatic redirect that prevents search engines from accessing another locale
+
+Use consistent locale paths where the current architecture supports them, for example:
+
+/en/
+/nl/
+/fr/
+/de/
+
+Do not create empty or machine-translated placeholder pages solely for SEO.
+
+Every hreflang cluster must be reciprocal and must point to canonical, indexable pages.
+
+Investigate the currently visible issue where a French materials page can display Dutch metadata or Dutch text. Correct similar language inconsistencies across the entire website.
+
+G. STRUCTURED DATA
+
+Implement valid JSON-LD where appropriate.
+
+Use schema.org types correctly and conservatively.
+
+Site-wide:
+
+1. Organization
+2. WebSite
+3. SearchAction only if a functional public site search exists
+4. BreadcrumbList
+
+Tutorial and editorial pages:
+
+1. Article
+2. TechArticle where appropriate
+3. HowTo only when the page contains a genuine step-by-step procedure with the necessary structure
+
+Machine reviews:
+
+1. Product
+2. Review
+3. Brand
+4. Person or Organization as author, based on the actual author
+5. AggregateRating only if genuine multiple-user rating data exists
+
+Do not use AggregateRating for a single editorial score.
+
+Material and settings pages:
+
+- Article, TechArticle or Dataset where appropriate
+- Do not force Product schema onto material settings pages
+
+Video pages:
+
+- VideoObject only when a real embedded or hosted video is present
+
+FAQ:
+
+- Use FAQPage only for genuine visible FAQ content and only where consistent with current search-engine eligibility guidance
+- Do not generate FAQ markup for hidden or non-visible content
+
+Required structured-data rules:
+
+- JSON-LD content must match visible page content
+- prices and availability must not be marked up unless current and reliable
+- review ratings must not be fabricated
+- test structured data for syntax and eligibility
+- avoid duplicate conflicting schema blocks
+
+H. OPEN GRAPH AND SOCIAL METADATA
+
+Implement accurate:
+
+- og:title
+- og:description
+- og:type
+- og:url
+- og:image
+- og:site_name
+- Twitter/X card metadata
+
+Use page-specific images for reviews, tutorials, materials and brand pages where available.
+
+Create a suitable default social-sharing image for pages without a dedicated image.
+
+Ensure social images have:
+
+- correct dimensions
+- useful composition
+- readable branding
+- optimized file size
+- absolute production URLs
+
+I. IMAGES AND MEDIA
+
+Audit:
+
+- missing alt text
+- decorative images incorrectly given keyword-stuffed alt text
+- oversized images
+- poor dimensions
+- cumulative layout shift
+- missing width and height
+- inadequate responsive image handling
+- next/image configuration where relevant
+- modern formats such as WebP or AVIF
+- lazy loading below the fold
+- priority loading for the main hero image only where justified
+- image filenames
+- image sitemap requirements
+- duplicate images
+
+Alt text must describe the actual image and not be used for keyword stuffing.
+
+For machine images, use informative alt text such as:
+
+“EM-Smart AXI Ultra 60W MOPA laser engraving a curved metal surface”
+
+Only use such descriptions if the image actually shows that content.
+
+J. CORE WEB VITALS AND PERFORMANCE
+
+Audit and improve:
+
+- Largest Contentful Paint
+- Interaction to Next Paint
+- Cumulative Layout Shift
+- First Contentful Paint
+- Time to First Byte
+- JavaScript bundle size
+- hydration cost
+- unused JavaScript
+- unused CSS
+- font loading
+- image loading
+- third-party scripts
+- analytics impact
+- caching
+- code splitting
+- preloading
+- Vercel deployment configuration
+- server-side rendering and static generation opportunities
+
+Performance targets:
+
+- LCP below 2.5 seconds on representative mobile conditions
+- INP below 200 milliseconds
+- CLS below 0.1
+- no significant functionality regression
+- Lighthouse SEO score as close to 100 as realistically possible
+- Lighthouse accessibility and best-practice scores should not be reduced
+
+Do not remove valuable functionality purely to improve a synthetic score.
+
+K. MOBILE UX AND ACCESSIBILITY
+
+Audit:
+
+- mobile navigation
+- touch target sizes
+- font sizes
+- contrast
+- keyboard navigation
+- visible focus states
+- labels
+- forms
+- modal dialogs
+- language selector
+- settings tables on narrow screens
+- accessibility of calculators and interactive tools
+- screen-reader descriptions
+- skip links
+- reduced-motion preferences
+
+Aim for WCAG 2.2 AA where reasonably achievable.
+
+L. INTERNAL LINKING
+
+Build a deliberate internal-link architecture.
+
+Every important page should link contextually to:
+
+- its parent topic hub
+- related tutorials
+- relevant material settings
+- relevant reviews
+- associated brand pages
+- suitable tools or calculators
+- relevant comparisons
+
+Examples:
+
+A review of an MOPA machine should link to:
+
+- MOPA laser guide
+- stainless-steel colour-marking tutorial
+- Fiber/Galvo settings
+- manufacturer page
+- relevant material pages
+- relevant comparison pages
+
+A stainless-steel settings page should link to:
+
+- Fiber laser guide
+- MOPA guide
+- suitable tutorials
+- machines used for verified tests
+- safety guidance
+
+Use descriptive anchor text.
+
+Do not create excessive site-wide keyword links.
+
+Add visible breadcrumbs to reviews, tutorials, brand pages, material pages and settings pages.
+
+M. CONTENT QUALITY, TRUST AND E-E-A-T
+
+Audit and improve trust signals without inventing credentials.
+
+The site should clearly disclose:
+
+- who operates Laserhuis
+- editorial approach
+- review methodology
+- how machines are obtained
+- whether a machine was purchased, loaned, supplied or sponsored
+- affiliate relationships
+- correction policy
+- contact details
+- last reviewed or updated dates where appropriate
+- safety methodology
+- distinction between tested settings and reference starting points
+
+Create or improve these pages if absent:
+
+- About Laserhuis
+- Editorial Policy
+- Review Methodology
+- Testing Methodology
+- Affiliate and Sponsorship Disclosure
+- Corrections Policy
+- Contact
+- Laser Safety Disclaimer
+- Privacy Policy
+- Cookie Policy if applicable
+- Terms of Use
+
+Do not claim “independent” where a commercial relationship would make the exact wording misleading. Instead clearly disclose the relationship while retaining editorial independence.
+
+N. CONTENT CONSISTENCY
+
+Resolve contradictions such as:
+
+- “50+ tutorials”
+- “100+ tutorials”
+
+Create one reliable source of truth for counts shown across the site.
+
+Counts must update dynamically from actual published content where technically feasible.
+
+Do the same for:
+
+- review count
+- settings profile count
+- Fiber/Galvo tutorial count
+- material count
+- brand count
+
+Never display a count that the underlying published data does not support.
+
+PHASE 2: SEO CONTENT ARCHITECTURE
+
+Create a scalable content model, but do not mass-publish thin pages.
+
+1. FIBER LASER TOPIC SILO
+
+Create or prepare a main hub:
+
+/fiber-laser/
+
+Suggested H1:
+Fiber Laser Engraving Guide: Machines, Settings and Materials
+
+This hub should link to:
+
+/fiber-laser/mopa/
+/fiber-laser/settings/
+/fiber-laser/materials/
+/fiber-laser/deep-engraving/
+/fiber-laser/color-marking/
+/fiber-laser/lightburn/
+/fiber-laser/ezcad/
+/fiber-laser/lenses/
+/fiber-laser/rotary/
+/fiber-laser/safety/
+
+Potential future pages:
+
+- MOPA laser settings
+- stainless steel fiber laser settings
+- aluminium fiber laser engraving
+- brass fiber laser engraving
+- copper fiber laser engraving
+- titanium fiber laser engraving
+- MOPA colour engraving
+- deep engraving with fiber lasers
+- LightBurn fiber laser setup
+- EZCAD settings guide
+- fiber laser lens guide
+- rotary engraving with a fiber laser
+- 20W vs 30W vs 50W vs 60W vs 100W fiber laser
+
+Only publish pages containing substantial, genuinely useful content.
+
+2. MACHINE REVIEWS
+
+Every review should have:
+
+- permanent clean URL
+- unique title and description
+- visible publication date
+- visible update date where applicable
+- author
+- disclosure of how the machine was obtained
+- review methodology
+- tested applications
+- strengths
+- limitations
+- specifications
+- software compatibility
+- safety considerations
+- suitable users
+- unsuitable users
+- conclusion
+- contextual internal links
+- Product and Review structured data where eligible
+
+Prepare scalable routes such as:
+
+/reviews/commarker-b6-mopa
+/reviews/cloudray-mp-series-neo
+/reviews/monport-gpro-vision
+/reviews/em-smart-axi-ultra
+/reviews/gweike-g2
+/reviews/genmitsu-kintix
+
+Do not publish placeholder reviews as if the machines were tested.
+
+If content is not yet available, keep it in draft status or create only a factual manufacturer page.
+
+3. MANUFACTURER PAGES
+
+Create or standardize:
+
+/brands/commarker
+/brands/cloudray
+/brands/monport
+/brands/em-smart
+/brands/gweike
+/brands/genmitsu
+
+Each brand page may include:
+
+- objective manufacturer overview
+- technologies offered
+- available Laserhuis reviews
+- related tutorials
+- related material tests
+- machines used in content
+- disclosure of any collaboration
+- links to relevant comparisons
+
+Do not imply an official partnership without confirmation.
+
+4. MATERIAL PAGES
+
+Create a reusable material template.
+
+Recommended routes:
+
+/materials/stainless-steel
+/materials/aluminium
+/materials/brass
+/materials/copper
+/materials/titanium
+/materials/slate
+/materials/leather
+/materials/birch-plywood
+/materials/acrylic
+
+Each page should cover:
+
+- compatible laser types
+- engraving versus cutting suitability
+- tested or reference settings
+- preparation
+- expected result
+- frequent problems
+- safety considerations
+- machine-specific examples where available
+- links to relevant tutorials
+- links to appropriate settings
+- date tested or updated
+- clear distinction between tested data and starting-point data
+
+5. SETTINGS PAGES
+
+Create reusable, data-driven pages only when sufficient settings data exists.
+
+Examples:
+
+/settings/fiber-laser-stainless-steel
+/settings/mopa-stainless-steel-color
+/settings/fiber-laser-aluminium
+/settings/diode-laser-slate
+/settings/co2-laser-acrylic
+
+Each settings page should support, where applicable:
+
+- laser type
+- source type
+- wavelength
+- wattage
+- material
+- operation
+- lens or working field
+- speed
+- power
+- frequency
+- pulse width
+- line interval
+- passes
+- hatch strategy
+- focus offset
+- air assist
+- notes
+- machine used
+- test status
+- date tested
+- safety warning
+
+Prevent uncontrolled combinations from generating thousands of thin indexable pages.
+
+Only index combinations with substantial unique value. Noindex or avoid generating empty and low-value filter permutations.
+
+6. COMPARISON CONTENT
+
+Prepare a scalable comparison template.
+
+Possible future comparisons:
+
+- ComMarker B6 vs EM-Smart AXI Ultra
+- EM-Smart AXI Ultra vs xTool F2 Ultra
+- 30W vs 60W MOPA
+- MOPA vs Q-switched fiber laser
+- 20W vs 30W vs 50W vs 60W vs 100W fiber laser
+- best fiber laser for metal engraving
+- best MOPA laser for colour engraving
+
+Every comparison must:
+
+- be evidence-based
+- identify the comparison criteria
+- disclose test limitations
+- avoid declaring a universal winner without context
+- explain which machine suits which use case
+- contain only verified specifications
+- distinguish hands-on findings from manufacturer claims
+
+PHASE 3: KEYWORD AND SEARCH-INTENT STRATEGY
+
+Create a keyword map based on actual page purpose.
+
+Prioritize high-intent and long-tail topics such as:
+
+- fiber laser settings stainless steel
+- 60W MOPA settings stainless steel
+- MOPA laser colour settings
+- fiber laser settings aluminium
+- fiber laser settings brass
+- fiber laser settings titanium
+- fiber laser deep engraving settings
+- best frequency for fiber laser stainless steel
+- pulse width settings MOPA
+- LightBurn fiber laser setup
+- EZCAD fiber laser settings
+- fiber laser lens size guide
+- 30W vs 60W MOPA
+- best MOPA laser for metal
+- fiber laser QR code settings
+- black marking stainless steel fiber laser
+- deep engraving brass fiber laser
+
+For each important keyword cluster, specify:
+
+- search intent
+- recommended target page
+- current competing Laserhuis page, if any
+- risk of cannibalization
+- recommended title
+- recommended H1
+- supporting sections
+- internal links
+- suitable structured data
+- whether content should be created now or held until real testing data exists
+
+Avoid keyword cannibalization.
+
+One primary page should own each main search intent.
+
+PHASE 4: ANALYTICS AND MEASUREMENT
+
+Confirm that Vercel Web Analytics is correctly installed and functioning.
+
+Do not expose visitor data publicly.
+
+Implement or prepare meaningful custom events, subject to the available Vercel plan and privacy requirements:
+
+- review_view
+- tutorial_view
+- material_view
+- settings_search
+- settings_result
+- brand_page_view
+- comparison_view
+- calculator_use
+- outbound_manufacturer_click
+- newsletter_signup
+- language_change
+- internal_search
+- video_play
+
+Event names and properties must not contain personal data.
+
+Add Google Search Console verification in a maintainable way.
+
+Prepare:
+
+- sitemap submission instructions
+- domain-property verification instructions
+- URL inspection checklist
+- index-coverage monitoring
+- Core Web Vitals monitoring
+- search-query monitoring
+- brand-page monitoring
+- Fiber/Galvo content monitoring
+
+If Google Analytics 4 is not currently installed, do not automatically add it without explaining the privacy and cookie-consent implications for European visitors.
+
+Laserhuis operates for a European audience, so privacy-conscious analytics and appropriate legal disclosures are required.
+
+PHASE 5: CONTENT AND TECHNICAL VALIDATION
+
+After implementation, validate:
+
+1. Production build succeeds.
+2. No TypeScript or JavaScript errors.
+3. No broken routes.
+4. No major console errors.
+5. Existing site functionality still works.
+6. Settings finder still works.
+7. AI assistant still works.
+8. Review pages still work.
+9. Tutorial filtering still works.
+10. Language switching still works.
+11. Forms and newsletter signup still work.
+12. Analytics events fire without exposing personal data.
+13. robots.txt is accessible.
+14. sitemap is accessible and valid.
+15. Canonicals point to the correct production URLs.
+16. hreflang annotations are reciprocal.
+17. Structured data validates.
+18. No preview or staging URL is indexable.
+19. No essential page is accidentally noindexed.
+20. No new redirect chain exists.
+21. No significant accessibility regression.
+22. No significant Core Web Vitals regression.
+23. All updated pages work on mobile.
+24. All internal links use the final canonical URLs.
+
+PHASE 6: REQUIRED DELIVERABLES
+
+Return the work in this order:
+
+A. Executive summary
+- Overall SEO health score out of 100
+- Five strongest elements
+- Ten most important problems
+- Expected impact of corrections
+- Main risks
+
+B. Audit table
+For every finding include:
+- category
+- issue
+- affected page/template
+- severity
+- impact
+- proposed fix
+- implementation status
+
+C. Implementation plan
+Group work into:
+- immediate fixes
+- fixes within 7 days
+- fixes within 30 days
+- long-term content expansion
+
+D. Changes implemented
+Provide:
+- files changed
+- components changed
+- routes added
+- redirects added
+- metadata changes
+- schema changes
+- localization changes
+- performance changes
+- analytics changes
+
+E. Changes not implemented
+For each deferred recommendation, explain:
+- why it was not automatically implemented
+- what data or approval is needed
+- exact next action
+
+F. Validation report
+Include:
+- build result
+- broken-link result
+- sitemap result
+- robots result
+- canonical result
+- hreflang result
+- structured-data result
+- mobile result
+- performance result
+- accessibility result
+- analytics result
+
+G. SEO content roadmap
+Provide a prioritized list of the next 25 high-value pages.
+
+For each page include:
+- proposed URL
+- primary keyword
+- search intent
+- title
+- H1
+- content type
+- required evidence or testing
+- related internal links
+- priority
+- whether it can be created now
+
+WORKING METHOD
+
+Follow this exact sequence:
+
+1. Inspect the complete project structure and current implementation.
+2. Crawl or inventory all public routes.
+3. Produce the audit.
+4. Identify safe automatic fixes.
+5. Implement high-confidence technical fixes.
+6. Do not publish speculative review or testing claims.
+7. Run the production build.
+8. Test all major routes and functions.
+9. Validate metadata, canonicals, hreflang, robots, sitemap and JSON-LD.
+10. Report exactly what changed.
+11. Clearly identify anything that still requires manual action.
+12. Do not claim success if a build, validation or deployment step failed.
+
+Start now with the complete audit. Then implement the safe technical improvements and provide the requested deliverables.
