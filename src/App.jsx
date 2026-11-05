@@ -61,8 +61,10 @@ function App() {
                 <Route path="/fiber-laser" element={<FiberLaserHub />} />
                 <Route path="/fiber-laser/*" element={<FiberLaserHub />} />
                 <Route path="/tutorials" element={<Tutorials />} />
+                <Route path="/tutorials/:slug" element={<Tutorials />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/reviews/kintix" element={<KintixReview />} />
+                <Route path="/reviews/:slug" element={<Reviews />} />
                 <Route path="/materials" element={<Materials />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/videos" element={<Videos />} />

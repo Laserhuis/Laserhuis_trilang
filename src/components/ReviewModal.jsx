@@ -36,6 +36,15 @@ export const ReviewModal = ({ review: rawReview, onClose }) => {
         <div className="absolute bottom-5 left-5 right-5">
           <div className="flex flex-wrap items-center gap-2 mb-2">
             <LaserBadge type={review.laserType} />
+            {review.reviewType === "HANDS_ON_REVIEW" ? (
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                Hands-On Physical Review
+              </span>
+            ) : (
+              <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+                Manufacturer Spec Overview
+              </span>
+            )}
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950/90 border border-slate-700">
               <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
               <span className="font-mono text-sm text-amber-300 font-bold">{review.rating.toFixed(1)}</span>

@@ -6,6 +6,7 @@ export const REVIEWS = [
   {
     id: "rev-011",
     slug: "kintix",
+    reviewType: "HANDS_ON_REVIEW",
     featured: true,
     name: "Genmitsu Kintix 10W Galvo",
     brand: "Genmitsu",
@@ -51,6 +52,8 @@ export const REVIEWS = [
 
   {
     id: "rev-012",
+    slug: "genmitsu-kintix-5w",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "Genmitsu Kintix 5W Galvo",
     brand: "Genmitsu",
     category: "Hybrid Galvo Laser",
@@ -92,6 +95,8 @@ export const REVIEWS = [
 
   {
     id: "rev-001",
+    slug: "xtool-d1-pro-20w",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "xTool D1 Pro 20W",
     brand: "xTool",
     category: "Desktop Diode",
@@ -133,6 +138,8 @@ export const REVIEWS = [
 
   {
     id: "rev-002",
+    slug: "sculpfun-s30-ultra-33w",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "Sculpfun S30 Ultra 33W",
     brand: "Sculpfun",
     category: "Desktop Diode",
@@ -174,6 +181,8 @@ export const REVIEWS = [
 
   {
     id: "rev-004",
+    slug: "omtech-polar-50w-co2",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "OMTech Polar 50W CO2",
     brand: "OMTech",
     category: "CO2 Laser",
@@ -215,6 +224,8 @@ export const REVIEWS = [
 
   {
     id: "rev-006",
+    slug: "thunder-laser-nova-35",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "Thunder Laser Nova 35",
     brand: "Thunder Laser",
     category: "CO2 Laser",
@@ -256,6 +267,8 @@ export const REVIEWS = [
 
   {
     id: "rev-007",
+    slug: "omtech-30w-fiber-galvo",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "OMTech 30W Fiber Galvo",
     brand: "OMTech",
     category: "Fiber / Galvo",
@@ -297,6 +310,8 @@ export const REVIEWS = [
 
   {
     id: "rev-019",
+    slug: "acmer-p2-33w",
+    reviewType: "MANUFACTURER_SPEC_OVERVIEW",
     name: "Acmer P2 33W",
     brand: "Acmer",
     category: "Desktop Diode",

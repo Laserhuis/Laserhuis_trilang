@@ -11,7 +11,7 @@ export const TutorialCard = ({ tutorial: rawTutorial, index = 0 }) => {
 
   return (
     <Link
-      to={`?tutorial=${tutorial.id}`}
+      to={`/tutorials/${tutorial.slug || tutorial.id}`}
       data-testid={`tutorial-card-${tutorial.id}`}
       className="ph-card-hover group block bg-slate-900 border border-slate-800 rounded-xl overflow-hidden ph-fade-up"
       style={{ animationDelay: `${Math.min(index, 8) * 50}ms` }}

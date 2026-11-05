@@ -34,10 +34,19 @@ export const ReviewCard = ({ review: rawReview, index = 0 }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent" />
-        <div className="absolute top-3 left-3 flex gap-2">
+        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 max-w-[80%]">
           <LaserBadge type={review.laserType} />
+          {review.reviewType === "HANDS_ON_REVIEW" ? (
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+              Hands-On Lab Test
+            </span>
+          ) : (
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+              Spec Overview
+            </span>
+          )}
           {review.featured && (
-            <span className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-orange-500/20 text-orange-300 border border-orange-500/50">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide bg-orange-500/20 text-orange-300 border border-orange-500/50">
               {t("reviews.featured_short", "Editor's Choice")}
             </span>
           )}

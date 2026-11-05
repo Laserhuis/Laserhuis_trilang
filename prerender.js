@@ -109,6 +109,55 @@ const ROUTES = [
     `
   },
   {
+    path: '/reviews/genmitsu-kintix-5w',
+    title: 'Genmitsu Kintix 5W Galvo Laser Overview & Benchmarks | Laserhuis',
+    description: 'Technical overview and spec review of the Genmitsu Kintix 5W hybrid galvo laser.',
+    h1: 'Genmitsu Kintix 5W Galvo Laser Overview',
+    content: `<header><h1>Genmitsu Kintix 5W Galvo Laser Overview</h1></header><main><p>The 5W Kintix delivers hybrid-galvo speed, motorized focus, and Class 1 safety enclosure at an accessible price point.</p></main>`
+  },
+  {
+    path: '/reviews/xtool-d1-pro-20w',
+    title: 'xTool D1 Pro 20W Desktop Diode Laser Review & Specs | Laserhuis',
+    description: 'Hardware specification review of the xTool D1 Pro 20W quad-diode laser engraver and cutter.',
+    h1: 'xTool D1 Pro 20W Laser Review',
+    content: `<header><h1>xTool D1 Pro 20W Laser Review</h1></header><main><p>Quad-diode optical laser head with solid steel-wheeled frame for 1-pass cutting on 3mm plywood.</p></main>`
+  },
+  {
+    path: '/reviews/sculpfun-s30-ultra-33w',
+    title: 'Sculpfun S30 Ultra 33W Diode Laser Review & Benchmarks | Laserhuis',
+    description: 'Benchmark overview of the Sculpfun S30 Ultra 33W desktop diode laser with 600x600mm work bed.',
+    h1: 'Sculpfun S30 Ultra 33W Laser Review',
+    content: `<header><h1>Sculpfun S30 Ultra 33W Laser Review</h1></header><main><p>33W optical diode laser with industrial linear X-rail and automated air assist valve.</p></main>`
+  },
+  {
+    path: '/reviews/omtech-polar-50w-co2',
+    title: 'OMTech Polar 50W Desktop CO2 Laser Review | Laserhuis',
+    description: 'Review and specifications of the OMTech Polar 50W enclosed desktop CO2 laser cutter.',
+    h1: 'OMTech Polar 50W CO2 Laser Review',
+    content: `<header><h1>OMTech Polar 50W CO2 Laser Review</h1></header><main><p>Turnkey enclosed CO2 laser with integrated 5MP lid camera and built-in water chiller.</p></main>`
+  },
+  {
+    path: '/reviews/thunder-laser-nova-35',
+    title: 'Thunder Laser Nova 35 80W CO2 Laser Overview | Laserhuis',
+    description: 'Industrial specification review of the Thunder Laser Nova 35 (80W RECI tube) CO2 cutter.',
+    h1: 'Thunder Laser Nova 35 CO2 Laser Review',
+    content: `<header><h1>Thunder Laser Nova 35 CO2 Laser Review</h1></header><main><p>Industrial benchmark featuring hybrid servo drives and front/rear pass-through doors.</p></main>`
+  },
+  {
+    path: '/reviews/omtech-30w-fiber-galvo',
+    title: 'OMTech 30W Fiber Galvo Marking Laser Review | Laserhuis',
+    description: 'Technical spec overview of OMTech 30W Raycus Fiber Galvo laser engraver.',
+    h1: 'OMTech 30W Fiber Galvo Marking Laser Review',
+    content: `<header><h1>OMTech 30W Fiber Galvo Marking Laser Review</h1></header><main><p>7,000 mm/sec galvo scanners for high-speed metal marking, serialization, and deep coin relief.</p></main>`
+  },
+  {
+    path: '/reviews/acmer-p2-33w',
+    title: 'Acmer P2 33W Dual Linear Rail Diode Laser Review | Laserhuis',
+    description: 'Review of the Acmer P2 33W desktop diode laser built on dual linear guide rails.',
+    h1: 'Acmer P2 33W Diode Laser Review',
+    content: `<header><h1>Acmer P2 33W Diode Laser Review</h1></header><main><p>Dual linear guide rails with a quiet 30 L/min automatic air assist pump included.</p></main>`
+  },
+  {
     path: '/em-smart',
     title: 'EM-Smart Fiber & Dual-Source Desktop Laser Machines | Laserhuis',
     description: 'Discover EM-Smart 20W/30W Fiber Lasers, DualSE Fiber+Diode, and AXI True 3D Desktop engravers. Compact galvo laser engraving systems for metals.',

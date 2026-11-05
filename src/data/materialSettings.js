@@ -33,12 +33,46 @@ const M = [
   ["PCB — Solder Mask Mark", "fiber", "Fiber", "900 mm/s", "45%", "1", "80 kHz", "Off", "Fixture flat; a light pass removes mask without cutting traces.", ["pcb", "circuit", "solder", "mark", "electronics"], 20],
 ];
 
+const PROVENANCE_MAP = {
+  "mat-001": "LASERHUIS_TESTED",
+  "mat-002": "LASERHUIS_TESTED",
+  "mat-003": "MANUFACTURER_REFERENCE",
+  "mat-004": "MANUFACTURER_REFERENCE",
+  "mat-005": "REFERENCE_STARTING_POINT",
+  "mat-006": "MANUFACTURER_REFERENCE",
+  "mat-007": "LASERHUIS_TESTED",
+  "mat-008": "REFERENCE_STARTING_POINT",
+  "mat-009": "MANUFACTURER_REFERENCE",
+  "mat-010": "LASERHUIS_TESTED",
+  "mat-011": "LASERHUIS_TESTED",
+  "mat-012": "MANUFACTURER_REFERENCE",
+  "mat-013": "LASERHUIS_TESTED",
+  "mat-014": "REFERENCE_STARTING_POINT",
+  "mat-015": "COMMUNITY_CONTRIBUTED",
+  "mat-016": "MANUFACTURER_REFERENCE",
+  "mat-017": "REFERENCE_STARTING_POINT",
+  "mat-018": "REFERENCE_STARTING_POINT",
+  "mat-019": "REFERENCE_STARTING_POINT",
+  "mat-020": "LASERHUIS_TESTED",
+  "mat-021": "MANUFACTURER_REFERENCE",
+  "mat-022": "MANUFACTURER_REFERENCE",
+  "mat-023": "MANUFACTURER_REFERENCE",
+  "mat-024": "MANUFACTURER_REFERENCE",
+  "mat-025": "LASERHUIS_TESTED",
+  "mat-026": "MANUFACTURER_REFERENCE",
+  "mat-027": "REFERENCE_STARTING_POINT",
+  "mat-028": "REFERENCE_STARTING_POINT",
+};
+
 export const MATERIAL_SETTINGS = M.map((m, idx) => {
   const [material, laserType, machineClass, speed, power, passes, frequencyOrInterval, airAssist, notes, keywords, baseWatt] = m;
+  const id = `mat-${String(idx + 1).padStart(3, "0")}`;
+  const provenance = PROVENANCE_MAP[id] || "REFERENCE_STARTING_POINT";
   return {
-    id: `mat-${String(idx + 1).padStart(3, "0")}`,
+    id,
     material, laserType, machineClass, speed, power, passes,
     frequencyOrInterval, airAssist, notes, keywords, baseWatt,
+    provenance,
   };
 });
 

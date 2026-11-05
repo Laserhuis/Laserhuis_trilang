@@ -47,7 +47,7 @@ export default function About() {
               {t("about.mission_p1", "We started Laserhuis with a simple goal: to make laser technology accessible, predictable, and remarkably precise. Whether you are operating a 10W desktop diode, a 50W CO2 tube cutter, or a 60W MOPA fiber galvo system, getting clean cuts and crisp engravings shouldn't mean wasting expensive raw materials on endless test grids.")}
             </p>
             <p className="text-slate-400 leading-relaxed mt-4">
-              {t("about.mission_p2", "Every tutorial, review, and material parameter on Laserhuis is rigorously verified by master artisans and material scientists. We break down focal optics, air assist dynamics, gas extraction, and wavelength absorption so you achieve Grade-A output every time.")}
+              {t("about.mission_p2", "Laserhuis compiles practical laser engraving parameters, technical tutorials, and machine specifications for makers and workshops. Reviews explicitly disclose whether they are based on hands-on physical bench testing or manufacturer specification overviews.")}
             </p>
           </div>
           <div className="mt-6 pt-5 border-t border-slate-800 flex items-center gap-3 text-xs text-slate-400 font-mono">
@@ -57,9 +57,9 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <Stat value={`${TUTORIALS.length}+`} label={t("about.stat_tutorials", "Technical Tutorials")} sub={t("about.stat_tutorials_sub", "Grade A++++ Guides")} />
-          <Stat value={`${REVIEWS.length}`} label={t("about.stat_reviews", "In-Depth Reviews")} sub={t("about.stat_reviews_sub", "Hands-on Hardware Tests")} />
-          <Stat value="25,000+" label={t("about.stat_makers", "Makers Helped")} sub={t("about.stat_makers_sub", "Global Community")} />
+          <Stat value={`${TUTORIALS.length}+`} label={t("about.stat_tutorials", "Technical Guides")} sub="Diode, CO2 & Fiber" />
+          <Stat value={`${REVIEWS.length}`} label={t("about.stat_reviews", "In-Depth Reviews")} sub="Disclosed Lab & Spec Data" />
+          <Stat value="28" label="Material Profiles" sub="Wattage Scalable" />
           <Stat value="20+" label={t("about.stat_dither", "Dither Algorithms")} sub={t("about.stat_dither_sub", "Photo-to-Laser Studio")} />
         </div>
       </div>
@@ -99,25 +99,25 @@ export default function About() {
             </h2>
             
             <p className="mt-4 text-slate-300 text-base leading-relaxed">
-              {t("about.fb_desc1", "Connect with over ")}<strong className="text-white">{t("about.fb_desc_strong", "15,000+ laser engravers, makers, and workshop owners")}</strong>{t("about.fb_desc2", ". Get daily setting cheat sheets, free LightBurn vector file drops, and instant peer troubleshooting support for all diode, CO2, and galvo systems.")}
+              Connect with laser engravers, makers, and workshop owners in our community. Get setting cheat sheets, LightBurn vector file links, and peer troubleshooting support for diode, CO2, and galvo systems.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mt-6 text-sm text-slate-200">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                <span dangerouslySetInnerHTML={{ __html: t("about.fb_bullet1", "<strong>Daily Setting Cheat Sheets</strong> dropped weekly") }}></span>
+                <span>Setting Cheat Sheets & Guides</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                <span dangerouslySetInnerHTML={{ __html: t("about.fb_bullet2", "<strong>Free SVG / LightBurn Files</strong> for members") }}></span>
+                <span>Free Vector & LightBurn File Links</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                <span dangerouslySetInnerHTML={{ __html: t("about.fb_bullet3", "<strong>Project Showcases</strong> & feedback") }}></span>
+                <span>Project Showcases & Feedback</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
-                <span dangerouslySetInnerHTML={{ __html: t("about.fb_bullet4", "<strong>Instant Q&A</strong> with master artisans") }}></span>
+                <span>Troubleshooting Q&A</span>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ export default function About() {
                 <Facebook className="w-5 h-5 fill-white" /> {t("about.fb_cta", "Follow @laserhuis on Facebook")} <ArrowRight className="w-4 h-4" />
               </a>
               <span className="text-xs font-mono text-slate-400">
-                {t("about.fb_cta_sub", "15K+ Followers • Daily Updates")}
+                Official Laserhuis Facebook Page
               </span>
             </div>
           </div>
@@ -150,12 +150,7 @@ export default function About() {
             <div className="mt-4 space-y-3 text-xs text-slate-300">
               <div className="bg-slate-950 p-3 rounded-lg border border-slate-800">
                 <p className="text-cyan-400 font-mono text-[11px] mb-1">🔥 Latest Post Highlight:</p>
-                <p className="italic">"Free LightBurn 3D Relief Heightmap file uploaded for all members! Optimized for 20W Fiber & 50W CO2 lasers. Grab it now in our files section!"</p>
-              </div>
-              <div className="flex justify-between items-center text-slate-400 font-mono pt-2">
-                <span className="flex items-center gap-1"><ThumbsUp className="w-3.5 h-3.5 text-blue-400" /> 1,240 Likes</span>
-                <span className="flex items-center gap-1"><MessageSquare className="w-3.5 h-3.5 text-blue-400" /> 188 Comments</span>
-                <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5 text-blue-400" /> 15.2K Members</span>
+                <p className="italic">"LightBurn heightmap file guide uploaded for members! Optimized for 20W Fiber & 50W CO2 lasers."</p>
               </div>
             </div>
           </div>
