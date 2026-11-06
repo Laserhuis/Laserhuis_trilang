@@ -74,38 +74,147 @@ export const BATCH_3 = [
   // 53
   {
     id: "mopa-color-stainless-spectrum",
-    title: "MOPA Fiber Color Marking on Stainless Steel 316L (Spectrum Rainbow Palette)",
+    title: "MOPA Fiber Color Marking on Stainless Steel: Building a Repeatable Color Matrix",
     category: "Fiber/Galvo",
     difficulty: "Advanced",
     laserType: "fiber",
     readTime: "22 min",
-    materials: ["316L Mirror Polished Stainless Steel Sheet (1.5mm)", "Pure Acetone Degreaser"],
-    tools: ["60W MOPA Fiber Laser (2ns-500ns pulse adjustable)", "EZCAD3 / LightBurn Galvo", "F-Theta 160mm Lens"],
-    summary: "Full optical color spectrum marking (Gold, Red, Blue, Green, Purple) on stainless steel 316L using MOPA pulse width control.",
+    estimatedTime: "20 min surface preparation, 15 min color matrix test run",
+    targetMaterial: "316L / 304 Mirror-Polished Stainless Steel Sheet",
+    materials: [
+      "316L or 304 Mirror-Polished Stainless Steel Sheet",
+      "Pure Acetone Degreaser & Microfiber Wipes",
+      "Microcrystalline Protective Wax"
+    ],
+    tools: [
+      "60W MOPA Fiber Galvo Laser (1064nm, 2ns–500ns pulse width range)",
+      "LightBurn Galvo or EZCAD3 Software",
+      "F-Theta Scan Lens (160mm focal length)",
+      "Precision Bed Fixture & Dual Red-Dot Focus Indicator"
+    ],
+    summary: "Technical guide for achieving vibrant, repeatable structural colors (Gold, Magenta, Blue, Green) on stainless steel via MOPA thin-film oxide interference, detailing pulse-width modulation, frequency tuning, grid test matrices, and surface cleanliness protocols.",
     image: IMG.metal_macro,
+    prerequisites: {
+      compatibleLasers: "MOPA Fiber Galvo lasers with adjustable pulse width control (2ns to 500ns). Independent control over pulse duration and frequency is required to modulate surface heat accumulation without surface ablation.",
+      unsuitableLasers: "Conventional Q-switched fiber lasers with fixed pulse duration cannot reliably access the full chromatic interference spectrum. Diode (450nm) and CO2 (10.6µm) lasers cannot produce thin-film oxide interference on bare stainless steel.",
+      minimumSpecs: "MOPA fiber galvo engine, F-Theta scan lens, rigid column with fine Z-axis resolution, HEPA local fume extraction.",
+      safetyHazards: "1064nm NIR galvo beams generate specular reflections from mirror-polished steel.",
+      safetyEyewear: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
+    },
+    materialSelection: "Color generation on stainless steel is an optical interference phenomenon produced by transparent thin-film chromium oxide (Cr2O3) layers ranging from 30nm to 300nm in thickness. Structural color vibrancy depends on alloy purity, surface polish, ambient airflow, beam quality, focus, pulse width, frequency, scan speed, power, and line interval. Prefer 316L or 304 stainless steel with a #8 mirror finish. Brushed satin finishes produce diffuse reflections that mute color saturation.",
+    designPrep: "In LightBurn Galvo or EZCAD3, design a 5x5 grid of 10mm test squares. Assign a distinct parameter profile to each square, keeping focal distance and hatch spacing (0.005mm–0.010mm) constant while stepping pulse duration (e.g. 30ns to 200ns) and frequency (e.g. 80kHz to 250kHz). Enforce bi-directional cross-hatching at 0° and 90°.",
+    laserSetup: "Mount the mirror-polished plate perfectly flat in a zero-play pocket fixture. Align focus precisely on the top metal surface using the dual red-dot indicators. Ensure no draft from cooling fans blows directly across the plate during processing, as micro-thermal fluctuations shift oxide layer thickness.",
+    optics: {
+      lens: "F-Theta Galvo Scan Lens (160mm focal length)",
+      focalLength: null,
+      measuredSpotSize: null,
+      manufacturerSpecifiedSpotSize: null
+    },
+    airAssist: {
+      mode: "Off at marking point",
+      measuredPressure: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Do not blow compressed air directly across the marking area during color generation. Forced convective air currents cool the thermal boundary layer unpredictably, causing uneven color gradients."
+    },
+    exhaust: {
+      configuration: "Enclosure local exhaust duct",
+      measuredFlow: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Use effective local exhaust sized for the machine enclosure, duct geometry, pressure losses and material being processed. Capture fumes at the source and follow machine-manufacturer and applicable local safety requirements."
+    },
+    exactParameters: {
+      parameterProfiles: {
+        mopa: {
+          sourceType: "60W MOPA Fiber Galvo (1064nm)",
+          power: "35% - 48% controller setting",
+          speed: "600 - 1200 mm/s",
+          passes: "1 - 2 (Bi-directional cross-hatch)",
+          lineInterval: "0.005mm - 0.008mm hatch pitch",
+          airAssist: "Off at marking point",
+          focusOffset: "Exact focal plane (0.0mm)",
+          frequency: "90 - 200 kHz",
+          pulseWidth: "32ns (Green) / 60ns (Blue) / 100ns (Red) / 200ns (Gold)",
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        },
+        qSwitched: {
+          sourceType: "Conventional Q-Switched Fiber Galvo (1064nm)",
+          power: "Unsuitable for reliable broad-spectrum color",
+          speed: "N/A",
+          passes: "N/A",
+          lineInterval: "N/A",
+          airAssist: "Off",
+          focusOffset: "N/A",
+          frequency: "N/A",
+          pulseWidth: null,
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        }
+      },
+      sharedParameters: {
+        provenance: "REFERENCE_STARTING_POINT",
+        sourceName: null,
+        sourceReference: null,
+        physicallyTested: false,
+        lastEditorialReview: "2026-11"
+      },
+      provenance: "REFERENCE_STARTING_POINT",
+      sourceName: null,
+      sourceReference: null,
+      physicallyTested: false,
+      lastEditorialReview: "2026-11"
+    },
+    materialTestGuide: "Because oxide growth is sensitive to thermal buildup and alloy heat capacity, never assume colors are universal internet recipes. Run a controlled 2-variable parameter matrix on a sample from your exact material lot. Keep focus and hatch pitch fixed; step pulse width across rows and frequency across columns. Inspect the finished matrix under diffuse daylight or 5000K CRI 95+ neutral light.",
     steps: [
       {
-        title: "Thin-Film Chromium Oxide Refraction Physics",
-        detail: "Laser thermal pulses grow a transparent Chromium Oxide (Cr2O3) film on stainless steel. Film thickness (30nm to 300nm) determines constructively reinforced light wavelengths, generating intense structural rainbow colors."
+        title: "Substrate Degreasing & Solvent Evaporation",
+        action: "Wipe mirror-polished 316L sheet with pure acetone or 99% Isopropyl Alcohol using a lint-free microfiber cloth. Solvent Safety: Acetone and IPA are highly flammable. Work in a well-ventilated area away from open sparks or laser beams. Allow the surface to dry completely before firing the laser.",
+        why: "Microscopic oil films or fingerprints carbonize under laser heat, blocking oxygen contact and turning vibrant interference colors into muddy gray patches.",
+        lookFor: "Streak-free, optically pristine metal surface.",
+        possibleFailure: "Leaving fingerprint oils results in spotty brown discoloration across target color blocks.",
+        detail: "Degrease in a single wiping motion and verify surface dryness under reflected light."
       },
       {
-        title: "Chemical Degreasing Protocol",
-        detail: "Wipe stainless steel sheet with pure acetone in ultrasonic cleaner for 5 minutes. Surface grease or oils cause splotchy color shifts."
+        title: "Rigid Bed Fixturing & Focus Convergence",
+        action: "Clamp the stainless sheet in a low-profile aluminum fixture. Adjust galvo Z-height until the dual red focus dots align precisely into a single point on the top metal face.",
+        why: "A focal displacement of merely 50µm alters power density by over 20%, shifting oxide film thickness and altering the resulting color hue.",
+        lookFor: "Single converged red focal dot across all four sheet corners.",
+        possibleFailure: "A tilted plate creates a rainbow gradient across a square intended to be solid blue."
       },
       {
-        title: "MOPA Color Matrix Parameters (60W MOPA Fiber)",
-        detail: "Deep Gold: 1200 mm/s, 35% power, 200 kHz, 200ns pulse, Hatch 0.005mm. Crimson Red: 800 mm/s, 42% power, 160 kHz, 100ns pulse. Cobalt Blue: 600 mm/s, 48% power, 120 kHz, 60ns pulse. Emerald Green: 450 mm/s, 55% power, 90 kHz, 32ns pulse."
+        title: "LightBurn Galvo Matrix Execution",
+        action: "Send the 5x5 test grid to the MOPA galvo controller. Execute the run while monitoring enclosure fume extraction.",
+        why: "Multi-pass cross-hatching at dense line intervals (0.005mm) delivers steady, uniform heat input, allowing chromium ions to bind with ambient oxygen into a uniform Cr2O3 dielectric layer.",
+        lookFor: "Smooth, vibrant color blocks forming silently without bright sparking or metal sputtering.",
+        possibleFailure: "Sparks or crackling audio indicates excess power causing metal ablation rather than thin-film oxidation."
       },
       {
-        title: "Post-Marking Curing & Wax Sealing",
-        detail: "Allow color mark to cool 5 minutes. Apply microcrystalline Renaissance Wax to protect oxide layer against fingerprints."
+        title: "Chromatic Inspection & Protective Wax Sealing",
+        action: "Remove the marked sample and inspect under neutral lighting. Once cooled, apply a thin coat of microcrystalline wax with a soft cloth to protect against skin oil contamination.",
+        why: "Thin-film interference colors shift slightly if skin oils fill the microscopic surface structure. Microcrystalline wax seals the surface without altering refractive index.",
+        lookFor: "Vibrant, stable color rendition resistant to finger touch.",
+        possibleFailure: "Color appears dull or disappears when touched with bare fingers until sealed."
       }
     ],
     proTips: [
-      "Air draft speed across laser bed must be kept constant; temperature changes shift oxide film thickness.",
-      "Mirror polished stainless steel yields far more vibrant colors than brushed satin finishes."
+      "Short pulse durations (30ns–60ns) produce blue and green tones; longer pulse durations (150ns–200ns) produce gold and magenta tones.",
+      "Record the ambient room temperature and material lot number alongside your winning matrix parameters for full production repeatability."
     ],
-    safety: "Wear 1064nm NIR safety goggles during galvo operation."
+    troubleshooting: [
+      {
+        issue: "Color shifts from blue to dull gray across the same square",
+        fix: "Check sheet flatness with a dial indicator and eliminate drafts from external room cooling fans."
+      },
+      {
+        issue: "Splotchy brown spots inside bright red or gold blocks",
+        fix: "Repeat acetone cleaning protocol with clean microfiber wipes; never touch cleaned surfaces with bare skin."
+      },
+      {
+        issue: "Surface feels rough or shows metallic debris under fingernail test",
+        fix: "Increase scan speed by 20% or reduce laser power percentage; you have crossed the thermal threshold into ablative etching."
+      }
+    ],
+    safety: "Ensure galvo enclosure interlocks are engaged. Certified 1064nm eyewear must be worn during setup or open alignment modes."
   },
 
   // 54
@@ -214,34 +323,145 @@ export const BATCH_3 = [
   // 57
   {
     id: "galvo-annealing-anodized-black-aluminum",
-    title: "Fiber Galvo Bleaching Anodized Black Aluminum for White Medical Marking",
+    title: "Black and White Laser Marking Anodized Aluminum: Dye Bleaching vs MOPA Oxide Tuning",
     category: "Fiber/Galvo",
     difficulty: "Intermediate",
     laserType: "fiber",
-    readTime: "10 min",
-    materials: ["Anodized Black Aluminum Medical Trays / Equipment Housings"],
-    tools: ["Fiber Galvo Laser (20W-50W)", "LightBurn Galvo / EZCAD3"],
-    summary: "High-speed dye vaporization on black anodized aluminum to create bright white high-contrast text and UDI logos.",
+    readTime: "15 min",
+    estimatedTime: "10 min setup, 5 min laser marking",
+    targetMaterial: "Anodized Aluminum Housings / Equipment Plates",
+    materials: [
+      "Type II Anodized Aluminum Parts (Black, Clear, or Colored Coating)",
+      "99% Isopropyl Alcohol & Microfiber Cloth"
+    ],
+    tools: [
+      "Fiber or MOPA Galvo Laser (1064nm, 20W–50W)",
+      "LightBurn Galvo or EZCAD3 Software",
+      "F-Theta Scan Lens (160mm focal length)"
+    ],
+    summary: "Technical guide for high-speed laser marking on anodized aluminum, detailing white organic dye bleaching on dark anodized parts and dark/black marking on clear or colored anodized aluminum using short MOPA pulse durations without damaging the anodic oxide shell.",
     image: IMG.laser_badge,
+    prerequisites: {
+      compatibleLasers: "Fiber galvo lasers (1064nm, 20W–50W). Conventional Q-switched sources excel at white dye bleaching; MOPA fiber sources with short pulse widths (2ns to 15ns) enable high-contrast dark marking on clear or colored anodized layers.",
+      unsuitableLasers: "Diode lasers (450nm) can bleach certain organic dyes at low speeds but lack speed for industrial batch runs; CO2 lasers (10.6µm) reflect off metallic substrate or burn anodized coating.",
+      minimumSpecs: "Fiber galvo laser column, F-Theta scan lens, dual red-dot focus indicator, HEPA local fume extraction.",
+      safetyHazards: "1064nm NIR specular reflections from glossy anodized surfaces.",
+      safetyEyewear: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
+    },
+    materialSelection: "Type II anodized aluminum features a porous aluminum oxide (Al2O3) ceramic coating (8µm to 25µm thick) sealed over the aluminum base. White marking relies on selective laser thermal vaporization of organic dye trapped in the pores without melting the surrounding oxide shell. Black marking on clear/colored anodized aluminum uses ultra-short MOPA pulses (4ns to 12ns) at high frequency to cause localized thermal modification of the aluminum interface underneath the transparent oxide layer without rupturing the protective anodic skin.",
+    designPrep: "In LightBurn Galvo or EZCAD3, set up vector logos, text, or ISO-15415 Data Matrix barcodes. For white dye bleaching, select cross-hatching at 0.025mm–0.035mm pitch. For black marking on clear anodized stock, set a tight hatch pitch (0.010mm–0.015mm) and select short MOPA pulse widths.",
+    laserSetup: "Mount anodized aluminum parts in a rigid aluminum jig. Converge dual red focus dots precisely on the target marking plane. Turn on local enclosure HEPA fume extraction.",
+    optics: {
+      lens: "F-Theta Galvo Scan Lens (160mm focal length)",
+      focalLength: null,
+      measuredSpotSize: null,
+      manufacturerSpecifiedSpotSize: null
+    },
+    airAssist: {
+      mode: "Off at marking point",
+      measuredPressure: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Keep air assist off at galvo head; ensure enclosure HEPA exhaust is running."
+    },
+    exhaust: {
+      configuration: "Enclosure local exhaust duct",
+      measuredFlow: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Use effective local exhaust sized for the machine enclosure, duct geometry, pressure losses and material being processed. Capture fumes at the source and follow machine-manufacturer and applicable local safety requirements."
+    },
+    exactParameters: {
+      parameterProfiles: {
+        mopa: {
+          sourceType: "MOPA Fiber Galvo (1064nm, 30W reference)",
+          power: "White Bleach: 22% | Black Mark: 35% controller setting",
+          speed: "White Bleach: 2500 mm/s | Black Mark: 1200 mm/s",
+          passes: "1 (Cross-Hatch at 45°)",
+          lineInterval: "White: 0.030mm | Black: 0.012mm",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface Focus)",
+          frequency: "White: 45 kHz | Black: 250 kHz",
+          pulseWidth: "White: 200ns | Black: 8ns (ultra-short pulse)",
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        },
+        qSwitched: {
+          sourceType: "Conventional Q-Switched Fiber Galvo (1064nm, 20W reference)",
+          power: "White Bleach: 25% controller setting",
+          speed: "White Bleach: 2000 mm/s",
+          passes: "1 (Cross-Hatch at 45°)",
+          lineInterval: "0.030mm hatch pitch",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface Focus)",
+          frequency: "35 kHz",
+          pulseWidth: null,
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        }
+      },
+      sharedParameters: {
+        provenance: "REFERENCE_STARTING_POINT",
+        sourceName: null,
+        sourceReference: null,
+        physicallyTested: false,
+        lastEditorialReview: "2026-11"
+      },
+      provenance: "REFERENCE_STARTING_POINT",
+      sourceName: null,
+      sourceReference: null,
+      physicallyTested: false,
+      lastEditorialReview: "2026-11"
+    },
+    materialTestGuide: "Because anodizing dye chemistry and oxide layer thickness vary across suppliers, run a small 1-variable line test grid before processing finished parts. For white bleaching, increase speed in 250 mm/s increments until text turns crisp white without melting into dull grey. For black marking on clear stock, vary MOPA pulse width between 4ns and 15ns at high frequency (200kHz+).",
     steps: [
       {
-        title: "Anodic Organic Dye Bleaching Photochemistry",
-        detail: "Black anodized coating consists of porous aluminum oxide (Al2O3) filled with black organic dye. Fiber laser energy vaporizes dye molecules without damaging hard oxide shell, revealing bright white aluminum substrate underneath."
+        title: "Part Cleaning & Fixturing",
+        action: "Wipe anodized aluminum housing with 99% Isopropyl Alcohol using a pluisvrije microfiber doek to remove oils, then seat part securely in jig.",
+        why: "Finger oils obstruct uniform dye bleaching and cause spotty text width under fast galvo scanning.",
+        lookFor: "Clean, oil-free anodized coating.",
+        possibleFailure: "Uncleaned finger oils leave dark greasy smudges across white laser markings.",
+        detail: "Wipe part with IPA, allow 15 seconds evaporation, clamp flat in fixture."
       },
       {
-        title: "Laser Parameters (30W Fiber Galvo)",
-        detail: "Speed = 2500 mm/s, Power = 22%, Frequency = 40 kHz, Line Hatch = 0.03mm cross-hatch. Execution time for 50x50mm logo: 1.8 seconds."
+        title: "Focal Plane Verification",
+        action: "Adjust Z-height column until dual red focus pointers converge into a single dot on target anodized surface.",
+        why: "Precise focus maintains sharp spot size for crisp barcode edges and micro-text legibility.",
+        lookFor: "Single red focal dot on target marking area.",
+        possibleFailure: "Defocused laser beam melts anodic layer into rough grey crater."
       },
       {
-        title: "Durability Verification",
-        detail: "Wipe mark with acetone and scrub with Scotch-Brite pad. Mark remains pristine white and 100% scratch resistant."
+        title: "Galvo Laser Execution",
+        action: "Close enclosure, check 1064nm safety eyewear, press Start to execute vector marking job.",
+        why: "Fast galvo scanning vaporizes organic dye molecules in 1.8 seconds per logo without damaging ceramic oxide shell.",
+        lookFor: "Instant, silent transformation of black anodized dye into bright white graphic mark.",
+        possibleFailure: "Cratered or rough grey mark indicates excessive laser power or low scan speed."
+      },
+      {
+        title: "Wipe & Durability Audit",
+        action: "Wipe finished mark with IPA and scrub lightly with a microfiber cloth to inspect contrast.",
+        why: "Proper dye bleaching leaves ceramic oxide intact, making mark 100% scratch-proof and solvent-resistant.",
+        lookFor: "High-contrast, razor-sharp white or black mark resistant to acetone and scratching.",
+        possibleFailure: "Mark smudges or rubs off if organic dye was charred rather than vaporized."
       }
     ],
     proTips: [
-      "Too high laser power melts aluminum oxide shell, turning mark gray instead of bright white.",
-      "Zero post-processing cleaning required."
+      "For white marking on black anodized stock, use high scan speeds (2000+ mm/s) and low power to avoid melting the underlying metal.",
+      "For black marking on clear anodized stock, short MOPA pulse widths (6ns–12ns) at high frequency (200kHz+) are mandatory to avoid breaking the anodic skin."
     ],
-    safety: "Wear 1064nm safety goggles during galvo operation."
+    troubleshooting: [
+      {
+        issue: "White mark turns dull grey or feels rough under thumbnail test",
+        fix: "Increase galvo scan speed by 20% or reduce laser power percentage; you are overheating and melting the oxide shell."
+      },
+      {
+        issue: "Black mark on clear anodized stock appears brown or rub-susceptible",
+        fix: "Reduce MOPA pulse duration to 8ns and increase frequency to 250kHz to minimize thermal shock."
+      },
+      {
+        issue: "Faint white mark with visible scan line gaps",
+        fix: "Reduce hatch pitch from 0.035mm to 0.025mm to achieve complete fill coverage."
+      }
+    ],
+    safety: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
   },
 
   // 58

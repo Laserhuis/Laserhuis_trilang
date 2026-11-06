@@ -824,5 +824,294 @@ export const BATCH_4 = [
       "Cut puzzle from photo side down onto sticky mat to catch small puzzle pieces."
     ],
     safety: "Wood smoke soot requires active exhaust fan."
+  },
+
+  // 101
+  {
+    id: "fiber-stainless-steel-settings-guide",
+    title: "Fiber Laser Settings for Stainless Steel: Marking, Annealing and Engraving",
+    category: "Fiber/Galvo",
+    difficulty: "Intermediate",
+    laserType: "fiber",
+    readTime: "18 min",
+    estimatedTime: "15 min setup, 15 min parameter matrix test run",
+    targetMaterial: "304 & 316 Stainless Steel Sheet & Components",
+    materials: [
+      "304 / 316 Grade Stainless Steel Stock (Brushed, Polished, or Mill Finish)",
+      "Acetone / 99% IPA Solvent & Microfiber Wipes"
+    ],
+    tools: [
+      "20W–60W Fiber or MOPA Galvo Laser System (1064nm)",
+      "LightBurn Galvo or EZCAD Software",
+      "F-Theta Scan Lens (160mm or 210mm focal length)",
+      "Digital Calipers / Depth Micrometer"
+    ],
+    summary: "Comprehensive master guide for establishing reliable fiber laser parameters on 304 and 316 stainless steel, contrasting non-ablative surface annealing against dark contrast marking and deep material-removing ablation across MOPA and conventional Q-switched sources.",
+    image: IMG.metal_artisan,
+    prerequisites: {
+      compatibleLasers: "Fiber galvo lasers (1064nm wavelength, 20W–60W+ class). MOPA fiber sources provide adjustable pulse width control (2ns–500ns); Q-switched fiber sources operate with fixed pulse durations.",
+      unsuitableLasers: "Diode lasers (450nm) and CO2 lasers (10.6µm) reflect off un-coated bare stainless steel without achieving thermal oxidation or ablation thresholds.",
+      minimumSpecs: "Galvo laser source, Z-axis elevator column, dual red-dot focus pointers, HEPA local metal fume extraction.",
+      safetyHazards: "1064nm NIR specular reflections from glossy or polished stainless steel faces.",
+      safetyEyewear: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
+    },
+    materialSelection: "Stainless steel laser processing behavior depends strongly on alloy grade (304 vs 316 vs 430), surface finish (#4 brushed vs #8 mirror polish), beam quality (M²), focus, scan speed, controller power percentage, pulse width, frequency, and hatch geometry. Austenitic 304 and 316 grades respond exceptionally well to chromium oxide annealing. Thoroughly degrease metal surfaces with acetone before laser processing to eliminate oil films.",
+    designPrep: "In LightBurn Galvo or EZCAD, configure hatch fill. For surface annealing, select a dense hatch pitch (0.010mm–0.015mm) with bi-directional cross-hatching (0° and 90°). For deep material-removing engraving, select wider hatch pitch (0.020mm–0.030mm) with multi-angle rotation (e.g., 0°, 45°, 90°) to prevent trenching.",
+    laserSetup: "Mount metal stock flat in a rigid pocket fixture. Converge dual red focus dots precisely on the top metal face. Turn on local HEPA metal fume extraction.",
+    optics: {
+      lens: "F-Theta Galvo Scan Lens (160mm focal length reference)",
+      focalLength: null,
+      measuredSpotSize: null,
+      manufacturerSpecifiedSpotSize: null
+    },
+    airAssist: {
+      mode: "Off at marking point",
+      measuredPressure: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Keep air assist off at galvo head to prevent convective thermal quenching during annealing. Keep enclosure HEPA exhaust active."
+    },
+    exhaust: {
+      configuration: "Enclosure HEPA metal fume extraction duct",
+      measuredFlow: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Use effective local exhaust sized for the machine enclosure, duct geometry, pressure losses and material being processed. Capture fumes at the source and follow machine-manufacturer and applicable local safety requirements."
+    },
+    exactParameters: {
+      parameterProfiles: {
+        mopa: {
+          sourceType: "50W MOPA Fiber Galvo (1064nm)",
+          power: "Anneal: 45% | Dark Mark: 60% | Deep Engrave: 85%",
+          speed: "Anneal: 250 mm/s | Dark Mark: 800 mm/s | Deep Engrave: 1200 mm/s",
+          passes: "Anneal: 2 | Dark Mark: 1 | Deep Engrave: 20 loops",
+          lineInterval: "Anneal: 0.012mm | Dark Mark: 0.020mm | Deep Engrave: 0.025mm",
+          airAssist: "Off at marking point",
+          focusOffset: "Anneal: +0.3mm Defocus | Mark/Engrave: 0.0mm Surface Focus",
+          frequency: "Anneal: 35 kHz | Dark Mark: 65 kHz | Deep Engrave: 30 kHz",
+          pulseWidth: "Anneal: 200 ns | Dark Mark: 60 ns | Deep Engrave: 350 ns",
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        },
+        qSwitched: {
+          sourceType: "30W Conventional Q-Switched Fiber Galvo (1064nm)",
+          power: "Anneal: 55% | Dark Mark: 70% | Deep Engrave: 90%",
+          speed: "Anneal: 180 mm/s | Dark Mark: 600 mm/s | Deep Engrave: 900 mm/s",
+          passes: "Anneal: 2 | Dark Mark: 1 | Deep Engrave: 25 loops",
+          lineInterval: "Anneal: 0.012mm | Dark Mark: 0.020mm | Deep Engrave: 0.025mm",
+          airAssist: "Off at marking point",
+          focusOffset: "Anneal: +0.3mm Defocus | Mark/Engrave: 0.0mm Surface Focus",
+          frequency: "Anneal: 25 kHz | Dark Mark: 40 kHz | Deep Engrave: 20 kHz",
+          pulseWidth: null,
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        }
+      },
+      sharedParameters: {
+        provenance: "REFERENCE_STARTING_POINT",
+        sourceName: null,
+        sourceReference: null,
+        physicallyTested: false,
+        lastEditorialReview: "2026-11"
+      },
+      provenance: "REFERENCE_STARTING_POINT",
+      sourceName: null,
+      sourceReference: null,
+      physicallyTested: false,
+      lastEditorialReview: "2026-11"
+    },
+    materialTestGuide: "Because alloy composition and thermal mass vary between thin sheet and heavy bar stock, run a 2-variable test grid on scrap from your target lot. For annealing, step scan speed against defocus height while holding pulse width fixed. Evaluate the marks under direct and 45° angled lighting for deep jet-black tone without tactile roughness.",
+    steps: [
+      {
+        title: "Substrate Cleaning & Degreasing",
+        action: "Wipe stainless steel part with pure acetone or 99% IPA on a microfiber wipe to remove finger oils and cutting coolants. Solvent Safety: Flammable; allow complete surface evaporation away from ignition sources before firing laser.",
+        why: "Fingerprint lipids char under laser heat, leaving permanent brown smudges inside black annealed graphics.",
+        lookFor: "Optically pristine, streak-free metal face.",
+        possibleFailure: "Skipping degreasing bakes brown fingerprint outlines permanently into the stainless surface."
+      },
+      {
+        title: "Focus Alignment & Process Mode Selection",
+        action: "For non-ablative annealing, adjust galvo column height to introduce a +0.3mm defocus offset away from sharp focus. For deep engraving, align focus exactly on the top metal face.",
+        why: "Defocusering broadens the beam footprint, maintaining thermal input below ablation thresholds to grow a protective chromium oxide layer without cutting metal.",
+        lookFor: "Slightly expanded red focus dot for annealing, or crisp converged point for engraving.",
+        possibleFailure: "Sharp surface focus during annealing cuts into metal, creating rough grey slag instead of smooth black oxide."
+      },
+      {
+        title: "Parameter Grid Execution",
+        action: "Execute the test matrix while monitoring local HEPA exhaust. Observe marking tone and sound.",
+        why: "Annealing occurs silently with a deep glow; ablative deep engraving produces bright yellow sparks and sharp snapping audio.",
+        lookFor: "Silent dark black oxide formation for annealing; bright clean plasma arc for deep engraving.",
+        possibleFailure: "Sparks during annealing indicate excessive laser power density."
+      },
+      {
+        title: "Post-Processing Inspection & Cleaning",
+        action: "Wipe marked part with IPA. For deep-engraved parts, brush away loose metallic dust with a brass wire brush.",
+        why: "Verifies mark permanence against solvent rub and mechanical abrasion.",
+        lookFor: "Smooth, jet-black annealed mark resistant to acetone rub.",
+        possibleFailure: "Mark rubbing off indicates incomplete oxidation or superficial surface soot."
+      }
+    ],
+    proTips: [
+      "Austenitic 304 and 316 stainless steels anneal to a much darker jet-black than ferritic 430 stainless steel.",
+      "Defocusering by +0.2mm to +0.4mm reduces peak power density, preventing surface ablation while promoting Cr2O3 oxide growth."
+    ],
+    troubleshooting: [
+      {
+        issue: "Brownish discolored mark instead of deep jet black",
+        fix: "Increase pulse width (120ns–200ns on MOPA) or reduce scan speed by 15% to allow sufficient oxide thickness to develop."
+      },
+      {
+        issue: "Annealed mark feels rough or scratches off with thumbnail",
+        fix: "Introduce +0.3mm defocus offset and reduce power percentage; you are ablating base metal instead of non-destructive annealing."
+      },
+      {
+        issue: "Stainless steel sheet warps during multi-pass run",
+        fix: "Insert a 1.5-second cooling delay between passes and use aluminum heat-sink backing blocks."
+      }
+    ],
+    safety: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
+  },
+
+  // 102
+  {
+    id: "fiber-laser-aluminum-guide",
+    title: "Fiber Laser Engraving Aluminum: Bare, Anodized and Coated Aluminum",
+    category: "Fiber/Galvo",
+    difficulty: "Intermediate",
+    laserType: "fiber",
+    readTime: "16 min",
+    estimatedTime: "10 min setup, 12 min test grid run",
+    targetMaterial: "Bare, Anodized & Powder-Coated Aluminum Stock",
+    materials: [
+      "Bare Aluminum 6061 / 7075, Anodized Aluminum, Powder-Coated Aluminum Plates",
+      "99% Isopropyl Alcohol & Microfiber Wipes"
+    ],
+    tools: [
+      "20W–50W Fiber or MOPA Galvo Laser (1064nm)",
+      "LightBurn Galvo or EZCAD Software",
+      "F-Theta Scan Lens (160mm focal length)",
+      "Barcode Reader / Smartphone Camera for QR Verification"
+    ],
+    summary: "Comprehensive guide for laser marking and engraving aluminum across bare alloy, anodized coatings, and painted/powder-coated finishes, detailing contrast optimization, barcode/QR code verification, and high-speed industrial parameter matrices.",
+    image: IMG.machine_fiber,
+    prerequisites: {
+      compatibleLasers: "Fiber galvo lasers (1064nm, 20W–50W). High peak power density breaks through aluminum oxide films on bare alloy and vaporizes surface coatings cleanly.",
+      unsuitableLasers: "CO2 lasers (10.6µm) reflect off un-coated bare aluminum without marking; diode lasers (450nm) lack power density for bare metal ablation.",
+      minimumSpecs: "Fiber galvo engine, F-Theta scan lens, Z-column focus indicator, HEPA local metal dust extraction.",
+      safetyHazards: "1064nm NIR specular glare from bare aluminum faces.",
+      safetyEyewear: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
+    },
+    materialSelection: "Aluminum laser processing results depend strongly on finish: bare aluminum (6061/7075) requires high power density to create frosted white or dark grey contrast; anodized aluminum permits high-speed white dye bleaching or MOPA dark marking; powder-coated aluminum requires coating removal down to bright metal. Always clean aluminum with 99% IPA before laser processing.",
+    designPrep: "In LightBurn Galvo, set up graphics or 2D Data Matrix barcodes. For bare aluminum dark marking, select tight cross-hatching (0.010mm pitch) with short pulse widths. For coating removal on powder-coated aluminum, set a 0.030mm hatch pitch at moderate scan speeds.",
+    laserSetup: "Fixture aluminum parts flat in a rigid pocket jig. Align focus precisely using dual red dots. Turn on local enclosure HEPA fume extraction.",
+    optics: {
+      lens: "F-Theta Galvo Scan Lens (160mm focal length reference)",
+      focalLength: null,
+      measuredSpotSize: null,
+      manufacturerSpecifiedSpotSize: null
+    },
+    airAssist: {
+      mode: "Off at marking point",
+      measuredPressure: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Keep air assist off at galvo head; maintain enclosure HEPA exhaust."
+    },
+    exhaust: {
+      configuration: "Enclosure HEPA metal dust exhaust",
+      measuredFlow: null,
+      provenance: "REFERENCE_STARTING_POINT",
+      notes: "Use effective local exhaust sized for the machine enclosure, duct geometry, pressure losses and material being processed. Capture fumes at the source and follow machine-manufacturer and applicable local safety requirements."
+    },
+    exactParameters: {
+      parameterProfiles: {
+        mopa: {
+          sourceType: "30W MOPA Fiber Galvo (1064nm)",
+          power: "Bare Frost: 65% | Bare Dark: 80% | Coating Removal: 45%",
+          speed: "Bare Frost: 1500 mm/s | Bare Dark: 600 mm/s | Coating Removal: 2000 mm/s",
+          passes: "Bare Frost: 1 | Bare Dark: 3 | Coating Removal: 1 pass",
+          lineInterval: "Bare Frost: 0.025mm | Bare Dark: 0.010mm | Coating Removal: 0.035mm",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface Focus)",
+          frequency: "Bare Frost: 45 kHz | Bare Dark: 200 kHz | Coating Removal: 35 kHz",
+          pulseWidth: "Bare Frost: 200 ns | Bare Dark: 12 ns | Coating Removal: 250 ns",
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        },
+        qSwitched: {
+          sourceType: "20W Conventional Q-Switched Fiber Galvo (1064nm)",
+          power: "Bare Frost: 75% | Coating Removal: 55%",
+          speed: "Bare Frost: 1200 mm/s | Coating Removal: 1800 mm/s",
+          passes: "1 pass",
+          lineInterval: "Bare Frost: 0.025mm | Coating Removal: 0.035mm",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface Focus)",
+          frequency: "Bare Frost: 30 kHz | Coating Removal: 30 kHz",
+          pulseWidth: null,
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        }
+      },
+      sharedParameters: {
+        provenance: "REFERENCE_STARTING_POINT",
+        sourceName: null,
+        sourceReference: null,
+        physicallyTested: false,
+        lastEditorialReview: "2026-11"
+      },
+      provenance: "REFERENCE_STARTING_POINT",
+      sourceName: null,
+      sourceReference: null,
+      physicallyTested: false,
+      lastEditorialReview: "2026-11"
+    },
+    materialTestGuide: "Test 10mm x 10mm patches on scrap aluminum from your target lot. For bare aluminum, test frosted white vs dark grey contrast by stepping frequency and pulse width. For coated stock, increase speed until paint is cleanly vaporized without gouging the base metal.",
+    steps: [
+      {
+        title: "Surface Inspection & Degreasing",
+        action: "Wipe aluminum stock with 99% Isopropyl Alcohol on a pluisvrije wipe. Solvent Safety: Work in a ventilated area away from sparks and allow complete drying before firing laser.",
+        why: "Removes oils and oxidation residues to guarantee uniform laser beam absorption.",
+        lookFor: "Clean, non-greasy aluminum face.",
+        possibleFailure: "Oil smudges cause uneven barcode cell widths."
+      },
+      {
+        title: "Galvo Focus & Parameter Setting",
+        action: "Align dual red focus pointers on top aluminum face. Select parameters based on target finish (bare vs anodized vs coated).",
+        why: "Precise focus delivers required power density for clean ablation or dye bleaching.",
+        lookFor: "Single red focal dot on target surface.",
+        possibleFailure: "Defocused beam creates faint, unreadable marks on bare aluminum."
+      },
+      {
+        title: "Laser Marking Execution",
+        action: "Close enclosure, check 1064nm safety eyewear, and execute laser run.",
+        why: "Fiber galvo beam completes marking in 1 to 3 seconds per component.",
+        lookFor: "Smooth, silent marking with high visual contrast.",
+        possibleFailure: "Heavy metallic sparking indicates excessive laser power density gouging bare aluminum."
+      },
+      {
+        title: "Barcode Readability Verification",
+        action: "Wipe finished part with IPA and scan QR/Data Matrix codes with a barcode verifier or smartphone camera.",
+        why: "Confirms cell contrast and edge sharpness satisfy ISO/IEC 15415 standards.",
+        lookFor: "Instant barcode decoding on first camera scan.",
+        possibleFailure: "Unreadable barcode indicates poor contrast or excessive edge melt."
+      }
+    ],
+    proTips: [
+      "On bare 6061 aluminum, short MOPA pulse durations (8ns–15ns) at high frequency (200kHz+) yield dark grey marks without rough surface melt.",
+      "When removing powder coating, use wide hatch spacing (0.035mm) to vaporize paint in a single fast pass."
+    ],
+    troubleshooting: [
+      {
+        issue: "Faint contrast on bare 6061 aluminum plate",
+        fix: "Increase passes to 2 with 90° cross-hatch or switch to MOPA short-pulse dark marking profile."
+      },
+      {
+        issue: "Powder coating melts into sticky residue instead of vaporizing cleanly",
+        fix: "Increase laser frequency to 40kHz and increase scan speed to prevent thermal melting."
+      },
+      {
+        issue: "Scanned QR code fails to decode on smartphone camera",
+        fix: "Invert barcode (ensure quiet zone is clear) and reduce hatch pitch to eliminate thin gaps between cells."
+      }
+    ],
+    safety: "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone."
   }
 ];
+

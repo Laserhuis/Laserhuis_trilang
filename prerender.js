@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { TUTORIALS } from './src/data/tutorials.js';
+import { MATERIAL_SETTINGS } from './src/data/materialSettings.js';
 
 const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
@@ -21,7 +22,7 @@ const BASE_ROUTES = [
     content: `
       <header><h1>The knowledge hub for laser makers.</h1></header>
       <main>
-        <p>Laserhuis is the definitive reference database for diode, CO2, and fiber/galvo laser engraving. Discover 30+ step-by-step LightBurn and EZCAD tutorials, 28+ tested material speed and power settings, and unbiased hardware benchmark reviews.</p>
+        <p>Laserhuis is the definitive reference database for diode, CO2, and fiber/galvo laser engraving. Discover ${TUTORIALS.length}+ step-by-step LightBurn and EZCAD tutorials, ${MATERIAL_SETTINGS.length}+ tested material speed and power settings, and unbiased hardware benchmark reviews.</p>
         <nav>
           <a href="/fiber-laser">Fiber Laser Hub</a> |
           <a href="/tutorials">Tutorials</a> |
@@ -57,7 +58,7 @@ const BASE_ROUTES = [
     content: `
       <header><h1>Step-by-Step Laser Engraving & Cutting Tutorials</h1></header>
       <main>
-        <p>32+ practical laser projects across diode, CO2 and fiber workflows. Filter live and open any card for full step-by-step instructions.</p>
+        <p>${TUTORIALS.length}+ practical laser projects across diode, CO2 and fiber workflows. Filter live and open any card for full step-by-step instructions.</p>
       </main>
     `
   },
@@ -69,7 +70,7 @@ const BASE_ROUTES = [
     content: `
       <header><h1>Laser Speed & Power Settings Library</h1></header>
       <main>
-        <p>Access 28+ structured starting parameters by laser type and substrate. Tested LightBurn and EZCAD settings for wood, acrylic, slate, leather, stainless steel, and titanium.</p>
+        <p>Access ${MATERIAL_SETTINGS.length}+ structured starting parameters by laser type and substrate. Tested LightBurn and EZCAD settings for wood, acrylic, slate, leather, stainless steel, and titanium.</p>
       </main>
     `
   },

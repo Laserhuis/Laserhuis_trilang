@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Zap, BookOpen, Cpu, Layers, Sparkles, Youtube, ArrowRight, Wand2, Facebook, CheckCircle2, Users, MessageSquare, ThumbsUp, ShieldCheck } from "lucide-react";
 import { TUTORIALS } from "@/data/tutorials";
 import { REVIEWS } from "@/data/reviews";
+import { MATERIAL_SETTINGS } from "@/data/materialSettings";
 import { CHANNEL_URL } from "@/data/videos";
 import { IMG } from "@/data/images";
 import { useLanguage } from "@/context/LanguageContext";
@@ -59,7 +60,7 @@ export default function About() {
         <div className="grid grid-cols-2 gap-4">
           <Stat value={`${TUTORIALS.length}+`} label={t("about.stat_tutorials", "Technical Guides")} sub="Diode, CO2 & Fiber" />
           <Stat value={`${REVIEWS.length}`} label={t("about.stat_reviews", "In-Depth Reviews")} sub="Disclosed Lab & Spec Data" />
-          <Stat value="28" label="Material Profiles" sub="Wattage Scalable" />
+          <Stat value={`${MATERIAL_SETTINGS.length}`} label="Material Profiles" sub="Wattage Scalable" />
           <Stat value="20+" label={t("about.stat_dither", "Dither Algorithms")} sub={t("about.stat_dither_sub", "Photo-to-Laser Studio")} />
         </div>
       </div>

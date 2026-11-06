@@ -879,19 +879,46 @@ export const BATCH_2 = [
       notes: "Use effective local HEPA exhaust sized for copper and zinc metal dust."
     },
     exactParameters: {
-      mopa50W: {
-        sourceType: "50W MOPA Fiber Galvo (1064nm ref)",
-        power: "80% controller setting (Deep Ablation Pass) / 20% controller setting (Cleaning Pass)",
-        speed: "1000 mm/s (Deep Ablation) / 2500 mm/s (Cleaning)",
-        passes: "20 Ablation Loops + 2 Interleaved Cleaning Passes",
-        lineInterval: "0.020mm hatch pitch (3-angle cross hatch)",
-        airAssist: "Off at marking point",
-        focusOffset: "0.0mm (Surface focus plane)",
-        frequency: "30 kHz (Ablation) / 80 kHz (Cleaning)",
-        pulseWidth: "200 ns (Deep Ablation) / 32 ns (Cleaning)",
+      parameterProfiles: {
+        mopa: {
+          sourceType: "50W MOPA Fiber Galvo (1064nm)",
+          power: "80% controller setting (Ablation) / 20% controller setting (Cleaning)",
+          speed: "1000 mm/s (Ablation) / 2500 mm/s (Cleaning)",
+          passes: "20 Ablation Loops + 2 Interleaved Cleaning Passes",
+          lineInterval: "0.020mm hatch pitch (3-angle cross hatch)",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface focus plane)",
+          frequency: "30 kHz (Ablation) / 80 kHz (Cleaning)",
+          pulseWidth: "200 ns (Deep Ablation) / 32 ns (Cleaning)",
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        },
+        qSwitched: {
+          sourceType: "30W Conventional Q-Switched Fiber Galvo (1064nm)",
+          power: "85% controller setting (Ablation) / 25% controller setting (Cleaning)",
+          speed: "800 mm/s (Ablation) / 2000 mm/s (Cleaning)",
+          passes: "25 Ablation Loops + 2 Cleaning Passes",
+          lineInterval: "0.020mm hatch pitch (3-angle cross hatch)",
+          airAssist: "Off at marking point",
+          focusOffset: "0.0mm (Surface focus plane)",
+          frequency: "20 kHz (Ablation) / 50 kHz (Cleaning)",
+          pulseWidth: null,
+          provenance: "REFERENCE_STARTING_POINT",
+          physicallyTested: false
+        }
+      },
+      sharedParameters: {
         provenance: "REFERENCE_STARTING_POINT",
-        physicallyTested: false
-      }
+        sourceName: null,
+        sourceReference: null,
+        physicallyTested: false,
+        lastEditorialReview: "2026-11"
+      },
+      provenance: "REFERENCE_STARTING_POINT",
+      sourceName: null,
+      sourceReference: null,
+      physicallyTested: false,
+      lastEditorialReview: "2026-11"
     },
     materialTestGuide: "Perform a 20-loop deep ablation test box (10mm x 10mm) on scrap brass at 1000 mm/s @ 80% power, 30 kHz, 200ns. Measure depth with depth micrometer (target depth: 0.50mm ± 0.05mm).",
     steps: [
