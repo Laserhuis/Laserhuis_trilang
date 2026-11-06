@@ -98,18 +98,73 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
           />
           <InfoTile 
             icon={Shield} 
-            label={t("tutorial.safety_rating", "Safety Rating")} 
-            value="OD6+ Glasses" 
+            label={t("tutorial.safety_rating", "Laser Safety")} 
+            value="Certified Eyewear" 
           />
         </div>
 
-        {/* Tested Parameter Matrix */}
-        {p && (p.power || p.speed) && (
-          <div className="bg-slate-950 border border-cyan-500/30 rounded-2xl p-5 shadow-lg relative overflow-hidden">
+        {/* Parameter Matrix (Profile or Single) */}
+        {p && (p.parameterProfiles ? (
+          <div className="space-y-4">
+            {p.parameterProfiles.mopa && (
+              <div className="bg-slate-950 border border-cyan-500/30 rounded-2xl p-5 shadow-lg space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-400">
+                    <Settings className="w-4 h-4 text-cyan-400" /> MOPA Fiber Laser Profile
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
+                      {p.parameterProfiles.mopa.provenance || "REFERENCE_STARTING_POINT"}
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <ParamBox label="Power Setting" value={p.parameterProfiles.mopa.power} highlight />
+                  <ParamBox label="Scan Speed" value={p.parameterProfiles.mopa.speed} highlight />
+                  <ParamBox label="Passes" value={p.parameterProfiles.mopa.passes} />
+                  <ParamBox label="Hatch Spacing" value={p.parameterProfiles.mopa.lineInterval} />
+                  <ParamBox label="Air Assist" value={p.parameterProfiles.mopa.airAssist} />
+                  <ParamBox label="Focus Offset" value={p.parameterProfiles.mopa.focusOffset} />
+                  <ParamBox label="Frequency" value={p.parameterProfiles.mopa.frequency} />
+                  <ParamBox label="Pulse Width (Adjustable)" value={p.parameterProfiles.mopa.pulseWidth} highlight />
+                </div>
+              </div>
+            )}
+
+            {p.parameterProfiles.qSwitched && (
+              <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5 shadow-lg space-y-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-300">
+                    <Settings className="w-4 h-4 text-slate-400" /> Conventional Q-Switched Fiber Laser Profile
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 border border-slate-700">
+                      {p.parameterProfiles.qSwitched.provenance || "REFERENCE_STARTING_POINT"}
+                    </span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <ParamBox label="Power Setting" value={p.parameterProfiles.qSwitched.power} highlight />
+                  <ParamBox label="Scan Speed" value={p.parameterProfiles.qSwitched.speed} highlight />
+                  <ParamBox label="Passes" value={p.parameterProfiles.qSwitched.passes} />
+                  <ParamBox label="Hatch Spacing" value={p.parameterProfiles.qSwitched.lineInterval} />
+                  <ParamBox label="Air Assist" value={p.parameterProfiles.qSwitched.airAssist} />
+                  <ParamBox label="Focus Offset" value={p.parameterProfiles.qSwitched.focusOffset} />
+                  <ParamBox label="Frequency" value={p.parameterProfiles.qSwitched.frequency} />
+                  <ParamBox label="Pulse Width" value="N/A (Fixed hardware pulse)" />
+                </div>
+              </div>
+            )}
+
+            <p className="text-[11px] font-mono text-amber-300/90 leading-relaxed pt-1">
+              ⚠️ These values are reference starting points. Results vary by machine, optical configuration, focus, material composition and surface condition. Run a material test before processing the final workpiece.
+            </p>
+          </div>
+        ) : (p.power || p.speed) && (
+          <div className="bg-slate-950 border border-cyan-500/30 rounded-2xl p-5 shadow-lg relative overflow-hidden space-y-3">
             <div className="absolute -top-12 -right-12 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none" />
-            <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-cyan-400">
-                <Settings className="w-4 h-4 text-cyan-400" /> {t("tutorial.tested_params", "Tested LightBurn / Software Parameters")}
+                <Settings className="w-4 h-4 text-cyan-400" /> {t("tutorial.tested_params", "Software & Laser Settings")}
+                <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
+                  {p.provenance || "REFERENCE_STARTING_POINT"}
+                </span>
               </div>
               <button
                 type="button"
@@ -122,15 +177,86 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
               </button>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <ParamBox label={t("tutorial.power", "Power")} value={p.power || "Tested"} highlight />
-              <ParamBox label={t("tutorial.speed", "Speed")} value={p.speed || "Tested"} highlight />
+              <ParamBox label={t("tutorial.power", "Power Setting")} value={p.power || "Reference"} highlight />
+              <ParamBox label={t("tutorial.speed", "Speed")} value={p.speed || "Reference"} highlight />
               <ParamBox label={t("tutorial.passes", "Passes")} value={p.passes || "1"} />
-              <ParamBox label={t("tutorial.line_interval", "Line Interval / DPI")} value={p.lineInterval || "0.08mm"} />
-              <ParamBox label={t("tutorial.air_assist", "Air Assist")} value={p.airAssist || "Recommended"} />
+              <ParamBox label={t("tutorial.line_interval", "Line Interval / LPI")} value={p.lineInterval || "0.10mm (~254 LPI)"} />
+              <ParamBox label={t("tutorial.air_assist", "Air Assist")} value={p.airAssist || "Reference"} />
               <ParamBox label={t("tutorial.focus_offset", "Focus Offset")} value={p.focusOffset || "Surface Focus"} />
               <ParamBox label={t("tutorial.software_mode", "Software Mode")} value={p.lightburnMode || "Fill / Cut"} />
-              <ParamBox label={t("tutorial.frequency", "Frequency / Pulse")} value={p.frequency || "Standard"} />
+              <ParamBox label={t("tutorial.frequency", "Frequency / Pulse")} value={p.frequency || p.pulseWidth || "Standard"} />
             </div>
+            {p.sourceName && (
+              <div className="text-[11px] font-mono text-slate-400 flex flex-wrap gap-x-4 gap-y-1 pt-1 border-t border-slate-800/80">
+                <span><strong>Source:</strong> {p.sourceName}</span>
+                {p.machineModel && <span><strong>Machine Class:</strong> {p.machineModel}</span>}
+                {p.lastVerified && <span><strong>Verified:</strong> {p.lastVerified}</span>}
+              </div>
+            )}
+            <p className="text-[11px] font-mono text-amber-300/90 leading-relaxed pt-1">
+              ⚠️ These values are reference starting points unless explicitly marked as Laserhuis-tested. Results vary by machine, optical configuration, focus, material composition and surface condition. Run a material test before processing the final workpiece.
+            </p>
+          </div>
+        ))}
+
+        {/* Prerequisites */}
+        {tutorial.prerequisites && (
+          <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-2 text-xs">
+            <p className="font-mono uppercase tracking-[0.2em] text-cyan-400 font-bold flex items-center gap-2 mb-2">
+              <Shield className="w-4 h-4 text-cyan-400" /> {t("tutorial.prerequisites", "Prerequisites & Equipment Compatibility")}
+            </p>
+            {tutorial.prerequisites.compatibleLasers && (
+              <p className="text-slate-300"><strong className="text-emerald-400 font-mono">{t("tutorial.compatible_lasers", "Compatible Lasers:")}</strong> {tutorial.prerequisites.compatibleLasers}</p>
+            )}
+            {tutorial.prerequisites.unsuitableLasers && (
+              <p className="text-slate-300"><strong className="text-orange-400 font-mono">{t("tutorial.unsuitable_lasers", "Unsuitable Lasers:")}</strong> {tutorial.prerequisites.unsuitableLasers}</p>
+            )}
+            {tutorial.prerequisites.minimumSpecs && (
+              <p className="text-slate-300"><strong className="text-cyan-300 font-mono">{t("tutorial.min_specs", "Min Machine Specs:")}</strong> {tutorial.prerequisites.minimumSpecs}</p>
+            )}
+            {tutorial.prerequisites.safetyHazards && (
+              <p className="text-slate-300"><strong className="text-red-400 font-mono">{t("tutorial.safety_hazards", "Safety Hazards:")}</strong> {tutorial.prerequisites.safetyHazards}</p>
+            )}
+          </div>
+        )}
+
+        {/* Material Selection Guidance */}
+        {tutorial.materialSelection && (
+          <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <p className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-cyan-400 mb-2">
+              <Tag className="w-4 h-4" /> {t("tutorial.substrate_selection", "Substrate Selection & Buying Guidance")}
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed">{tutorial.materialSelection}</p>
+          </div>
+        )}
+
+        {/* Design Preparation */}
+        {tutorial.designPrep && (
+          <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <p className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-cyan-400 mb-2">
+              <PenTool className="w-4 h-4" /> {t("tutorial.design_prep", "Design & Software Preparation (LightBurn / EZCAD)")}
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed">{tutorial.designPrep}</p>
+          </div>
+        )}
+
+        {/* Laser Setup */}
+        {tutorial.laserSetup && (
+          <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <p className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-cyan-400 mb-2">
+              <Wrench className="w-4 h-4" /> {t("tutorial.machine_setup", "Machine Setup & Bed Focus Protocol")}
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed">{tutorial.laserSetup}</p>
+          </div>
+        )}
+
+        {/* Material Test Guidance */}
+        {tutorial.materialTestGuide && (
+          <div className="bg-amber-950/20 border border-amber-500/30 rounded-2xl p-5">
+            <p className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-amber-400 mb-2">
+              <AlertCircle className="w-4 h-4 text-amber-400" /> {t("tutorial.test_matrix_guide", "How to Conduct the Material Test Matrix")}
+            </p>
+            <p className="text-sm text-slate-300 leading-relaxed">{tutorial.materialTestGuide}</p>
           </div>
         )}
 
@@ -199,7 +325,7 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
                     >
                       {isDone ? <Check className="w-4 h-4 text-emerald-400" /> : i + 1}
                     </span>
-                    <div className="space-y-1 flex-1">
+                    <div className="space-y-2 flex-1">
                       <div className="flex items-center justify-between">
                         <p className={`font-heading font-bold text-base transition-colors ${isDone ? "text-emerald-300 line-through decoration-emerald-500/50" : "text-white"}`}>
                           {title}
@@ -208,7 +334,30 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
                           {isDone ? "Click to uncheck" : "Click to mark done"}
                         </span>
                       </div>
-                      <p className="text-sm text-slate-300 leading-relaxed">{detail}</p>
+
+                      {s.action && (
+                        <p className="text-xs text-slate-300 font-medium">
+                          <strong className="text-cyan-400 font-mono">ACTION:</strong> {s.action}
+                        </p>
+                      )}
+                      {s.why && (
+                        <p className="text-xs text-slate-400 italic">
+                          <strong className="text-cyan-300/80 font-mono not-italic">WHY:</strong> {s.why}
+                        </p>
+                      )}
+                      {detail && (
+                        <p className="text-sm text-slate-300 leading-relaxed">{detail}</p>
+                      )}
+                      {s.lookFor && (
+                        <p className="text-xs text-emerald-300/90 font-mono bg-emerald-950/30 border border-emerald-900/40 rounded-lg p-2">
+                          <strong>WHAT TO LOOK FOR:</strong> {s.lookFor}
+                        </p>
+                      )}
+                      {s.possibleFailure && (
+                        <p className="text-xs text-orange-300/90 font-mono bg-orange-950/30 border border-orange-900/40 rounded-lg p-2">
+                          <strong>POSSIBLE FAILURE:</strong> {s.possibleFailure}
+                        </p>
+                      )}
                     </div>
                   </li>
                 );
@@ -225,11 +374,17 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
             </p>
             <div className="space-y-3">
               {tutorial.troubleshooting.map((item, idx) => (
-                <div key={idx} className="bg-slate-900 border border-slate-800/80 rounded-xl p-4">
-                  <p className="text-xs font-bold text-orange-300 font-mono uppercase tracking-wider mb-1">
+                <div key={idx} className="bg-slate-900 border border-slate-800/80 rounded-xl p-4 space-y-1 text-xs">
+                  <p className="font-bold text-orange-300 font-mono uppercase tracking-wider">
                     {t("tutorial.symptom", "Symptom")}: {item.issue}
                   </p>
-                  <p className="text-sm text-slate-300 flex items-start gap-2">
+                  {item.likelyCause && (
+                    <p className="text-slate-400"><strong className="text-amber-300 font-mono">Likely Cause:</strong> {item.likelyCause}</p>
+                  )}
+                  {item.howToConfirm && (
+                    <p className="text-slate-400"><strong className="text-cyan-300 font-mono">How to Confirm:</strong> {item.howToConfirm}</p>
+                  )}
+                  <p className="text-slate-300 flex items-start gap-2 pt-1 border-t border-slate-800/60">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span><strong className="text-white">{t("tutorial.real_fix", "Real-world Fix")}:</strong> {item.fix}</span>
                   </p>
@@ -262,7 +417,7 @@ export const TutorialModal = ({ tutorial: rawTutorial, onClose }) => {
               {t("tutorial.safety_protocol", "Safety & Exhaust Protocol")}
             </p>
             <p className="text-xs text-orange-200/90 leading-relaxed">
-              {tutorial.safetyNote || tutorial.safety || t("tutorial.safety_default", "Always wear OD6+ certified laser safety eyewear for your specific wavelength and ensure 120+ CFM extraction.")}
+              {tutorial.prerequisites?.safetyEyewear || tutorial.safetyNote || tutorial.safety || t("tutorial.safety_default", "Use the machine fully enclosed with functional interlocks wherever designed to do so. If laser-protective eyewear is required for the operating mode, use certified eyewear suitable for the actual wavelength(s), laser operating mode and required protection level specified by the machine manufacturer or a competent laser-safety assessment. Never select eyewear from lens colour or wavelength alone. Use effective local exhaust sized for the machine enclosure, duct geometry, pressure losses and material being processed.")}
             </p>
           </div>
         </div>

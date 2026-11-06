@@ -115,6 +115,15 @@ export const TRANSLATIONS = {
     "tutorial.pro_tips": "Pro Secrets & Techniques",
     "tutorial.safety_protocol": "Safety & Exhaust Protocol",
     "tutorial.safety_default": "Always wear OD6+ certified laser safety eyewear for your specific wavelength and ensure 120+ CFM extraction.",
+    "tutorial.prerequisites": "Prerequisites & Equipment Compatibility",
+    "tutorial.compatible_lasers": "Compatible Lasers:",
+    "tutorial.unsuitable_lasers": "Unsuitable Lasers:",
+    "tutorial.min_specs": "Min Machine Specs:",
+    "tutorial.safety_hazards": "Safety Hazards:",
+    "tutorial.substrate_selection": "Substrate Selection & Buying Guidance",
+    "tutorial.design_prep": "Design & Software Preparation (LightBurn / EZCAD)",
+    "tutorial.machine_setup": "Machine Setup & Bed Focus Protocol",
+    "tutorial.test_matrix_guide": "How to Conduct the Material Test Matrix",
 
     // Difficulty Levels
     "difficulty.Beginner": "Beginner",
@@ -395,6 +404,15 @@ export const TRANSLATIONS = {
     "tutorial.pro_tips": "Professionele Geheimen & Technieken",
     "tutorial.safety_protocol": "Veiligheids- & Afzuigprotocol",
     "tutorial.safety_default": "Draag altijd een OD6+ gecertificeerde laserveiligheidsbril voor je golflengte en zorg voor minimaal 120 CFM rookafzuiging.",
+    "tutorial.prerequisites": "Vereisten & Apparatuur Compatibiliteit",
+    "tutorial.compatible_lasers": "Geschikte Lasers:",
+    "tutorial.unsuitable_lasers": "Ongeschikte Lasers:",
+    "tutorial.min_specs": "Minimale Machine Specs:",
+    "tutorial.safety_hazards": "Veiligheidsrisico's:",
+    "tutorial.substrate_selection": "Materiaalselectie & Aankoopadvies",
+    "tutorial.design_prep": "Ontwerp & Software Voorbereiding (LightBurn / EZCAD)",
+    "tutorial.machine_setup": "Machine Instelling & Bed Focus Protocol",
+    "tutorial.test_matrix_guide": "Het Uitvoeren van de Materiaal Testmatrix",
 
     // Difficulty Levels
     "difficulty.Beginner": "Beginner",
@@ -675,6 +693,15 @@ export const TRANSLATIONS = {
     "tutorial.pro_tips": "Secrets & Astuces de Pro",
     "tutorial.safety_protocol": "Protocole de Sécurité & Extraction",
     "tutorial.safety_default": "Portez impérativement des lunettes de protection certifiées OD6+ adaptées à votre longueur d'onde et prévoyez une extraction minimale de 120 CFM.",
+    "tutorial.prerequisites": "Prérequis & Compatibilité des Équipements",
+    "tutorial.compatible_lasers": "Lasers Compatibles :",
+    "tutorial.unsuitable_lasers": "Lasers Incompatibles :",
+    "tutorial.min_specs": "Spécifications Minimales :",
+    "tutorial.safety_hazards": "Risques & Sécurité :",
+    "tutorial.substrate_selection": "Choix du Matériau & Conseils d'Achat",
+    "tutorial.design_prep": "Préparation du Design & Logiciel (LightBurn / EZCAD)",
+    "tutorial.machine_setup": "Configuration Machine & Protocole de Focus",
+    "tutorial.test_matrix_guide": "Comment Réaliser la Matrice de Test Matériau",
 
     // Difficulty Levels
     "difficulty.Beginner": "Débutant",

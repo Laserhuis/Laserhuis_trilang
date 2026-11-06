@@ -1,7 +1,7 @@
-import { BATCH_1 } from "./tutorials/batch1";
-import { BATCH_2 } from "./tutorials/batch2";
-import { BATCH_3 } from "./tutorials/batch3";
-import { BATCH_4 } from "./tutorials/batch4";
+import { BATCH_1 } from "./tutorials/batch1.js";
+import { BATCH_2 } from "./tutorials/batch2.js";
+import { BATCH_3 } from "./tutorials/batch3.js";
+import { BATCH_4 } from "./tutorials/batch4.js";
 
 const RAW_TUTORIALS = [
   ...BATCH_1,
@@ -70,7 +70,7 @@ function enrichTutorial(t) {
       troubleshooting = [
         {
           issue: "Micro-crazing / tiny hairline cracks along cut edges",
-          fix: "Never wipe cut acrylic with Isopropyl Alcohol. Clean only with deionized water and mild dish soap."
+          fix: "Avoid alcohol and aggressive solvent cleaning on freshly laser-cut acrylic unless the material manufacturer explicitly confirms compatibility. For routine cleaning, begin with mild soap and water."
         },
         {
           issue: "Frosted or wavy edge instead of clear glass finish",
